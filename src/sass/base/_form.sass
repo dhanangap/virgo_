@@ -1,0 +1,30 @@
+form
+    .control
+        margin-bottom: 2rem
+        
+        label
+            display: block
+            margin-bottom: 1.2rem
+            line-height: 1.2em
+
+        input, select
+            position: relative
+            display: block
+            width: 100%
+            padding: 1.2rem
+            line-height: 2rem
+            border: 0.1rem solid $color-grey-12
+
+            &:focus
+                border-color: $color-primary
+
+        select
+            appearance: none
+            display: grid
+
+            &:hover
+                box-shadow: inset -3rem 0 0 $color-grey-2
+            
+            &:focus
+                box-shadow: inset -3rem 0 0 $color-primary
+                
