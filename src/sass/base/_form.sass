@@ -7,24 +7,169 @@ form
             margin-bottom: 1.2rem
             line-height: 1.2em
 
-        input, select
+        input, select, textarea
             position: relative
             display: block
             width: 100%
             padding: 1.2rem
             line-height: 2rem
             border: 0.1rem solid $color-grey-12
+            font-family: $font-sans
 
             &:focus
                 border-color: $color-primary
 
+        ::placeholder
+            color: $color-grey-12
+
+        input, textarea
+            cursor: text
+
         select
             appearance: none
             display: grid
-
-            &:hover
-                box-shadow: inset -3rem 0 0 $color-grey-2
             
             &:focus
                 box-shadow: inset -3rem 0 0 $color-primary
+
+        // ----- Radio
+        .radio
+            display: flex
+            margin: 0 0 2rem
+            padding: 1.3rem 2.4rem 1.3rem 0
+            align-items: center
+
+            input[type="radio"]
+                position: relative
+                width: 2rem
+                height: 2rem
+                margin-right: 0.8rem
+                appearance: none
+                background-color: transparent
+                border: 1px solid $color-grey-12
+                border-radius: 50%
+                cursor: default
+
+                &::after
+                    content: ""
+                    position: absolute
+                    top: 0.4rem
+                    left: 0.4rem
+                    width: calc(100% - 0.8rem)
+                    height: calc(100% - 0.8rem)
+                    background: transparent
+                    border-radius: 50%
                 
+                &:hover
+                    &::after
+                        background: $color-grey-4
+                
+                &:active
+                    &::after
+                        background: $color-grey-6
+
+                &:checked
+                    border-color: $color-primary
+                    &::after
+                        background: $color-primary
+
+        // ----- Checkbox
+        .checkbox
+            display: flex
+            width: fit-content
+            margin: 0 0 2rem
+            padding: 1.3rem 2.4rem 1.3rem 0
+            align-items: center
+
+            input[type="checkbox"]
+                position: relative
+                width: 2rem
+                height: 2rem
+                margin-right: 0.8rem
+                appearance: none
+                background-color: transparent
+                border: 1px solid $color-grey-12
+                border-radius: $roundness + 0.2rem
+                cursor: default
+
+                &:last-child
+                    margin-right: -2.4rem
+
+                &::after
+                    content: ""
+                    position: absolute
+                    top: 0.4rem
+                    left: 0.4rem
+                    width: calc(100% - 0.8rem)
+                    height: calc(100% - 0.8rem)
+                    background: transparent
+                    border-radius: $roundness
+                
+                &:hover
+                    &::after
+                        background: $color-grey-4
+                
+                &:active
+                    &::after
+                        background: $color-grey-6
+
+                &:checked
+                    border-color: $color-primary
+                    &::after
+                        background: $color-primary
+                
+            &.switch
+                input[type="checkbox"]
+                    width: 3.6rem
+                    height: 2.6rem
+                    padding: 0
+                    border-radius: 2rem
+                    background-color: $color-grey-2
+
+                    &::after
+                        top: -1px
+                        left: -1px
+                        width: 2.4rem
+                        height: 2.4rem
+                        border-radius: 50%
+                        border: 1px solid $color-grey-12
+                        background-color: #fff
+
+                    &:hover
+                        background: $color-grey-4
+                    
+                    &:active
+                        background: $color-grey-6
+
+                    &:checked
+                        border-color: $color-primary
+                        background: $color-primary
+                        &::after
+                            border-color: $color-primary
+                            transform: translateX(1rem)
+                    
+                    &:checked:hover
+                        background: darken($color-primary, 5%)
+        
+    // ========== Form Validation
+    .control.required
+        label::after
+            content: "*"
+            margin-left: 0.4rem
+            color: $color-red-6
+
+    // ========== Actions
+    .actions
+        margin-top: 2 * 1.2rem
+
+    // ========= Group
+    .group
+        display: flex
+        flex-direction: row
+
+    // ========== Custom Layout
+    .control.row
+        align-items: center
+
+        label, .radio
+            margin-bottom: 0

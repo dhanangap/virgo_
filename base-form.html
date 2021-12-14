@@ -72,21 +72,17 @@
                     <h5>Default Form Style</h5>
                     <p>
                         A form is consisted of control elements such as inputs, checkboxes, and buttons.
-                        Default style of form and its elements designed to make it easier for users to understand.
+                        Default style of form and its elements are designed to make it easier for users to understand.
                     </p>
                     <div class="row mt-3">
-                        <div class="col-6">
+                        <div class="col-7">
                             <form>
                                 <div class="control">
                                     <label for="form-fullname">Full Name</label>
-                                    <input type="text" id="form-fullname">
+                                    <input type="text" id="form-fullname" placeholder="Enter your full name..." required>
                                 </div>
                                 <div class="control">
-                                    <label for="form-favorite">Favorite City</label>
-                                    <input type="text" id="form-favorite">
-                                </div>
-                                <div class="control">
-                                    <label for="form-food">The Best Food</label>
+                                    <label for="form-food">Favorite Food</label>
                                     <select value="" id="form-food">
                                         <option value="">Select the best food ever...</option>
                                         <option value="pizza">Pizza</option>
@@ -94,6 +90,77 @@
                                         <option value="rendang">Rendang</option>
                                         <option value="chicken">Fried Chicken</option>
                                     </select>
+                                </div>
+                                <div class="control">
+                                    <label for="form-bio">Personal Description</label>
+                                    <textarea id="form-bio" rows="5" placeholder="Tell us your secrets..."></textarea>
+                                </div>
+                                <div class="actions">
+                                    <button type="submit" class="button primary">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mt-4">
+                    <h5>Inline Label and Control</h5>
+                    <p>We can utilize <a href="./layout-grid">grid system</a> to customize our form layout.</p>
+                    <div class="row">
+                        <div class="col-7">
+                            <form>
+                                <div class="control row spaced-2">
+                                    <div class="col-3">
+                                        <label for="form-2-nickname">Nickname</label>
+                                    </div>
+                                    <div class="col-9">
+                                        <input type="text" id="form-2-nickname" placeholder="What your friends call you...">
+                                    </div>
+                                </div>
+                                <div class="control row spaced-2">
+                                    <div class="col-3">
+                                        <label for="form-2-club">Favorite Club</label>
+                                    </div>
+                                    <div class="col-9">
+                                        <select id="form-2-club">
+                                            <option value="">Select your favorite club...</option>
+                                            <option value="arsenal">Arsenal FC</option>
+                                            <option value="chelsea">Chelsea FC</option>
+                                            <option value="liverpool">Liverpool FC</option>
+                                            <option value="mautd">Manchester United</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="control row spaced-2">
+                                    <div class="col-3">
+                                        <label for="form-2-gender">Gender</label>
+                                    </div>
+                                    <div class="col-9">
+                                        <div class="group">
+                                            <label class="radio">
+                                                <input type="radio" name="form-2-gender" value="male">
+                                                Male
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="form-2-gender" value="female">
+                                                Female
+                                            </label>
+                                            <label class="radio">
+                                                <input type="radio" name="form-2-gender" value="secret">
+                                                It's a secret
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="control row spaced-2">
+                                    <div class="col-3">
+                                        <label for="form-2-news">Daily News</label>
+                                    </div>
+                                    <div class="col-9">
+                                        <label class="checkbox switch">
+                                            <input type="checkbox">
+                                        </label>
+                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -104,6 +171,8 @@
 
         </div>
     </div>
+
+    <script src="./src/js/script.js" type="module"></script>
 
 </body>
 </html>
