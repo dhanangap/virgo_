@@ -28,10 +28,12 @@
     // ========== Spacing
     @for $number from 1 through 4
         &.spaced-#{$number}
-            width: calc(100% + #{$number * 1.2rem})
+            width: calc(100% + #{$number * 1.2rem}) !important
 
             > .col
                 flex: 1 0 (100% / 24)
+                margin-right: $number * 1.2rem
+
             > [class^="col"]
                 margin-right: $number * 1.2rem
 

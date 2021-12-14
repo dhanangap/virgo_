@@ -104,7 +104,7 @@
                 </section>
 
                 <section class="mt-4">
-                    <h5>Inline Label and Control</h5>
+                    <h5>Form Layout</h5>
                     <p>We can utilize <a href="./layout-grid">grid system</a> to customize our form layout.</p>
                     <div class="row">
                         <div class="col-7">
@@ -160,6 +160,41 @@
                                         <label class="checkbox switch">
                                             <input type="checkbox">
                                         </label>
+                                    </div>
+                                </div>
+                                <div class="control row spaced-2">
+                                    <div class="col-3">
+                                        <label for="form-2-message">Message</label>
+                                    </div>
+                                    <div class="col-9">
+                                        <textarea id="form-2-message" rows="5" placeholder="Write your message here..."></textarea>
+                                    </div>
+                                </div>
+                                <div class="actions row spaced-2">
+                                    <div class="col-9 col-offset-3">
+                                        <button class="button primary" type="submit">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mt-4">
+                    <h5>Inline Form</h5>
+                    <p>To create an inline form, we can utilize simple row and column classes.</p>
+                    <div class="row">
+                        <div class="col-7">
+                            <form>
+                                <div class="row spaced-1">
+                                    <div class="control col">
+                                        <input type="text" placeholder="Username">
+                                    </div>
+                                    <div class="control col">
+                                        <input type="text" placeholder="Password">
+                                    </div>
+                                    <div class="actions col">
+                                        <button class="button primary" type="submit">Login</button>
                                     </div>
                                 </div>
                             </form>

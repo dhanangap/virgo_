@@ -14,6 +14,7 @@ form
             padding: 1.2rem
             line-height: 2rem
             border: 0.1rem solid $color-grey-12
+            border-radius: $roundness
             font-family: $font-sans
 
             &:focus
@@ -169,7 +170,13 @@ form
 
     // ========== Custom Layout
     .control.row
-        align-items: center
-
         label, .radio
             margin-bottom: 0
+
+        > *:first-child > label
+            margin-top: 1.3rem
+    
+    .row
+        > .actions
+            margin: 0
+            flex-grow: 0 !important
