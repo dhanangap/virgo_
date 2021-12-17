@@ -4,14 +4,22 @@ a.button, button.button
     border: 0.1rem solid $color-grey-12
     font-family: $font-sans
     font-weight: 500
+    background-color: #fff
     border-radius: $roundness
 
     &:hover
         background-color: $color-grey-2
+        text-decoration: none
     &:active
         background-color: $color-grey-4
 
-    // ========== Primary Button
+    // ========== Style
+    // ---------- Outline
+    // &.outline
+
+
+    // ========== Color
+    // ---------- Primary
     &.primary
         border-color: $color-primary
         background-color: $color-primary
@@ -19,5 +27,183 @@ a.button, button.button
 
         &:hover
             background-color: lighten($color-primary, 5%)
+            border-color: lighten($color-primary, 5%)
         &:active
             background-color: darken($color-primary, 5%)
+            border-color: darken($color-primary, 5%)
+
+        &.outline
+            background-color: transparent
+            border-color: $color-primary
+            color: $color-primary
+
+            &:hover
+                background-color: $color-primary
+                color: #fff
+            &:active
+                background-color: darken($color-primary, 5%)
+                color: #fff
+
+    // ---------- Success
+    &.success
+        border-color: $color-green-5
+        background-color: $color-green-5
+        color: #fff
+
+        &:hover
+            background-color: lighten($color-green-5, 5%)
+            border-color: lighten($color-green-5, 5%)
+        &:active
+            background-color: darken($color-green-5, 5%)
+            border-color: darken($color-green-5, 5%)
+
+        &.outline
+            background-color: transparent
+            border-color: $color-green-5
+            color: $color-green-5
+
+            &:hover
+                background-color: $color-green-5
+                color: #fff
+            &:active
+                background-color: darken($color-green-5, 5%)
+                color: #fff
+                
+    // ---------- Warning
+    &.warning
+        border-color: $color-yellow-6
+        background-color: $color-yellow-6
+        color: #fff
+
+        &:hover
+            background-color: lighten($color-yellow-6, 5%)
+            border-color: lighten($color-yellow-6, 5%)
+        &:active
+            background-color: darken($color-yellow-6, 5%)
+            border-color: darken($color-yellow-6, 5%)
+
+        &.outline
+            background-color: transparent
+            border-color: $color-yellow-6
+            color: $color-yellow-6
+
+            &:hover
+                background-color: $color-yellow-6
+                color: #fff
+            &:active
+                background-color: darken($color-yellow-6, 5%)
+                color: #fff
+                
+    // ---------- Danger
+    &.danger
+        border-color: $color-red-5
+        background-color: $color-red-5
+        color: #fff
+
+        &:hover
+            background-color: lighten($color-red-5, 5%)
+            border-color: lighten($color-red-5, 5%)
+        &:active
+            background-color: darken($color-red-5, 5%)
+            border-color: darken($color-red-5, 5%)
+
+        &.outline
+            background-color: transparent
+            border-color: $color-red-5
+            color: $color-red-5
+
+            &:hover
+                background-color: $color-red-5
+                color: #fff
+            &:active
+                background-color: darken($color-red-5, 5%)
+                color: #fff
+
+    // ========== Size
+    // ---------- Block
+    &.block
+        width: 100%
+
+    // ---------- Small
+    &.small
+        padding: 0.8rem 1.8rem
+        line-height: 1.6rem
+        font-size: 0.9em
+
+    // ---------- Large
+    &.large
+        padding: 1.8rem 2.8rem
+        line-height: 2.2rem
+        font-size: 1.2em
+
+// ========== Group
+.button-group
+    display: flex
+
+    .button
+        border-radius: 0
+
+    .button:not(:last-child)
+        border-right: none
+
+    .button:first-child
+        border-radius: $roundness 0 0 $roundness
+    
+    .button:last-child
+        border-radius: 0 $roundness $roundness 0
+
+// ========== Dropdown
+.button-dropdown
+    // position: relative
+    overflow: visible
+
+    > .button
+        position: relative
+        padding-right: calc(2.4rem + 1em)
+
+        i[class^="icon-"]
+            position: absolute
+            right: 0.8rem
+            padding-top: 0.1em
+
+    .dropdown
+        position: absolute
+        top: 0
+        left: 0
+        min-width: 24rem
+        padding: 1.2rem 0
+        display: flex
+        flex-direction: column
+        border: 1px solid $color-grey-8
+        border-radius: $roundness
+        background-color: #fff
+        overflow: hidden
+        transition: opacity 0.3s ease-out
+        opacity: 0
+
+        &[data-state="hidden"]
+            opacity: 0
+
+        &[data-state="shown"]
+            opacity: 1
+            transition: opacity 0s ease-out
+
+        > *
+            width: 100%
+            text-align: left
+
+        > button, > a
+            padding: 0.8rem 2.4rem
+
+            &:hover
+                background-color: $color-primary
+                color: #fff
+                box-shadow: none
+            
+            &:active   
+                background-color: darken($color-primary, 5%)
+
+        .divider
+            height: 1px
+            margin: 1.2rem 0
+            background-color: $color-grey-6
