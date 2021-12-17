@@ -6,6 +6,9 @@ export class Navbar {
 
         document.querySelectorAll(".navbar").forEach(navbar => {
 
+            if (navbar.classList.contains("fixed-top")) document.body.classList.add("has-navbar-fixed-top");
+            if (navbar.classList.contains("fixed-bottom")) document.body.classList.add("has-navbar-fixed-bottom");
+            
             let menu = navbar.querySelector(".menu");
             
             // ----- Dropdown
