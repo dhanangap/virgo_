@@ -180,3 +180,37 @@ form
         > .actions
             margin: 0
             flex-grow: 0 !important
+
+    .control.inline
+        position: relative
+
+        > input
+            padding-right: 3.6rem
+
+        > button
+            position: absolute
+            top: 0
+            right: 0
+            height: 4.6rem
+            padding: 0 1.2rem
+
+// ========== Form Styles
+
+// ---------- Dark Theme
+form.dark
+    color: #fff
+
+    .control
+
+        input, select, textarea
+            border-color: transparent
+            background-color: #ffffff22
+
+            &:hover
+                background-color: #ffffff33
+            
+            &:focus
+                box-shadow: inset 0 -2px 0 #ffffff
+
+        ::placeholder
+            color: #ffffff99

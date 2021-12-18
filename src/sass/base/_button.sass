@@ -94,6 +94,20 @@ a.button, button.button
                 background-color: darken($color-yellow-6, 5%)
                 color: #fff
 
+    // ---------- White
+    &.white
+        &.outline
+            background-color: transparent
+            border-color: #fff
+            color: #fff
+
+            &:hover
+                background-color: #fff
+                color: #fff
+            &:active
+                background-color: darken(#fff, 5%)
+                color: #fff
+
     // ---------- Transparent
     &.transparent
         border-color: transparent
@@ -110,6 +124,9 @@ a.button, button.button
             background-color: transparent
             border-color: transparent
             opacity: 0.6
+
+        &.white
+            color: #fff !important
                 
     // ---------- Danger
     &.danger

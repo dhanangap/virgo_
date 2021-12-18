@@ -79,6 +79,10 @@
 // ---------- Phone
 @media screen and ( max-width: 480px )
     .row
+
+        &.sm-reverse
+            flex-direction: row-reverse
+
         .col
             flex: 1 0 (100% / 3)
 
@@ -97,5 +101,21 @@
                     &:nth-child(3n)
                         margin-right: 0
                         
+        // * Column Width
+        @for $number from 1 through 6
+            .col-sm-#{$number}
+                width: $number / 12 * 100%
+        @for $number from 7 through 12
+            .col-sm-#{$number}
+                width: $number / 12 * 100%
 
+        // * Column Offset
+        .col-sm-offset-0
+            margin-left: 0
+        @for $number from 1 through 6
+            .col-sm-offset-#{$number}
+                margin-left: $number / 12 * 100%
+        @for $number from 7 through 11
+            .col-sm-offset-#{$number}
+                margin-left: $number / 12 * 100%
     
