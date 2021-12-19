@@ -41,6 +41,7 @@ export class Navbar {
 }
 
 function dropdownToggleListener(event) {
+    event.preventDefault();
     if (window.innerWidth) {
         let parentElement = event.target.parentElement;
         let dropdown = parentElement.querySelector(".dropdown");
