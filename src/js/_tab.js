@@ -1,5 +1,8 @@
 export class Tab {
 
+    static transitionDuration = 0.3;
+    static transitionEasing = "ease-out";
+
     static init() {
 
         let tabs = document.querySelectorAll(".tab");
@@ -27,6 +30,11 @@ export class Tab {
                     if (i === activeTabIndex) tabPage.classList.add("active");
                 }
 
+                // Fix height issue for tabs with transition property
+                let pagesContainer = tab.querySelector(".tab-pages");
+                let activePage = pagesContainer.querySelector(".tab-pages > .tab-page.active");
+                pagesContainer.style.height = activePage.getBoundingClientRect().height + "px";
+
                 // ----- Navigation
                 // - Internal
                 let tabNavigation = tab.querySelector(".navigation");
@@ -38,7 +46,6 @@ export class Tab {
                             // Active status
                             let button = tabNavButtons[i];
                             button.classList.remove("active");
-                            if (i === activeTabIndex) button.classList.add("active");
                             // Data attributes
                             button.classList.add("tab-nav-button");
                             button.dataset["tab"] = id;
@@ -50,7 +57,19 @@ export class Tab {
 
             // ===== Add event listener to tab nav buttons
             for (const button of document.querySelectorAll(".tab-nav-button")) {
-                button.addEventListener("click", tabNavListener);
+                const tabId = button.dataset["tab"];
+                const index = button.dataset["target"];
+                
+                if (tabId && index) {
+                    const tab = document.querySelector(`#${tabId}`);
+                    if (tab) {
+                        button.classList.remove("active")
+                        if (parseInt(tab.dataset["active"]) === parseInt(index)) {
+                            button.classList.add("active")
+                        }
+                        button.addEventListener("click", tabNavListener);
+                    }
+                }
             }
             
         }
@@ -62,7 +81,10 @@ export class Tab {
         let tab = document.querySelector(`#${tabId}`);
         if (!tab) return;
         
-        let pages = tab.querySelectorAll(".tab-pages > .tab-page");
+        let pagesContainer = tab.querySelector(".tab-pages");
+        if (!pagesContainer) return;
+
+        let pages = pagesContainer.querySelectorAll(".tab-page");
         if (pages.length === 0) return;
         
         let currentPage = pages[parseInt( tab.dataset["active"] )];
@@ -76,15 +98,28 @@ export class Tab {
         
         // - No transition effect
         if (!transition) {
-            // Tab page
             currentPage.classList.remove("active");
             targetPage.classList.add("active");
-            // Tab navigation
-            let buttons = document.querySelectorAll(`.tab-nav-button[data-tab=${tabId}]`);
-            for (const button of buttons) {
-                button.classList.remove("active");
-                if (parseInt(button.dataset["target"]) === index) button.classList.add("active");
-            }
+        }
+        
+        // - Transition: Fade
+        else if (transition === "fade") {
+            currentPage.dataset["state"] = "transition-out";
+            targetPage.dataset["state"] = "transition-in";
+            pagesContainer.style.height = targetPage.getBoundingClientRect().height + "px";
+            setTimeout(() => {
+                currentPage.classList.remove("active");
+            }, this.transitionDuration * 1000);
+            setTimeout(() => {
+                targetPage.classList.add("active");
+            }, this.transitionDuration * 1000);
+        }
+        
+        // ----- Tab navigation
+        let buttons = document.querySelectorAll(`.tab-nav-button[data-tab=${tabId}]`);
+        for (const button of buttons) {
+            button.classList.remove("active");
+            if (parseInt(button.dataset["target"]) === index) button.classList.add("active");
         }
 
     }

@@ -1,5 +1,4 @@
 .tab
-
     // Tab Pages
     > .tab-pages
         
@@ -10,3 +9,24 @@
             &.active
                 display: block
                 opacity: 1
+
+// ========== [ Transition ]
+// ---------- Fade
+.tab[data-transition="fade"]
+    > .tab-pages
+        position: relative
+        transition: height 0.3s ease-out
+        
+        > .tab-page
+            position: absolute
+            top: 0
+            left: 0
+            transition: opacity 0.3s ease-out
+            
+            &[data-state="transition-out"]
+                opacity: 0
+                z-index: 5001
+            
+            &[data-state="transition-in"]
+                display: block
+                z-index: 5002
