@@ -76,6 +76,7 @@ export class Slider {
             activeSlide = parseInt(slider.dataset["active"]);
 
             // ----- Initialize Indicator
+            // Internal indicator
             for (let i = 0; i < totalSlides; i++) {
                 let button = document.createElement("button");
                 if (activeSlide === i) button.classList.add("active");
@@ -83,6 +84,18 @@ export class Slider {
                 button.dataset["index"] = i;
                 indicator.addEventListener("click", indicatorButtonListener);
                 indicator.appendChild(button);
+            }
+            // External indicator(s)
+            let externalIndicators = document.querySelectorAll(`.slider-indicator[data-slider="${id}"]`);
+            for (const indicator of externalIndicators) {
+                for (let i = 0; i < totalSlides; i++) {
+                    let button = document.createElement("button");
+                    if (activeSlide === i) button.classList.add("active");
+                    button.dataset["target"] = id;
+                    button.dataset["index"] = i;
+                    indicator.addEventListener("click", indicatorButtonListener);
+                    indicator.appendChild(button);
+                }
             }
 
             // ----- Set Active Slide
@@ -134,7 +147,16 @@ export class Slider {
         slider.dataset["active"] = target;
 
         // ----- Update indicator
+        // Internal
         slider.querySelectorAll(".indicator button").forEach(button => {
+            let index = parseInt(button.dataset["index"]);
+            button.classList.remove("active");
+            if (index === target) {
+                button.classList.add("active");
+            }
+        });
+        // External
+        document.querySelectorAll(`.slider-indicator[data-slider=${sliderId}] button`).forEach(button => {
             let index = parseInt(button.dataset["index"]);
             button.classList.remove("active");
             if (index === target) {
