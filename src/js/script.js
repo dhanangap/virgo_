@@ -3,6 +3,7 @@ import { Form } from "./_form.js";
 import { Navbar } from "./_navbar.js";
 import { Slider } from "./_slider.js";
 import { Modal } from "./_modal.js";
+import { Tab } from "./_tab.js";
 
 document.addEventListener('DOMContentLoaded', function () {
     
@@ -11,5 +12,6 @@ document.addEventListener('DOMContentLoaded', function () {
     Navbar.initNavbar();
     Slider.init();
     Modal.init();
+    Tab.init();
 
 }, false);
