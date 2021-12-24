@@ -1,0 +1,96 @@
+// ====================================================================
+// - Virgo Utility Class
+// - Display > None
+// ====================================================================
+
+// --------------------------------------------------------------------
+// * Mixins
+// --------------------------------------------------------------------
+
+@mixin none					{ display: none !important; }
+@mixin unset				{ display: unset !important; }
+
+// --------------------------------------------------------------------
+// * Default Classes
+// --------------------------------------------------------------------
+
+.hide						{ @include none; }
+
+// --------------------------------------------------------------------
+// * Small Screen
+// --------------------------------------------------------------------
+@media screen and
+( max-width: ($md - 1px) )	{
+
+.sm\:hide					{ @include none; }
+.sm\:show					{ @include unset; }
+
+.md\:only					{ @include none; }
+.lg\:only					{ @include none; }
+.xl\:only					{ @include none; }
+.xxl\:only					{ @include none; }
+
+}
+// --------------------------------------------------------------------
+// * Medium Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $md ) and
+( max-width: ($lg - 1px) )	{
+
+.md\:hide					{ @include none; }
+.md\:show					{ @include unset; }
+
+.sm\:only					{ @include none; }
+.lg\:only					{ @include none; }
+.xl\:only					{ @include none; }
+.xxl\:only					{ @include none; }
+
+}
+// --------------------------------------------------------------------
+// * Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $lg ) and
+( max-width: ($xl - 1px) )	{
+
+.lg\:hide					{ @include none; }
+.lg\:show					{ @include unset; }
+
+.sm\:only					{ @include none; }
+.md\:only					{ @include none; }
+.xl\:only					{ @include none; }
+.xxl\:only					{ @include none; }
+
+}
+// --------------------------------------------------------------------
+// * Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $xl ) and
+( max-width: ($xxl - 1px) )	{
+
+.xl\:hide					{ @include none; }
+.xl\:show					{ @include unset; }
+
+.sm\:only					{ @include none; }
+.md\:only					{ @include none; }
+.lg\:only					{ @include none; }
+.xxl\:only					{ @include none; }
+
+}
+// --------------------------------------------------------------------
+// * Extra-Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $xxl )         {
+
+.xxl\:hide					{ @include none; }
+.xxl\:show					{ @include unset; }
+
+.sm\:only					{ @include none; }
+.md\:only					{ @include none; }
+.lg\:only					{ @include none; }
+.xl\:only					{ @include none; }
+
+}

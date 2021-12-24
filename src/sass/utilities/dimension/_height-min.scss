@@ -1,0 +1,141 @@
+// ====================================================================
+// - Virgo Utility Class
+// - Dimension > Minimum Height
+// ====================================================================
+
+// --------------------------------------------------------------------
+// * Mixins
+// --------------------------------------------------------------------
+
+// * Zero Height
+@mixin hmin-0				{ min-height: 0px !important }
+
+// * Percentage-Based
+@mixin hmin-percent($x, $y)	{ min-height: ($x / $y) * 100% !important }
+
+// * Viewport-Based
+@mixin hmin-screen($x, $y)	{ min-height: ($x / $y) * 100vh !important }
+
+// --------------------------------------------------------------------
+// * Default Classes
+// --------------------------------------------------------------------
+
+// Zero height
+.hmin-0						{ @include hmin-0; }
+// Percentage and viewport 
+@for $y from 1 through 12	{
+@for $x from 1 through $y	{
+
+.hmin-#{$x}\/#{$y} 			{ @include hmin-percent($x, $y); }
+.hmin-screen-#{$x}\/#{$y} 	{ @include hmin-screen($x, $y); }
+
+}}
+// Aliases
+.hmin-full					{ @extend .hmin-1\/1;}
+.hmin-half					{ @extend .hmin-1\/2; }
+.hmin-screen-full			{ @extend .hmin-screen-1\/1; }
+.hmin-screen-half			{ @extend .hmin-screen-1\/2; }
+
+// --------------------------------------------------------------------
+// * Small Screen
+// --------------------------------------------------------------------
+@media screen and
+( max-width: ($md - 1px) )	    {
+
+@for $y from 1 through 12 	    {
+@for $x from 1 through $y 	    {
+
+.sm\:hmin-#{$x}\/#{$y} 		    { @include hmin-percent($x, $y); }
+.sm\:hmin-screen-#{$x}\/#{$y} 	{ @include hmin-screen($x, $y); }
+
+}}
+.sm\:hmin-0					    { @include hmin-0; }
+.sm\:hmin-full					{ @extend .sm\:hmin-1\/1;}
+.sm\:hmin-half					{ @extend .sm\:hmin-1\/2; }
+.sm\:hmin-screen-full			{ @extend .sm\:hmin-screen-1\/1; }
+.sm\:hmin-screen-half			{ @extend .sm\:hmin-screen-1\/2; }
+
+}
+// --------------------------------------------------------------------
+// * Medium Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $md ) and
+( max-width: ($lg - 1px) )	    {
+
+@for $y from 1 through 12	    {
+@for $x from 1 through $y	    {
+
+.md\:hmin-#{$x}\/#{$y} 		    { @include hmin-percent($x, $y); }
+.md\:hmin-screen-#{$x}\/#{$y} 	{ @include hmin-screen($x, $y); }
+
+}}
+.md\:hmin-0					    { @include hmin-0; }
+.md\:hmin-full					{ @extend .md\:hmin-1\/1;}
+.md\:hmin-half					{ @extend .md\:hmin-1\/2; }
+.md\:hmin-screen-full			{ @extend .md\:hmin-screen-1\/1; }
+.md\:hmin-screen-half			{ @extend .md\:hmin-screen-1\/2; }
+
+}
+// --------------------------------------------------------------------
+// * Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $lg ) and
+( max-width: ($xl - 1px) )	    {
+
+@for $y from 1 through 12 	    {
+@for $x from 1 through $y 	    {
+
+.lg\:hmin-#{$x}\/#{$y} 		    { @include hmin-percent($x, $y); }
+.lg\:hmin-screen-#{$x}\/#{$y} 	{ @include hmin-screen($x, $y); }
+
+}}
+.lg\:hmin-0					    { @include hmin-0; }
+.lg\:hmin-full					{ @extend .lg\:hmin-1\/1;}
+.lg\:hmin-half					{ @extend .lg\:hmin-1\/2; }
+.lg\:hmin-screen-full			{ @extend .lg\:hmin-screen-1\/1; }
+.lg\:hmin-screen-half			{ @extend .lg\:hmin-screen-1\/2; }
+
+}
+// --------------------------------------------------------------------
+// * Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $xl ) and
+( max-width: ($xxl - 1px) )	    {
+
+@for $y from 1 through 12 	    {
+@for $x from 1 through $y 	    {
+
+.xl\:hmin-#{$x}\/#{$y} 		    { @include hmin-percent($x, $y); }
+.xl\:hmin-screen-#{$x}\/#{$y} 	{ @include hmin-screen($x, $y); }
+
+}}
+.xl\:hmin-0					    { @include hmin-0; }
+.xl\:hmin-full					{ @extend .xl\:hmin-1\/1;}
+.xl\:hmin-half					{ @extend .xl\:hmin-1\/2; }
+.xl\:hmin-screen-full			{ @extend .xl\:hmin-screen-1\/1; }
+.xl\:hmin-screen-half			{ @extend .xl\:hmin-screen-1\/2; }
+
+}
+// --------------------------------------------------------------------
+// * Extra-Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $xxl )             {
+
+@for $y from 1 through 12 	    {
+@for $x from 1 through $y 	    {
+
+.xxl\:hmin-#{$x}\/#{$y} 		{ @include hmin-percent($x, $y); }
+.xxl\:hmin-screen-#{$x}\/#{$y}  { @include hmin-screen($x, $y); }
+
+}}
+.xxl\:hmin-0					{ @include hmin-0; }
+.xxl\:hmin-full				    { @extend .xxl\:hmin-1\/1 ;}
+.xxl\:hmin-half				    { @extend .xxl\:hmin-1\/2; }
+.xxl\:hmin-screen-full			{ @extend .xxl\:hmin-screen-1\/1; }
+.xxl\:hmin-screen-half			{ @extend .xxl\:hmin-screen-1\/2; }
+
+}

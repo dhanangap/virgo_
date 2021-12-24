@@ -1,0 +1,104 @@
+// ====================================================================
+// - Virgo Layout Class
+// - Row
+// ====================================================================
+
+// --------------------------------------------------------------------
+// * Mixins
+// --------------------------------------------------------------------
+
+@mixin row					{ @include flex; flex-wrap: wrap; }
+@mixin col($i)				{ @include w-percent($i,12); }
+@mixin col-offset($i)		{ margin-left: $i / 12 * 100% !important; }
+
+// --------------------------------------------------------------------
+// * Default Classes
+// --------------------------------------------------------------------
+
+.row						{ @include row;
+
+.col						{ @include flex-grow(1); }
+@for $i from 0 through 12 	{
+
+.col-#{$i} 					{ @include col($i); }
+.col-offset-#{$i} 			{ @include col-offset($i); }
+
+}}
+// --------------------------------------------------------------------
+// * Small Screen
+// --------------------------------------------------------------------
+@media screen and
+( max-width: ($md - 1px) )	{
+
+.row						{ @include row;
+
+.sm\:col					{ @include flex-grow(1); }
+@for $i from 0 through 12 	{
+
+.sm\:col-#{$i} 				{ @include col($i); }
+.sm\:col-offset-#{$i} 		{ @include col-offset($i); }
+
+}}}
+// --------------------------------------------------------------------
+// * Medium Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $md ) and
+( max-width: ($lg - 1px) )	{
+
+.row						{ @include row;
+
+.md\:col					{ @include flex-grow(1); }
+@for $i from 0 through 12 	{
+
+.md\:col-#{$i} 				{ @include col($i); }
+.md\:col-offset-#{$i} 		{ @include col-offset($i); }
+
+}}}
+// --------------------------------------------------------------------
+// * Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $lg ) and
+( max-width: ($xl - 1px) )	{
+
+.row						{ @include row;
+
+.lg\:col					{ @include flex-grow(1); }
+@for $i from 0 through 12 	{
+
+.lg\:col-#{$i} 				{ @include col($i); }
+.lg\:col-offset-#{$i} 		{ @include col-offset($i); }
+
+}}}
+// --------------------------------------------------------------------
+// * Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $xl ) and
+( max-width: ($xxl - 1px) )	{
+
+.row						{ @include row;
+
+.xl\:col					{ @include flex-grow(1); }
+@for $i from 0 through 12 	{
+
+.xl\:col-#{$i} 				{ @include col($i); }
+.xl\:col-offset-#{$i} 		{ @include col-offset($i); }
+
+}}}
+// --------------------------------------------------------------------
+// * Extra-Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $xxl )         {
+
+.row						{ @include row;
+
+.xxl\:col					{ @include flex-grow(1); }
+@for $i from 0 through 12 	{
+
+.xxl\:col-#{$i} 			{ @include col($i); }
+.xxl\:col-offset-#{$i} 		{ @include col-offset($i); }
+
+}}}

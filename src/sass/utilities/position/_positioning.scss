@@ -1,0 +1,100 @@
+// ====================================================================
+// - Virgo Utility Class
+// - Position > Absolute
+// ====================================================================
+
+// --------------------------------------------------------------------
+// * Mixins
+// --------------------------------------------------------------------
+
+@mixin top ($value: 0)		{ top: $value !important; }
+@mixin right ($value: 0)	{ right: $value !important; }
+@mixin bottom ($value: 0)	{ bottom: $value !important; }
+@mixin left ($value: 0)		{ left: $value !important; }
+
+// --------------------------------------------------------------------
+// * Default Classes
+// --------------------------------------------------------------------
+
+@for $i from 0 to 12 		{
+	
+.top-#{$i}					{ @include top($i * 1rem); }
+.right-#{$i}				{ @include right($i * 1rem); }
+.bottom-#{$i}				{ @include bottom($i * 1rem); }
+.left-#{$i}					{ @include left($i * 1rem); }
+
+}
+
+// --------------------------------------------------------------------
+// * Small Screen
+// --------------------------------------------------------------------
+@media screen and
+( max-width: ($md - 1px) )	{
+
+@for $i from 0 to 12 		{
+	
+.sm\:top-#{$i}				{ @include top($i * 1rem); }
+.sm\:right-#{$i}			{ @include right($i * 1rem); }
+.sm\:bottom-#{$i}			{ @include bottom($i * 1rem); }
+.sm\:left-#{$i}				{ @include left($i * 1rem); }
+
+}}
+// --------------------------------------------------------------------
+// * Medium Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $md ) and
+( max-width: ($lg - 1px) )	{
+
+@for $i from 0 to 12 		{
+	
+.md\:top-#{$i}				{ @include top($i * 1rem); }
+.md\:right-#{$i}			{ @include right($i * 1rem); }
+.md\:bottom-#{$i}			{ @include bottom($i * 1rem); }
+.md\:left-#{$i}				{ @include left($i * 1rem); }
+
+}}
+// --------------------------------------------------------------------
+// * Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $lg ) and
+( max-width: ($xl - 1px) )	{
+
+@for $i from 0 to 12 		{
+	
+.lg\:top-#{$i}				{ @include top($i * 1rem); }
+.lg\:right-#{$i}			{ @include right($i * 1rem); }
+.lg\:bottom-#{$i}			{ @include bottom($i * 1rem); }
+.lg\:left-#{$i}				{ @include left($i * 1rem); }
+
+}}
+// --------------------------------------------------------------------
+// * Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $xl ) and
+( max-width: ($xxl - 1px) )	{
+
+@for $i from 0 to 12 		{
+	
+.xl\:top-#{$i}				{ @include top($i * 1rem); }
+.xl\:right-#{$i}			{ @include right($i * 1rem); }
+.xl\:bottom-#{$i}			{ @include bottom($i * 1rem); }
+.xl\:left-#{$i}				{ @include left($i * 1rem); }
+
+}}
+// --------------------------------------------------------------------
+// * Extra-Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $xxl )         {
+
+@for $i from 0 to 12 		{
+	
+.xxl\:top-#{$i}				{ @include top($i * 1rem); }
+.xxl\:right-#{$i}			{ @include right($i * 1rem); }
+.xxl\:bottom-#{$i}			{ @include bottom($i * 1rem); }
+.xxl\:left-#{$i}			{ @include left($i * 1rem); }
+
+}}

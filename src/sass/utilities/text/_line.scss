@@ -1,0 +1,101 @@
+// ====================================================================
+// - Virgo Utility Class
+// - Text > Line Height
+// ====================================================================
+
+// --------------------------------------------------------------------
+// * Mixins
+// --------------------------------------------------------------------
+
+@mixin line-height($value)	{ line-height: $value * 1em !important; }
+
+// --------------------------------------------------------------------
+// * Default Classes
+// --------------------------------------------------------------------
+
+.line-0\.8					{ @include line-height(0.8); }
+.line-1						{ @include line-height(1.0); }
+.line-1\.2					{ @include line-height(1.2); }
+.line-1\.4					{ @include line-height(1.4); }
+.line-1\.6					{ @include line-height(1.6); }
+.line-1\.8					{ @include line-height(1.8); }
+.line-2						{ @include line-height(2.0); }
+
+// --------------------------------------------------------------------
+// * Small Screen
+// --------------------------------------------------------------------
+@media screen and
+( max-width: ($md - 1px) )	{
+
+.sm\:line-0\.8				{ @include line-height(0.8); }
+.sm\:line-1					{ @include line-height(1.0); }
+.sm\:line-1\.2				{ @include line-height(1.2); }
+.sm\:line-1\.4				{ @include line-height(1.4); }
+.sm\:line-1\.6				{ @include line-height(1.6); }
+.sm\:line-1\.8				{ @include line-height(1.8); }
+.sm\:line-2					{ @include line-height(2.0); }
+
+}
+// --------------------------------------------------------------------
+// * Medium Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $md ) and
+( max-width: ($lg - 1px) )	{
+
+.md\:line-0\.8				{ @include line-height(0.8); }
+.md\:line-1					{ @include line-height(1.0); }
+.md\:line-1\.2				{ @include line-height(1.2); }
+.md\:line-1\.4				{ @include line-height(1.4); }
+.md\:line-1\.6				{ @include line-height(1.6); }
+.md\:line-1\.8				{ @include line-height(1.8); }
+.md\:line-2					{ @include line-height(2.0); }
+
+}
+// --------------------------------------------------------------------
+// * Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $lg ) and
+( max-width: ($xl - 1px) )	{
+
+.lg\:line-0\.8				{ @include line-height(0.8); }
+.lg\:line-1					{ @include line-height(1.0); }
+.lg\:line-1\.2				{ @include line-height(1.2); }
+.lg\:line-1\.4				{ @include line-height(1.4); }
+.lg\:line-1\.6				{ @include line-height(1.6); }
+.lg\:line-1\.8				{ @include line-height(1.8); }
+.lg\:line-2					{ @include line-height(2.0); }
+
+}
+// --------------------------------------------------------------------
+// * Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $xl ) and
+( max-width: ($xxl - 1px) )	{
+
+.xl\:line-0\.8				{ @include line-height(0.8); }
+.xl\:line-1					{ @include line-height(1.0); }
+.xl\:line-1\.2				{ @include line-height(1.2); }
+.xl\:line-1\.4				{ @include line-height(1.4); }
+.xl\:line-1\.6				{ @include line-height(1.6); }
+.xl\:line-1\.8				{ @include line-height(1.8); }
+.xl\:line-2					{ @include line-height(2.0); }
+
+}
+// --------------------------------------------------------------------
+// * Extra-Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $xxl )         {
+
+.xxl\:line-0\.8				{ @include line-height(0.8); }
+.xxl\:line-1				{ @include line-height(1.0); }
+.xxl\:line-1\.2				{ @include line-height(1.2); }
+.xxl\:line-1\.4				{ @include line-height(1.4); }
+.xxl\:line-1\.6				{ @include line-height(1.6); }
+.xxl\:line-1\.8				{ @include line-height(1.8); }
+.xxl\:line-2				{ @include line-height(2.0); }
+
+}

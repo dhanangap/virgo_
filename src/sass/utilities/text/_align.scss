@@ -1,0 +1,83 @@
+// ====================================================================
+// - Virgo Utility Class
+// - Text > Align
+// ====================================================================
+
+// --------------------------------------------------------------------
+// * Mixins
+// --------------------------------------------------------------------
+
+@mixin text-align($value)			{ text-align: $value !important; }
+
+// --------------------------------------------------------------------
+// * Default Classes
+// --------------------------------------------------------------------
+
+.text-left							{ @include text-align(left); }
+.text-center						{ @include text-align(center); }
+.text-right							{ @include text-align(right); }
+.text-justify						{ @include text-align(justify); }
+
+// --------------------------------------------------------------------
+// * Small Screen
+// --------------------------------------------------------------------
+@media screen and
+( max-width: ($md - 1px) )	{
+
+.sm\:text-left						{ @include text-align(left); }
+.sm\:text-center					{ @include text-align(center); }
+.sm\:text-right						{ @include text-align(right); }
+.sm\:text-justify					{ @include text-align(justify); }
+
+}
+// --------------------------------------------------------------------
+// * Medium Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $md ) and
+( max-width: ($lg - 1px) )	{
+
+.md\:text-left						{ @include text-align(left); }
+.md\:text-center					{ @include text-align(center); }
+.md\:text-right						{ @include text-align(right); }
+.md\:text-justify					{ @include text-align(justify); }
+
+}
+// --------------------------------------------------------------------
+// * Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $lg ) and
+( max-width: ($xl - 1px) )	{
+
+.lg\:text-left						{ @include text-align(left); }
+.lg\:text-center					{ @include text-align(center); }
+.lg\:text-right						{ @include text-align(right); }
+.lg\:text-justify					{ @include text-align(justify); }
+
+}
+// --------------------------------------------------------------------
+// * Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $xl ) and
+( max-width: ($xxl - 1px) )	{
+
+.xl\:text-left						{ @include text-align(left); }
+.xl\:text-center					{ @include text-align(center); }
+.xl\:text-right						{ @include text-align(right); }
+.xl\:text-justify					{ @include text-align(justify); }
+
+}
+// --------------------------------------------------------------------
+// * Extra-Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $xxl )                 {
+
+.xxl\:text-left						{ @include text-align(left); }
+.xxl\:text-center					{ @include text-align(center); }
+.xxl\:text-right					{ @include text-align(right); }
+.xxl\:text-justify					{ @include text-align(justify); }
+
+}
