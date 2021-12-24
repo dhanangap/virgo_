@@ -9,6 +9,7 @@
 
 // * Zero Height
 @mixin h-0				    { height: 0px !important }
+@mixin h-auto			    { height: auto !important }
 
 // * Percentage-Based
 @mixin h-percent($x, $y)	{ height: ($x / $y) * 100% !important }
@@ -27,6 +28,7 @@
 
 // Zero height
 .h-0						{ @include h-0; }
+.h-auto						{ @include h-auto; }
 // Percentage and viewport 
 @for $y from 1 through 12	{
 @for $x from 1 through $y	{
@@ -58,6 +60,7 @@
 .sm\:h-screen-#{$x}\/#{$y} 	{ @include h-screen($x, $y); }
 
 }}
+.sm\:h-auto					{ @include h-auto; }
 .sm\:h-0					{ @include h-0; }
 .sm\:h-full					{ @extend .sm\:h-1\/1;}
 .sm\:h-half					{ @extend .sm\:h-1\/2; }
@@ -82,6 +85,7 @@
 .md\:h-screen-#{$x}\/#{$y} 	{ @include h-screen($x, $y); }
 
 }}
+.md\:h-auto					{ @include h-auto; }
 .md\:h-0					{ @include h-0; }
 .md\:h-full					{ @extend .md\:h-1\/1;}
 .md\:h-half					{ @extend .md\:h-1\/2; }
@@ -106,6 +110,7 @@
 .lg\:h-screen-#{$x}\/#{$y} 	{ @include h-screen($x, $y); }
 
 }}
+.lg\:h-auto					{ @include h-auto; }
 .lg\:h-0					{ @include h-0; }
 .lg\:h-full					{ @extend .lg\:h-1\/1;}
 .lg\:h-half					{ @extend .lg\:h-1\/2; }
@@ -130,6 +135,7 @@
 .xl\:h-screen-#{$x}\/#{$y} 	{ @include h-screen($x, $y); }
 
 }}
+.xl\:h-auto					{ @include h-auto; }
 .xl\:h-0					{ @include h-0; }
 .xl\:h-full					{ @extend .xl\:h-1\/1;}
 .xl\:h-half					{ @extend .xl\:h-1\/2; }
@@ -153,6 +159,7 @@
 .xxl\:h-screen-#{$x}\/#{$y} { @include h-screen($x, $y); }
 
 }}
+.xxl\:h-auto				{ @include h-auto; }
 .xxl\:h-0					{ @include h-0; }
 .xxl\:h-full				{ @extend .xxl\:h-1\/1 ;}
 .xxl\:h-half				{ @extend .xxl\:h-1\/2; }

@@ -18,6 +18,7 @@
 .bg-transparent						{ @include background-color(transparent); }
 .bg-primary							{ @include background-color($color-primary); }
 .bg-secondary						{ @include background-color($color-secondary); }
+.bg-white							{ @include background-color(#fff); }
 
 // --------------------------------------------------------------------
 // * Small Screen
@@ -29,6 +30,7 @@
 .sm\:bg-transparent					{ @include background-color(transparent); }
 .sm\:bg-primary						{ @include background-color($color-primary); }
 .sm\:bg-secondary					{ @include background-color($color-secondary); }
+.sm\:bg-white						{ @include background-color(#fff); }
 
 }
 // --------------------------------------------------------------------
@@ -42,6 +44,7 @@
 .md\:bg-transparent					{ @include background-color(transparent); }
 .md\:bg-primary						{ @include background-color($color-primary); }
 .md\:bg-secondary					{ @include background-color($color-secondary); }
+.md\:bg-white						{ @include background-color(#fff); }
 
 }
 // --------------------------------------------------------------------
@@ -55,6 +58,7 @@
 .lg\:bg-transparent					{ @include background-color(transparent); }
 .lg\:bg-primary						{ @include background-color($color-primary); }
 .lg\:bg-secondary					{ @include background-color($color-secondary); }
+.lg\:bg-white						{ @include background-color(#fff); }
 
 }
 // --------------------------------------------------------------------
@@ -68,6 +72,7 @@
 .xl\:bg-transparent					{ @include background-color(transparent); }
 .xl\:bg-primary						{ @include background-color($color-primary); }
 .xl\:bg-secondary					{ @include background-color($color-secondary); }
+.xl\:bg-white						{ @include background-color(#fff); }
 
 }
 // --------------------------------------------------------------------
@@ -80,5 +85,6 @@
 .xxl\:bg-transparent				{ @include background-color(transparent); }
 .xxl\:bg-primary					{ @include background-color($color-primary); }
 .xxl\:bg-secondary					{ @include background-color($color-secondary); }
+.xxl\:bg-white						{ @include background-color(#fff); }
 
 }

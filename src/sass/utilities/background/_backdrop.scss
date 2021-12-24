@@ -1,0 +1,71 @@
+// ====================================================================
+// - Virgo Utility Class
+// - Background > Backdrop
+// ====================================================================
+
+// --------------------------------------------------------------------
+// * Mixins
+// --------------------------------------------------------------------
+
+@mixin backdrop($value)				{ background-color: transparentize($value, 0.6) !important; }
+
+// --------------------------------------------------------------------
+// * Default Classes
+// --------------------------------------------------------------------
+
+.bg-backdrop-dark					{ @include backdrop(#000); }
+.bg-backdrop-light					{ @include backdrop(#fff); }
+
+// --------------------------------------------------------------------
+// * Small Screen
+// --------------------------------------------------------------------
+@media screen and
+( max-width: ($md - 1px) )	{
+
+.sm\:bg-backdrop-dark				{ @include backdrop(#000); }
+.sm\:bg-backdrop-light				{ @include backdrop(#fff); }
+
+}
+// --------------------------------------------------------------------
+// * Medium Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $md ) and
+( max-width: ($lg - 1px) )	{
+
+.md\:bg-backdrop-dark				{ @include backdrop(#000); }
+.md\:bg-backdrop-light				{ @include backdrop(#fff); }
+
+}
+// --------------------------------------------------------------------
+// * Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $lg ) and
+( max-width: ($xl - 1px) )	{
+
+.lg\:bg-backdrop-dark				{ @include backdrop(#000); }
+.lg\:bg-backdrop-light				{ @include backdrop(#fff); }
+
+}
+// --------------------------------------------------------------------
+// * Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $xl ) and
+( max-width: ($xxl - 1px) )	{
+
+.xl\:bg-backdrop-dark				{ @include backdrop(#000); }
+.xl\:bg-backdrop-light				{ @include backdrop(#fff); }
+
+}
+// --------------------------------------------------------------------
+// * Extra-Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $xxl )                 {
+
+.xxl\:bg-backdrop-dark				{ @include backdrop(#000); }
+.xxl\:bg-backdrop-light				{ @include backdrop(#fff); }
+
+}
