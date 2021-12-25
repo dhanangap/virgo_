@@ -15,7 +15,7 @@
 @mixin w-percent($x, $y)	{ width: ($x / $y) * 100% !important }
 
 // * Viewport-Based
-@mixin w-screen($x, $y)		{ width: ($x / $y) * 100vh !important }
+@mixin w-screen($x, $y)		{ width: ($x / $y) * 100vw !important }
 
 // * Content-Based
 @mixin w-min				{ width: min-content !important }

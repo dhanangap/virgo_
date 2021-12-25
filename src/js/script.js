@@ -4,6 +4,7 @@ import { Navbar } from "./_navbar.js";
 import { Slider } from "./_slider.js";
 import { Modal } from "./_modal.js";
 import { Tab } from "./_tab.js";
+import { Tagger } from "./_tagger.js";
 import { Carousel } from "./_carousel.js";
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -14,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
     Slider.init();
     Modal.init();
     Tab.init();
+    Tagger.init();
     Carousel.init();
 
 }, false);

@@ -23854,7 +23854,7 @@ i.icon.large {
 }
 
 .w-screen-1\/1, .w-screen-full {
-  width: 100vh !important;
+  width: 100vw !important;
 }
 
 .w-1\/2, .w-half {
@@ -23862,7 +23862,7 @@ i.icon.large {
 }
 
 .w-screen-1\/2, .w-screen-half {
-  width: 50vh !important;
+  width: 50vw !important;
 }
 
 .w-2\/2 {
@@ -23870,7 +23870,7 @@ i.icon.large {
 }
 
 .w-screen-2\/2 {
-  width: 100vh !important;
+  width: 100vw !important;
 }
 
 .w-1\/3 {
@@ -23878,7 +23878,7 @@ i.icon.large {
 }
 
 .w-screen-1\/3 {
-  width: 33.33333vh !important;
+  width: 33.33333vw !important;
 }
 
 .w-2\/3 {
@@ -23886,7 +23886,7 @@ i.icon.large {
 }
 
 .w-screen-2\/3 {
-  width: 66.66667vh !important;
+  width: 66.66667vw !important;
 }
 
 .w-3\/3 {
@@ -23894,7 +23894,7 @@ i.icon.large {
 }
 
 .w-screen-3\/3 {
-  width: 100vh !important;
+  width: 100vw !important;
 }
 
 .w-1\/4 {
@@ -23902,7 +23902,7 @@ i.icon.large {
 }
 
 .w-screen-1\/4 {
-  width: 25vh !important;
+  width: 25vw !important;
 }
 
 .w-2\/4 {
@@ -23910,7 +23910,7 @@ i.icon.large {
 }
 
 .w-screen-2\/4 {
-  width: 50vh !important;
+  width: 50vw !important;
 }
 
 .w-3\/4 {
@@ -23918,7 +23918,7 @@ i.icon.large {
 }
 
 .w-screen-3\/4 {
-  width: 75vh !important;
+  width: 75vw !important;
 }
 
 .w-4\/4 {
@@ -23926,7 +23926,7 @@ i.icon.large {
 }
 
 .w-screen-4\/4 {
-  width: 100vh !important;
+  width: 100vw !important;
 }
 
 .w-1\/5 {
@@ -23934,7 +23934,7 @@ i.icon.large {
 }
 
 .w-screen-1\/5 {
-  width: 20vh !important;
+  width: 20vw !important;
 }
 
 .w-2\/5 {
@@ -23942,7 +23942,7 @@ i.icon.large {
 }
 
 .w-screen-2\/5 {
-  width: 40vh !important;
+  width: 40vw !important;
 }
 
 .w-3\/5 {
@@ -23950,7 +23950,7 @@ i.icon.large {
 }
 
 .w-screen-3\/5 {
-  width: 60vh !important;
+  width: 60vw !important;
 }
 
 .w-4\/5 {
@@ -23958,7 +23958,7 @@ i.icon.large {
 }
 
 .w-screen-4\/5 {
-  width: 80vh !important;
+  width: 80vw !important;
 }
 
 .w-5\/5 {
@@ -23966,7 +23966,7 @@ i.icon.large {
 }
 
 .w-screen-5\/5 {
-  width: 100vh !important;
+  width: 100vw !important;
 }
 
 .w-1\/6 {
@@ -23974,7 +23974,7 @@ i.icon.large {
 }
 
 .w-screen-1\/6 {
-  width: 16.66667vh !important;
+  width: 16.66667vw !important;
 }
 
 .w-2\/6 {
@@ -23982,7 +23982,7 @@ i.icon.large {
 }
 
 .w-screen-2\/6 {
-  width: 33.33333vh !important;
+  width: 33.33333vw !important;
 }
 
 .w-3\/6 {
@@ -23990,7 +23990,7 @@ i.icon.large {
 }
 
 .w-screen-3\/6 {
-  width: 50vh !important;
+  width: 50vw !important;
 }
 
 .w-4\/6 {
@@ -23998,7 +23998,7 @@ i.icon.large {
 }
 
 .w-screen-4\/6 {
-  width: 66.66667vh !important;
+  width: 66.66667vw !important;
 }
 
 .w-5\/6 {
@@ -24006,7 +24006,7 @@ i.icon.large {
 }
 
 .w-screen-5\/6 {
-  width: 83.33333vh !important;
+  width: 83.33333vw !important;
 }
 
 .w-6\/6 {
@@ -24014,7 +24014,7 @@ i.icon.large {
 }
 
 .w-screen-6\/6 {
-  width: 100vh !important;
+  width: 100vw !important;
 }
 
 .w-1\/7 {
@@ -24022,7 +24022,7 @@ i.icon.large {
 }
 
 .w-screen-1\/7 {
-  width: 14.28571vh !important;
+  width: 14.28571vw !important;
 }
 
 .w-2\/7 {
@@ -24030,7 +24030,7 @@ i.icon.large {
 }
 
 .w-screen-2\/7 {
-  width: 28.57143vh !important;
+  width: 28.57143vw !important;
 }
 
 .w-3\/7 {
@@ -24038,7 +24038,7 @@ i.icon.large {
 }
 
 .w-screen-3\/7 {
-  width: 42.85714vh !important;
+  width: 42.85714vw !important;
 }
 
 .w-4\/7 {
@@ -24046,7 +24046,7 @@ i.icon.large {
 }
 
 .w-screen-4\/7 {
-  width: 57.14286vh !important;
+  width: 57.14286vw !important;
 }
 
 .w-5\/7 {
@@ -24054,7 +24054,7 @@ i.icon.large {
 }
 
 .w-screen-5\/7 {
-  width: 71.42857vh !important;
+  width: 71.42857vw !important;
 }
 
 .w-6\/7 {
@@ -24062,7 +24062,7 @@ i.icon.large {
 }
 
 .w-screen-6\/7 {
-  width: 85.71429vh !important;
+  width: 85.71429vw !important;
 }
 
 .w-7\/7 {
@@ -24070,7 +24070,7 @@ i.icon.large {
 }
 
 .w-screen-7\/7 {
-  width: 100vh !important;
+  width: 100vw !important;
 }
 
 .w-1\/8 {
@@ -24078,7 +24078,7 @@ i.icon.large {
 }
 
 .w-screen-1\/8 {
-  width: 12.5vh !important;
+  width: 12.5vw !important;
 }
 
 .w-2\/8 {
@@ -24086,7 +24086,7 @@ i.icon.large {
 }
 
 .w-screen-2\/8 {
-  width: 25vh !important;
+  width: 25vw !important;
 }
 
 .w-3\/8 {
@@ -24094,7 +24094,7 @@ i.icon.large {
 }
 
 .w-screen-3\/8 {
-  width: 37.5vh !important;
+  width: 37.5vw !important;
 }
 
 .w-4\/8 {
@@ -24102,7 +24102,7 @@ i.icon.large {
 }
 
 .w-screen-4\/8 {
-  width: 50vh !important;
+  width: 50vw !important;
 }
 
 .w-5\/8 {
@@ -24110,7 +24110,7 @@ i.icon.large {
 }
 
 .w-screen-5\/8 {
-  width: 62.5vh !important;
+  width: 62.5vw !important;
 }
 
 .w-6\/8 {
@@ -24118,7 +24118,7 @@ i.icon.large {
 }
 
 .w-screen-6\/8 {
-  width: 75vh !important;
+  width: 75vw !important;
 }
 
 .w-7\/8 {
@@ -24126,7 +24126,7 @@ i.icon.large {
 }
 
 .w-screen-7\/8 {
-  width: 87.5vh !important;
+  width: 87.5vw !important;
 }
 
 .w-8\/8 {
@@ -24134,7 +24134,7 @@ i.icon.large {
 }
 
 .w-screen-8\/8 {
-  width: 100vh !important;
+  width: 100vw !important;
 }
 
 .w-1\/9 {
@@ -24142,7 +24142,7 @@ i.icon.large {
 }
 
 .w-screen-1\/9 {
-  width: 11.11111vh !important;
+  width: 11.11111vw !important;
 }
 
 .w-2\/9 {
@@ -24150,7 +24150,7 @@ i.icon.large {
 }
 
 .w-screen-2\/9 {
-  width: 22.22222vh !important;
+  width: 22.22222vw !important;
 }
 
 .w-3\/9 {
@@ -24158,7 +24158,7 @@ i.icon.large {
 }
 
 .w-screen-3\/9 {
-  width: 33.33333vh !important;
+  width: 33.33333vw !important;
 }
 
 .w-4\/9 {
@@ -24166,7 +24166,7 @@ i.icon.large {
 }
 
 .w-screen-4\/9 {
-  width: 44.44444vh !important;
+  width: 44.44444vw !important;
 }
 
 .w-5\/9 {
@@ -24174,7 +24174,7 @@ i.icon.large {
 }
 
 .w-screen-5\/9 {
-  width: 55.55556vh !important;
+  width: 55.55556vw !important;
 }
 
 .w-6\/9 {
@@ -24182,7 +24182,7 @@ i.icon.large {
 }
 
 .w-screen-6\/9 {
-  width: 66.66667vh !important;
+  width: 66.66667vw !important;
 }
 
 .w-7\/9 {
@@ -24190,7 +24190,7 @@ i.icon.large {
 }
 
 .w-screen-7\/9 {
-  width: 77.77778vh !important;
+  width: 77.77778vw !important;
 }
 
 .w-8\/9 {
@@ -24198,7 +24198,7 @@ i.icon.large {
 }
 
 .w-screen-8\/9 {
-  width: 88.88889vh !important;
+  width: 88.88889vw !important;
 }
 
 .w-9\/9 {
@@ -24206,7 +24206,7 @@ i.icon.large {
 }
 
 .w-screen-9\/9 {
-  width: 100vh !important;
+  width: 100vw !important;
 }
 
 .w-1\/10 {
@@ -24214,7 +24214,7 @@ i.icon.large {
 }
 
 .w-screen-1\/10 {
-  width: 10vh !important;
+  width: 10vw !important;
 }
 
 .w-2\/10 {
@@ -24222,7 +24222,7 @@ i.icon.large {
 }
 
 .w-screen-2\/10 {
-  width: 20vh !important;
+  width: 20vw !important;
 }
 
 .w-3\/10 {
@@ -24230,7 +24230,7 @@ i.icon.large {
 }
 
 .w-screen-3\/10 {
-  width: 30vh !important;
+  width: 30vw !important;
 }
 
 .w-4\/10 {
@@ -24238,7 +24238,7 @@ i.icon.large {
 }
 
 .w-screen-4\/10 {
-  width: 40vh !important;
+  width: 40vw !important;
 }
 
 .w-5\/10 {
@@ -24246,7 +24246,7 @@ i.icon.large {
 }
 
 .w-screen-5\/10 {
-  width: 50vh !important;
+  width: 50vw !important;
 }
 
 .w-6\/10 {
@@ -24254,7 +24254,7 @@ i.icon.large {
 }
 
 .w-screen-6\/10 {
-  width: 60vh !important;
+  width: 60vw !important;
 }
 
 .w-7\/10 {
@@ -24262,7 +24262,7 @@ i.icon.large {
 }
 
 .w-screen-7\/10 {
-  width: 70vh !important;
+  width: 70vw !important;
 }
 
 .w-8\/10 {
@@ -24270,7 +24270,7 @@ i.icon.large {
 }
 
 .w-screen-8\/10 {
-  width: 80vh !important;
+  width: 80vw !important;
 }
 
 .w-9\/10 {
@@ -24278,7 +24278,7 @@ i.icon.large {
 }
 
 .w-screen-9\/10 {
-  width: 90vh !important;
+  width: 90vw !important;
 }
 
 .w-10\/10 {
@@ -24286,7 +24286,7 @@ i.icon.large {
 }
 
 .w-screen-10\/10 {
-  width: 100vh !important;
+  width: 100vw !important;
 }
 
 .w-1\/11 {
@@ -24294,7 +24294,7 @@ i.icon.large {
 }
 
 .w-screen-1\/11 {
-  width: 9.09091vh !important;
+  width: 9.09091vw !important;
 }
 
 .w-2\/11 {
@@ -24302,7 +24302,7 @@ i.icon.large {
 }
 
 .w-screen-2\/11 {
-  width: 18.18182vh !important;
+  width: 18.18182vw !important;
 }
 
 .w-3\/11 {
@@ -24310,7 +24310,7 @@ i.icon.large {
 }
 
 .w-screen-3\/11 {
-  width: 27.27273vh !important;
+  width: 27.27273vw !important;
 }
 
 .w-4\/11 {
@@ -24318,7 +24318,7 @@ i.icon.large {
 }
 
 .w-screen-4\/11 {
-  width: 36.36364vh !important;
+  width: 36.36364vw !important;
 }
 
 .w-5\/11 {
@@ -24326,7 +24326,7 @@ i.icon.large {
 }
 
 .w-screen-5\/11 {
-  width: 45.45455vh !important;
+  width: 45.45455vw !important;
 }
 
 .w-6\/11 {
@@ -24334,7 +24334,7 @@ i.icon.large {
 }
 
 .w-screen-6\/11 {
-  width: 54.54545vh !important;
+  width: 54.54545vw !important;
 }
 
 .w-7\/11 {
@@ -24342,7 +24342,7 @@ i.icon.large {
 }
 
 .w-screen-7\/11 {
-  width: 63.63636vh !important;
+  width: 63.63636vw !important;
 }
 
 .w-8\/11 {
@@ -24350,7 +24350,7 @@ i.icon.large {
 }
 
 .w-screen-8\/11 {
-  width: 72.72727vh !important;
+  width: 72.72727vw !important;
 }
 
 .w-9\/11 {
@@ -24358,7 +24358,7 @@ i.icon.large {
 }
 
 .w-screen-9\/11 {
-  width: 81.81818vh !important;
+  width: 81.81818vw !important;
 }
 
 .w-10\/11 {
@@ -24366,7 +24366,7 @@ i.icon.large {
 }
 
 .w-screen-10\/11 {
-  width: 90.90909vh !important;
+  width: 90.90909vw !important;
 }
 
 .w-11\/11 {
@@ -24374,7 +24374,7 @@ i.icon.large {
 }
 
 .w-screen-11\/11 {
-  width: 100vh !important;
+  width: 100vw !important;
 }
 
 .w-1\/12 {
@@ -24382,7 +24382,7 @@ i.icon.large {
 }
 
 .w-screen-1\/12 {
-  width: 8.33333vh !important;
+  width: 8.33333vw !important;
 }
 
 .w-2\/12 {
@@ -24390,7 +24390,7 @@ i.icon.large {
 }
 
 .w-screen-2\/12 {
-  width: 16.66667vh !important;
+  width: 16.66667vw !important;
 }
 
 .w-3\/12 {
@@ -24398,7 +24398,7 @@ i.icon.large {
 }
 
 .w-screen-3\/12 {
-  width: 25vh !important;
+  width: 25vw !important;
 }
 
 .w-4\/12 {
@@ -24406,7 +24406,7 @@ i.icon.large {
 }
 
 .w-screen-4\/12 {
-  width: 33.33333vh !important;
+  width: 33.33333vw !important;
 }
 
 .w-5\/12 {
@@ -24414,7 +24414,7 @@ i.icon.large {
 }
 
 .w-screen-5\/12 {
-  width: 41.66667vh !important;
+  width: 41.66667vw !important;
 }
 
 .w-6\/12 {
@@ -24422,7 +24422,7 @@ i.icon.large {
 }
 
 .w-screen-6\/12 {
-  width: 50vh !important;
+  width: 50vw !important;
 }
 
 .w-7\/12 {
@@ -24430,7 +24430,7 @@ i.icon.large {
 }
 
 .w-screen-7\/12 {
-  width: 58.33333vh !important;
+  width: 58.33333vw !important;
 }
 
 .w-8\/12 {
@@ -24438,7 +24438,7 @@ i.icon.large {
 }
 
 .w-screen-8\/12 {
-  width: 66.66667vh !important;
+  width: 66.66667vw !important;
 }
 
 .w-9\/12 {
@@ -24446,7 +24446,7 @@ i.icon.large {
 }
 
 .w-screen-9\/12 {
-  width: 75vh !important;
+  width: 75vw !important;
 }
 
 .w-10\/12 {
@@ -24454,7 +24454,7 @@ i.icon.large {
 }
 
 .w-screen-10\/12 {
-  width: 83.33333vh !important;
+  width: 83.33333vw !important;
 }
 
 .w-11\/12 {
@@ -24462,7 +24462,7 @@ i.icon.large {
 }
 
 .w-screen-11\/12 {
-  width: 91.66667vh !important;
+  width: 91.66667vw !important;
 }
 
 .w-12\/12 {
@@ -24470,7 +24470,7 @@ i.icon.large {
 }
 
 .w-screen-12\/12 {
-  width: 100vh !important;
+  width: 100vw !important;
 }
 
 .w-min {
@@ -24496,469 +24496,469 @@ i.icon.large {
     width: 100% !important;
   }
   .sm\:w-screen-1\/1, .sm\:w-screen-full {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .sm\:w-1\/2, .sm\:w-half {
     width: 50% !important;
   }
   .sm\:w-screen-1\/2, .sm\:w-screen-half {
-    width: 50vh !important;
+    width: 50vw !important;
   }
   .sm\:w-2\/2 {
     width: 100% !important;
   }
   .sm\:w-screen-2\/2 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .sm\:w-1\/3 {
     width: 33.33333% !important;
   }
   .sm\:w-screen-1\/3 {
-    width: 33.33333vh !important;
+    width: 33.33333vw !important;
   }
   .sm\:w-2\/3 {
     width: 66.66667% !important;
   }
   .sm\:w-screen-2\/3 {
-    width: 66.66667vh !important;
+    width: 66.66667vw !important;
   }
   .sm\:w-3\/3 {
     width: 100% !important;
   }
   .sm\:w-screen-3\/3 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .sm\:w-1\/4 {
     width: 25% !important;
   }
   .sm\:w-screen-1\/4 {
-    width: 25vh !important;
+    width: 25vw !important;
   }
   .sm\:w-2\/4 {
     width: 50% !important;
   }
   .sm\:w-screen-2\/4 {
-    width: 50vh !important;
+    width: 50vw !important;
   }
   .sm\:w-3\/4 {
     width: 75% !important;
   }
   .sm\:w-screen-3\/4 {
-    width: 75vh !important;
+    width: 75vw !important;
   }
   .sm\:w-4\/4 {
     width: 100% !important;
   }
   .sm\:w-screen-4\/4 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .sm\:w-1\/5 {
     width: 20% !important;
   }
   .sm\:w-screen-1\/5 {
-    width: 20vh !important;
+    width: 20vw !important;
   }
   .sm\:w-2\/5 {
     width: 40% !important;
   }
   .sm\:w-screen-2\/5 {
-    width: 40vh !important;
+    width: 40vw !important;
   }
   .sm\:w-3\/5 {
     width: 60% !important;
   }
   .sm\:w-screen-3\/5 {
-    width: 60vh !important;
+    width: 60vw !important;
   }
   .sm\:w-4\/5 {
     width: 80% !important;
   }
   .sm\:w-screen-4\/5 {
-    width: 80vh !important;
+    width: 80vw !important;
   }
   .sm\:w-5\/5 {
     width: 100% !important;
   }
   .sm\:w-screen-5\/5 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .sm\:w-1\/6 {
     width: 16.66667% !important;
   }
   .sm\:w-screen-1\/6 {
-    width: 16.66667vh !important;
+    width: 16.66667vw !important;
   }
   .sm\:w-2\/6 {
     width: 33.33333% !important;
   }
   .sm\:w-screen-2\/6 {
-    width: 33.33333vh !important;
+    width: 33.33333vw !important;
   }
   .sm\:w-3\/6 {
     width: 50% !important;
   }
   .sm\:w-screen-3\/6 {
-    width: 50vh !important;
+    width: 50vw !important;
   }
   .sm\:w-4\/6 {
     width: 66.66667% !important;
   }
   .sm\:w-screen-4\/6 {
-    width: 66.66667vh !important;
+    width: 66.66667vw !important;
   }
   .sm\:w-5\/6 {
     width: 83.33333% !important;
   }
   .sm\:w-screen-5\/6 {
-    width: 83.33333vh !important;
+    width: 83.33333vw !important;
   }
   .sm\:w-6\/6 {
     width: 100% !important;
   }
   .sm\:w-screen-6\/6 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .sm\:w-1\/7 {
     width: 14.28571% !important;
   }
   .sm\:w-screen-1\/7 {
-    width: 14.28571vh !important;
+    width: 14.28571vw !important;
   }
   .sm\:w-2\/7 {
     width: 28.57143% !important;
   }
   .sm\:w-screen-2\/7 {
-    width: 28.57143vh !important;
+    width: 28.57143vw !important;
   }
   .sm\:w-3\/7 {
     width: 42.85714% !important;
   }
   .sm\:w-screen-3\/7 {
-    width: 42.85714vh !important;
+    width: 42.85714vw !important;
   }
   .sm\:w-4\/7 {
     width: 57.14286% !important;
   }
   .sm\:w-screen-4\/7 {
-    width: 57.14286vh !important;
+    width: 57.14286vw !important;
   }
   .sm\:w-5\/7 {
     width: 71.42857% !important;
   }
   .sm\:w-screen-5\/7 {
-    width: 71.42857vh !important;
+    width: 71.42857vw !important;
   }
   .sm\:w-6\/7 {
     width: 85.71429% !important;
   }
   .sm\:w-screen-6\/7 {
-    width: 85.71429vh !important;
+    width: 85.71429vw !important;
   }
   .sm\:w-7\/7 {
     width: 100% !important;
   }
   .sm\:w-screen-7\/7 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .sm\:w-1\/8 {
     width: 12.5% !important;
   }
   .sm\:w-screen-1\/8 {
-    width: 12.5vh !important;
+    width: 12.5vw !important;
   }
   .sm\:w-2\/8 {
     width: 25% !important;
   }
   .sm\:w-screen-2\/8 {
-    width: 25vh !important;
+    width: 25vw !important;
   }
   .sm\:w-3\/8 {
     width: 37.5% !important;
   }
   .sm\:w-screen-3\/8 {
-    width: 37.5vh !important;
+    width: 37.5vw !important;
   }
   .sm\:w-4\/8 {
     width: 50% !important;
   }
   .sm\:w-screen-4\/8 {
-    width: 50vh !important;
+    width: 50vw !important;
   }
   .sm\:w-5\/8 {
     width: 62.5% !important;
   }
   .sm\:w-screen-5\/8 {
-    width: 62.5vh !important;
+    width: 62.5vw !important;
   }
   .sm\:w-6\/8 {
     width: 75% !important;
   }
   .sm\:w-screen-6\/8 {
-    width: 75vh !important;
+    width: 75vw !important;
   }
   .sm\:w-7\/8 {
     width: 87.5% !important;
   }
   .sm\:w-screen-7\/8 {
-    width: 87.5vh !important;
+    width: 87.5vw !important;
   }
   .sm\:w-8\/8 {
     width: 100% !important;
   }
   .sm\:w-screen-8\/8 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .sm\:w-1\/9 {
     width: 11.11111% !important;
   }
   .sm\:w-screen-1\/9 {
-    width: 11.11111vh !important;
+    width: 11.11111vw !important;
   }
   .sm\:w-2\/9 {
     width: 22.22222% !important;
   }
   .sm\:w-screen-2\/9 {
-    width: 22.22222vh !important;
+    width: 22.22222vw !important;
   }
   .sm\:w-3\/9 {
     width: 33.33333% !important;
   }
   .sm\:w-screen-3\/9 {
-    width: 33.33333vh !important;
+    width: 33.33333vw !important;
   }
   .sm\:w-4\/9 {
     width: 44.44444% !important;
   }
   .sm\:w-screen-4\/9 {
-    width: 44.44444vh !important;
+    width: 44.44444vw !important;
   }
   .sm\:w-5\/9 {
     width: 55.55556% !important;
   }
   .sm\:w-screen-5\/9 {
-    width: 55.55556vh !important;
+    width: 55.55556vw !important;
   }
   .sm\:w-6\/9 {
     width: 66.66667% !important;
   }
   .sm\:w-screen-6\/9 {
-    width: 66.66667vh !important;
+    width: 66.66667vw !important;
   }
   .sm\:w-7\/9 {
     width: 77.77778% !important;
   }
   .sm\:w-screen-7\/9 {
-    width: 77.77778vh !important;
+    width: 77.77778vw !important;
   }
   .sm\:w-8\/9 {
     width: 88.88889% !important;
   }
   .sm\:w-screen-8\/9 {
-    width: 88.88889vh !important;
+    width: 88.88889vw !important;
   }
   .sm\:w-9\/9 {
     width: 100% !important;
   }
   .sm\:w-screen-9\/9 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .sm\:w-1\/10 {
     width: 10% !important;
   }
   .sm\:w-screen-1\/10 {
-    width: 10vh !important;
+    width: 10vw !important;
   }
   .sm\:w-2\/10 {
     width: 20% !important;
   }
   .sm\:w-screen-2\/10 {
-    width: 20vh !important;
+    width: 20vw !important;
   }
   .sm\:w-3\/10 {
     width: 30% !important;
   }
   .sm\:w-screen-3\/10 {
-    width: 30vh !important;
+    width: 30vw !important;
   }
   .sm\:w-4\/10 {
     width: 40% !important;
   }
   .sm\:w-screen-4\/10 {
-    width: 40vh !important;
+    width: 40vw !important;
   }
   .sm\:w-5\/10 {
     width: 50% !important;
   }
   .sm\:w-screen-5\/10 {
-    width: 50vh !important;
+    width: 50vw !important;
   }
   .sm\:w-6\/10 {
     width: 60% !important;
   }
   .sm\:w-screen-6\/10 {
-    width: 60vh !important;
+    width: 60vw !important;
   }
   .sm\:w-7\/10 {
     width: 70% !important;
   }
   .sm\:w-screen-7\/10 {
-    width: 70vh !important;
+    width: 70vw !important;
   }
   .sm\:w-8\/10 {
     width: 80% !important;
   }
   .sm\:w-screen-8\/10 {
-    width: 80vh !important;
+    width: 80vw !important;
   }
   .sm\:w-9\/10 {
     width: 90% !important;
   }
   .sm\:w-screen-9\/10 {
-    width: 90vh !important;
+    width: 90vw !important;
   }
   .sm\:w-10\/10 {
     width: 100% !important;
   }
   .sm\:w-screen-10\/10 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .sm\:w-1\/11 {
     width: 9.09091% !important;
   }
   .sm\:w-screen-1\/11 {
-    width: 9.09091vh !important;
+    width: 9.09091vw !important;
   }
   .sm\:w-2\/11 {
     width: 18.18182% !important;
   }
   .sm\:w-screen-2\/11 {
-    width: 18.18182vh !important;
+    width: 18.18182vw !important;
   }
   .sm\:w-3\/11 {
     width: 27.27273% !important;
   }
   .sm\:w-screen-3\/11 {
-    width: 27.27273vh !important;
+    width: 27.27273vw !important;
   }
   .sm\:w-4\/11 {
     width: 36.36364% !important;
   }
   .sm\:w-screen-4\/11 {
-    width: 36.36364vh !important;
+    width: 36.36364vw !important;
   }
   .sm\:w-5\/11 {
     width: 45.45455% !important;
   }
   .sm\:w-screen-5\/11 {
-    width: 45.45455vh !important;
+    width: 45.45455vw !important;
   }
   .sm\:w-6\/11 {
     width: 54.54545% !important;
   }
   .sm\:w-screen-6\/11 {
-    width: 54.54545vh !important;
+    width: 54.54545vw !important;
   }
   .sm\:w-7\/11 {
     width: 63.63636% !important;
   }
   .sm\:w-screen-7\/11 {
-    width: 63.63636vh !important;
+    width: 63.63636vw !important;
   }
   .sm\:w-8\/11 {
     width: 72.72727% !important;
   }
   .sm\:w-screen-8\/11 {
-    width: 72.72727vh !important;
+    width: 72.72727vw !important;
   }
   .sm\:w-9\/11 {
     width: 81.81818% !important;
   }
   .sm\:w-screen-9\/11 {
-    width: 81.81818vh !important;
+    width: 81.81818vw !important;
   }
   .sm\:w-10\/11 {
     width: 90.90909% !important;
   }
   .sm\:w-screen-10\/11 {
-    width: 90.90909vh !important;
+    width: 90.90909vw !important;
   }
   .sm\:w-11\/11 {
     width: 100% !important;
   }
   .sm\:w-screen-11\/11 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .sm\:w-1\/12 {
     width: 8.33333% !important;
   }
   .sm\:w-screen-1\/12 {
-    width: 8.33333vh !important;
+    width: 8.33333vw !important;
   }
   .sm\:w-2\/12 {
     width: 16.66667% !important;
   }
   .sm\:w-screen-2\/12 {
-    width: 16.66667vh !important;
+    width: 16.66667vw !important;
   }
   .sm\:w-3\/12 {
     width: 25% !important;
   }
   .sm\:w-screen-3\/12 {
-    width: 25vh !important;
+    width: 25vw !important;
   }
   .sm\:w-4\/12 {
     width: 33.33333% !important;
   }
   .sm\:w-screen-4\/12 {
-    width: 33.33333vh !important;
+    width: 33.33333vw !important;
   }
   .sm\:w-5\/12 {
     width: 41.66667% !important;
   }
   .sm\:w-screen-5\/12 {
-    width: 41.66667vh !important;
+    width: 41.66667vw !important;
   }
   .sm\:w-6\/12 {
     width: 50% !important;
   }
   .sm\:w-screen-6\/12 {
-    width: 50vh !important;
+    width: 50vw !important;
   }
   .sm\:w-7\/12 {
     width: 58.33333% !important;
   }
   .sm\:w-screen-7\/12 {
-    width: 58.33333vh !important;
+    width: 58.33333vw !important;
   }
   .sm\:w-8\/12 {
     width: 66.66667% !important;
   }
   .sm\:w-screen-8\/12 {
-    width: 66.66667vh !important;
+    width: 66.66667vw !important;
   }
   .sm\:w-9\/12 {
     width: 75% !important;
   }
   .sm\:w-screen-9\/12 {
-    width: 75vh !important;
+    width: 75vw !important;
   }
   .sm\:w-10\/12 {
     width: 83.33333% !important;
   }
   .sm\:w-screen-10\/12 {
-    width: 83.33333vh !important;
+    width: 83.33333vw !important;
   }
   .sm\:w-11\/12 {
     width: 91.66667% !important;
   }
   .sm\:w-screen-11\/12 {
-    width: 91.66667vh !important;
+    width: 91.66667vw !important;
   }
   .sm\:w-12\/12 {
     width: 100% !important;
   }
   .sm\:w-screen-12\/12 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .sm\:w-auto {
     width: auto !important;
@@ -24988,469 +24988,469 @@ i.icon.large {
     width: 100% !important;
   }
   .md\:w-screen-1\/1, .md\:w-screen-full {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .md\:w-1\/2, .md\:w-half {
     width: 50% !important;
   }
   .md\:w-screen-1\/2, .md\:w-screen-half {
-    width: 50vh !important;
+    width: 50vw !important;
   }
   .md\:w-2\/2 {
     width: 100% !important;
   }
   .md\:w-screen-2\/2 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .md\:w-1\/3 {
     width: 33.33333% !important;
   }
   .md\:w-screen-1\/3 {
-    width: 33.33333vh !important;
+    width: 33.33333vw !important;
   }
   .md\:w-2\/3 {
     width: 66.66667% !important;
   }
   .md\:w-screen-2\/3 {
-    width: 66.66667vh !important;
+    width: 66.66667vw !important;
   }
   .md\:w-3\/3 {
     width: 100% !important;
   }
   .md\:w-screen-3\/3 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .md\:w-1\/4 {
     width: 25% !important;
   }
   .md\:w-screen-1\/4 {
-    width: 25vh !important;
+    width: 25vw !important;
   }
   .md\:w-2\/4 {
     width: 50% !important;
   }
   .md\:w-screen-2\/4 {
-    width: 50vh !important;
+    width: 50vw !important;
   }
   .md\:w-3\/4 {
     width: 75% !important;
   }
   .md\:w-screen-3\/4 {
-    width: 75vh !important;
+    width: 75vw !important;
   }
   .md\:w-4\/4 {
     width: 100% !important;
   }
   .md\:w-screen-4\/4 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .md\:w-1\/5 {
     width: 20% !important;
   }
   .md\:w-screen-1\/5 {
-    width: 20vh !important;
+    width: 20vw !important;
   }
   .md\:w-2\/5 {
     width: 40% !important;
   }
   .md\:w-screen-2\/5 {
-    width: 40vh !important;
+    width: 40vw !important;
   }
   .md\:w-3\/5 {
     width: 60% !important;
   }
   .md\:w-screen-3\/5 {
-    width: 60vh !important;
+    width: 60vw !important;
   }
   .md\:w-4\/5 {
     width: 80% !important;
   }
   .md\:w-screen-4\/5 {
-    width: 80vh !important;
+    width: 80vw !important;
   }
   .md\:w-5\/5 {
     width: 100% !important;
   }
   .md\:w-screen-5\/5 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .md\:w-1\/6 {
     width: 16.66667% !important;
   }
   .md\:w-screen-1\/6 {
-    width: 16.66667vh !important;
+    width: 16.66667vw !important;
   }
   .md\:w-2\/6 {
     width: 33.33333% !important;
   }
   .md\:w-screen-2\/6 {
-    width: 33.33333vh !important;
+    width: 33.33333vw !important;
   }
   .md\:w-3\/6 {
     width: 50% !important;
   }
   .md\:w-screen-3\/6 {
-    width: 50vh !important;
+    width: 50vw !important;
   }
   .md\:w-4\/6 {
     width: 66.66667% !important;
   }
   .md\:w-screen-4\/6 {
-    width: 66.66667vh !important;
+    width: 66.66667vw !important;
   }
   .md\:w-5\/6 {
     width: 83.33333% !important;
   }
   .md\:w-screen-5\/6 {
-    width: 83.33333vh !important;
+    width: 83.33333vw !important;
   }
   .md\:w-6\/6 {
     width: 100% !important;
   }
   .md\:w-screen-6\/6 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .md\:w-1\/7 {
     width: 14.28571% !important;
   }
   .md\:w-screen-1\/7 {
-    width: 14.28571vh !important;
+    width: 14.28571vw !important;
   }
   .md\:w-2\/7 {
     width: 28.57143% !important;
   }
   .md\:w-screen-2\/7 {
-    width: 28.57143vh !important;
+    width: 28.57143vw !important;
   }
   .md\:w-3\/7 {
     width: 42.85714% !important;
   }
   .md\:w-screen-3\/7 {
-    width: 42.85714vh !important;
+    width: 42.85714vw !important;
   }
   .md\:w-4\/7 {
     width: 57.14286% !important;
   }
   .md\:w-screen-4\/7 {
-    width: 57.14286vh !important;
+    width: 57.14286vw !important;
   }
   .md\:w-5\/7 {
     width: 71.42857% !important;
   }
   .md\:w-screen-5\/7 {
-    width: 71.42857vh !important;
+    width: 71.42857vw !important;
   }
   .md\:w-6\/7 {
     width: 85.71429% !important;
   }
   .md\:w-screen-6\/7 {
-    width: 85.71429vh !important;
+    width: 85.71429vw !important;
   }
   .md\:w-7\/7 {
     width: 100% !important;
   }
   .md\:w-screen-7\/7 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .md\:w-1\/8 {
     width: 12.5% !important;
   }
   .md\:w-screen-1\/8 {
-    width: 12.5vh !important;
+    width: 12.5vw !important;
   }
   .md\:w-2\/8 {
     width: 25% !important;
   }
   .md\:w-screen-2\/8 {
-    width: 25vh !important;
+    width: 25vw !important;
   }
   .md\:w-3\/8 {
     width: 37.5% !important;
   }
   .md\:w-screen-3\/8 {
-    width: 37.5vh !important;
+    width: 37.5vw !important;
   }
   .md\:w-4\/8 {
     width: 50% !important;
   }
   .md\:w-screen-4\/8 {
-    width: 50vh !important;
+    width: 50vw !important;
   }
   .md\:w-5\/8 {
     width: 62.5% !important;
   }
   .md\:w-screen-5\/8 {
-    width: 62.5vh !important;
+    width: 62.5vw !important;
   }
   .md\:w-6\/8 {
     width: 75% !important;
   }
   .md\:w-screen-6\/8 {
-    width: 75vh !important;
+    width: 75vw !important;
   }
   .md\:w-7\/8 {
     width: 87.5% !important;
   }
   .md\:w-screen-7\/8 {
-    width: 87.5vh !important;
+    width: 87.5vw !important;
   }
   .md\:w-8\/8 {
     width: 100% !important;
   }
   .md\:w-screen-8\/8 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .md\:w-1\/9 {
     width: 11.11111% !important;
   }
   .md\:w-screen-1\/9 {
-    width: 11.11111vh !important;
+    width: 11.11111vw !important;
   }
   .md\:w-2\/9 {
     width: 22.22222% !important;
   }
   .md\:w-screen-2\/9 {
-    width: 22.22222vh !important;
+    width: 22.22222vw !important;
   }
   .md\:w-3\/9 {
     width: 33.33333% !important;
   }
   .md\:w-screen-3\/9 {
-    width: 33.33333vh !important;
+    width: 33.33333vw !important;
   }
   .md\:w-4\/9 {
     width: 44.44444% !important;
   }
   .md\:w-screen-4\/9 {
-    width: 44.44444vh !important;
+    width: 44.44444vw !important;
   }
   .md\:w-5\/9 {
     width: 55.55556% !important;
   }
   .md\:w-screen-5\/9 {
-    width: 55.55556vh !important;
+    width: 55.55556vw !important;
   }
   .md\:w-6\/9 {
     width: 66.66667% !important;
   }
   .md\:w-screen-6\/9 {
-    width: 66.66667vh !important;
+    width: 66.66667vw !important;
   }
   .md\:w-7\/9 {
     width: 77.77778% !important;
   }
   .md\:w-screen-7\/9 {
-    width: 77.77778vh !important;
+    width: 77.77778vw !important;
   }
   .md\:w-8\/9 {
     width: 88.88889% !important;
   }
   .md\:w-screen-8\/9 {
-    width: 88.88889vh !important;
+    width: 88.88889vw !important;
   }
   .md\:w-9\/9 {
     width: 100% !important;
   }
   .md\:w-screen-9\/9 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .md\:w-1\/10 {
     width: 10% !important;
   }
   .md\:w-screen-1\/10 {
-    width: 10vh !important;
+    width: 10vw !important;
   }
   .md\:w-2\/10 {
     width: 20% !important;
   }
   .md\:w-screen-2\/10 {
-    width: 20vh !important;
+    width: 20vw !important;
   }
   .md\:w-3\/10 {
     width: 30% !important;
   }
   .md\:w-screen-3\/10 {
-    width: 30vh !important;
+    width: 30vw !important;
   }
   .md\:w-4\/10 {
     width: 40% !important;
   }
   .md\:w-screen-4\/10 {
-    width: 40vh !important;
+    width: 40vw !important;
   }
   .md\:w-5\/10 {
     width: 50% !important;
   }
   .md\:w-screen-5\/10 {
-    width: 50vh !important;
+    width: 50vw !important;
   }
   .md\:w-6\/10 {
     width: 60% !important;
   }
   .md\:w-screen-6\/10 {
-    width: 60vh !important;
+    width: 60vw !important;
   }
   .md\:w-7\/10 {
     width: 70% !important;
   }
   .md\:w-screen-7\/10 {
-    width: 70vh !important;
+    width: 70vw !important;
   }
   .md\:w-8\/10 {
     width: 80% !important;
   }
   .md\:w-screen-8\/10 {
-    width: 80vh !important;
+    width: 80vw !important;
   }
   .md\:w-9\/10 {
     width: 90% !important;
   }
   .md\:w-screen-9\/10 {
-    width: 90vh !important;
+    width: 90vw !important;
   }
   .md\:w-10\/10 {
     width: 100% !important;
   }
   .md\:w-screen-10\/10 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .md\:w-1\/11 {
     width: 9.09091% !important;
   }
   .md\:w-screen-1\/11 {
-    width: 9.09091vh !important;
+    width: 9.09091vw !important;
   }
   .md\:w-2\/11 {
     width: 18.18182% !important;
   }
   .md\:w-screen-2\/11 {
-    width: 18.18182vh !important;
+    width: 18.18182vw !important;
   }
   .md\:w-3\/11 {
     width: 27.27273% !important;
   }
   .md\:w-screen-3\/11 {
-    width: 27.27273vh !important;
+    width: 27.27273vw !important;
   }
   .md\:w-4\/11 {
     width: 36.36364% !important;
   }
   .md\:w-screen-4\/11 {
-    width: 36.36364vh !important;
+    width: 36.36364vw !important;
   }
   .md\:w-5\/11 {
     width: 45.45455% !important;
   }
   .md\:w-screen-5\/11 {
-    width: 45.45455vh !important;
+    width: 45.45455vw !important;
   }
   .md\:w-6\/11 {
     width: 54.54545% !important;
   }
   .md\:w-screen-6\/11 {
-    width: 54.54545vh !important;
+    width: 54.54545vw !important;
   }
   .md\:w-7\/11 {
     width: 63.63636% !important;
   }
   .md\:w-screen-7\/11 {
-    width: 63.63636vh !important;
+    width: 63.63636vw !important;
   }
   .md\:w-8\/11 {
     width: 72.72727% !important;
   }
   .md\:w-screen-8\/11 {
-    width: 72.72727vh !important;
+    width: 72.72727vw !important;
   }
   .md\:w-9\/11 {
     width: 81.81818% !important;
   }
   .md\:w-screen-9\/11 {
-    width: 81.81818vh !important;
+    width: 81.81818vw !important;
   }
   .md\:w-10\/11 {
     width: 90.90909% !important;
   }
   .md\:w-screen-10\/11 {
-    width: 90.90909vh !important;
+    width: 90.90909vw !important;
   }
   .md\:w-11\/11 {
     width: 100% !important;
   }
   .md\:w-screen-11\/11 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .md\:w-1\/12 {
     width: 8.33333% !important;
   }
   .md\:w-screen-1\/12 {
-    width: 8.33333vh !important;
+    width: 8.33333vw !important;
   }
   .md\:w-2\/12 {
     width: 16.66667% !important;
   }
   .md\:w-screen-2\/12 {
-    width: 16.66667vh !important;
+    width: 16.66667vw !important;
   }
   .md\:w-3\/12 {
     width: 25% !important;
   }
   .md\:w-screen-3\/12 {
-    width: 25vh !important;
+    width: 25vw !important;
   }
   .md\:w-4\/12 {
     width: 33.33333% !important;
   }
   .md\:w-screen-4\/12 {
-    width: 33.33333vh !important;
+    width: 33.33333vw !important;
   }
   .md\:w-5\/12 {
     width: 41.66667% !important;
   }
   .md\:w-screen-5\/12 {
-    width: 41.66667vh !important;
+    width: 41.66667vw !important;
   }
   .md\:w-6\/12 {
     width: 50% !important;
   }
   .md\:w-screen-6\/12 {
-    width: 50vh !important;
+    width: 50vw !important;
   }
   .md\:w-7\/12 {
     width: 58.33333% !important;
   }
   .md\:w-screen-7\/12 {
-    width: 58.33333vh !important;
+    width: 58.33333vw !important;
   }
   .md\:w-8\/12 {
     width: 66.66667% !important;
   }
   .md\:w-screen-8\/12 {
-    width: 66.66667vh !important;
+    width: 66.66667vw !important;
   }
   .md\:w-9\/12 {
     width: 75% !important;
   }
   .md\:w-screen-9\/12 {
-    width: 75vh !important;
+    width: 75vw !important;
   }
   .md\:w-10\/12 {
     width: 83.33333% !important;
   }
   .md\:w-screen-10\/12 {
-    width: 83.33333vh !important;
+    width: 83.33333vw !important;
   }
   .md\:w-11\/12 {
     width: 91.66667% !important;
   }
   .md\:w-screen-11\/12 {
-    width: 91.66667vh !important;
+    width: 91.66667vw !important;
   }
   .md\:w-12\/12 {
     width: 100% !important;
   }
   .md\:w-screen-12\/12 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .md\:w-auto {
     width: auto !important;
@@ -25480,469 +25480,469 @@ i.icon.large {
     width: 100% !important;
   }
   .lg\:w-screen-1\/1, .lg\:w-screen-full {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .lg\:w-1\/2, .lg\:w-half {
     width: 50% !important;
   }
   .lg\:w-screen-1\/2, .lg\:w-screen-half {
-    width: 50vh !important;
+    width: 50vw !important;
   }
   .lg\:w-2\/2 {
     width: 100% !important;
   }
   .lg\:w-screen-2\/2 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .lg\:w-1\/3 {
     width: 33.33333% !important;
   }
   .lg\:w-screen-1\/3 {
-    width: 33.33333vh !important;
+    width: 33.33333vw !important;
   }
   .lg\:w-2\/3 {
     width: 66.66667% !important;
   }
   .lg\:w-screen-2\/3 {
-    width: 66.66667vh !important;
+    width: 66.66667vw !important;
   }
   .lg\:w-3\/3 {
     width: 100% !important;
   }
   .lg\:w-screen-3\/3 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .lg\:w-1\/4 {
     width: 25% !important;
   }
   .lg\:w-screen-1\/4 {
-    width: 25vh !important;
+    width: 25vw !important;
   }
   .lg\:w-2\/4 {
     width: 50% !important;
   }
   .lg\:w-screen-2\/4 {
-    width: 50vh !important;
+    width: 50vw !important;
   }
   .lg\:w-3\/4 {
     width: 75% !important;
   }
   .lg\:w-screen-3\/4 {
-    width: 75vh !important;
+    width: 75vw !important;
   }
   .lg\:w-4\/4 {
     width: 100% !important;
   }
   .lg\:w-screen-4\/4 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .lg\:w-1\/5 {
     width: 20% !important;
   }
   .lg\:w-screen-1\/5 {
-    width: 20vh !important;
+    width: 20vw !important;
   }
   .lg\:w-2\/5 {
     width: 40% !important;
   }
   .lg\:w-screen-2\/5 {
-    width: 40vh !important;
+    width: 40vw !important;
   }
   .lg\:w-3\/5 {
     width: 60% !important;
   }
   .lg\:w-screen-3\/5 {
-    width: 60vh !important;
+    width: 60vw !important;
   }
   .lg\:w-4\/5 {
     width: 80% !important;
   }
   .lg\:w-screen-4\/5 {
-    width: 80vh !important;
+    width: 80vw !important;
   }
   .lg\:w-5\/5 {
     width: 100% !important;
   }
   .lg\:w-screen-5\/5 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .lg\:w-1\/6 {
     width: 16.66667% !important;
   }
   .lg\:w-screen-1\/6 {
-    width: 16.66667vh !important;
+    width: 16.66667vw !important;
   }
   .lg\:w-2\/6 {
     width: 33.33333% !important;
   }
   .lg\:w-screen-2\/6 {
-    width: 33.33333vh !important;
+    width: 33.33333vw !important;
   }
   .lg\:w-3\/6 {
     width: 50% !important;
   }
   .lg\:w-screen-3\/6 {
-    width: 50vh !important;
+    width: 50vw !important;
   }
   .lg\:w-4\/6 {
     width: 66.66667% !important;
   }
   .lg\:w-screen-4\/6 {
-    width: 66.66667vh !important;
+    width: 66.66667vw !important;
   }
   .lg\:w-5\/6 {
     width: 83.33333% !important;
   }
   .lg\:w-screen-5\/6 {
-    width: 83.33333vh !important;
+    width: 83.33333vw !important;
   }
   .lg\:w-6\/6 {
     width: 100% !important;
   }
   .lg\:w-screen-6\/6 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .lg\:w-1\/7 {
     width: 14.28571% !important;
   }
   .lg\:w-screen-1\/7 {
-    width: 14.28571vh !important;
+    width: 14.28571vw !important;
   }
   .lg\:w-2\/7 {
     width: 28.57143% !important;
   }
   .lg\:w-screen-2\/7 {
-    width: 28.57143vh !important;
+    width: 28.57143vw !important;
   }
   .lg\:w-3\/7 {
     width: 42.85714% !important;
   }
   .lg\:w-screen-3\/7 {
-    width: 42.85714vh !important;
+    width: 42.85714vw !important;
   }
   .lg\:w-4\/7 {
     width: 57.14286% !important;
   }
   .lg\:w-screen-4\/7 {
-    width: 57.14286vh !important;
+    width: 57.14286vw !important;
   }
   .lg\:w-5\/7 {
     width: 71.42857% !important;
   }
   .lg\:w-screen-5\/7 {
-    width: 71.42857vh !important;
+    width: 71.42857vw !important;
   }
   .lg\:w-6\/7 {
     width: 85.71429% !important;
   }
   .lg\:w-screen-6\/7 {
-    width: 85.71429vh !important;
+    width: 85.71429vw !important;
   }
   .lg\:w-7\/7 {
     width: 100% !important;
   }
   .lg\:w-screen-7\/7 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .lg\:w-1\/8 {
     width: 12.5% !important;
   }
   .lg\:w-screen-1\/8 {
-    width: 12.5vh !important;
+    width: 12.5vw !important;
   }
   .lg\:w-2\/8 {
     width: 25% !important;
   }
   .lg\:w-screen-2\/8 {
-    width: 25vh !important;
+    width: 25vw !important;
   }
   .lg\:w-3\/8 {
     width: 37.5% !important;
   }
   .lg\:w-screen-3\/8 {
-    width: 37.5vh !important;
+    width: 37.5vw !important;
   }
   .lg\:w-4\/8 {
     width: 50% !important;
   }
   .lg\:w-screen-4\/8 {
-    width: 50vh !important;
+    width: 50vw !important;
   }
   .lg\:w-5\/8 {
     width: 62.5% !important;
   }
   .lg\:w-screen-5\/8 {
-    width: 62.5vh !important;
+    width: 62.5vw !important;
   }
   .lg\:w-6\/8 {
     width: 75% !important;
   }
   .lg\:w-screen-6\/8 {
-    width: 75vh !important;
+    width: 75vw !important;
   }
   .lg\:w-7\/8 {
     width: 87.5% !important;
   }
   .lg\:w-screen-7\/8 {
-    width: 87.5vh !important;
+    width: 87.5vw !important;
   }
   .lg\:w-8\/8 {
     width: 100% !important;
   }
   .lg\:w-screen-8\/8 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .lg\:w-1\/9 {
     width: 11.11111% !important;
   }
   .lg\:w-screen-1\/9 {
-    width: 11.11111vh !important;
+    width: 11.11111vw !important;
   }
   .lg\:w-2\/9 {
     width: 22.22222% !important;
   }
   .lg\:w-screen-2\/9 {
-    width: 22.22222vh !important;
+    width: 22.22222vw !important;
   }
   .lg\:w-3\/9 {
     width: 33.33333% !important;
   }
   .lg\:w-screen-3\/9 {
-    width: 33.33333vh !important;
+    width: 33.33333vw !important;
   }
   .lg\:w-4\/9 {
     width: 44.44444% !important;
   }
   .lg\:w-screen-4\/9 {
-    width: 44.44444vh !important;
+    width: 44.44444vw !important;
   }
   .lg\:w-5\/9 {
     width: 55.55556% !important;
   }
   .lg\:w-screen-5\/9 {
-    width: 55.55556vh !important;
+    width: 55.55556vw !important;
   }
   .lg\:w-6\/9 {
     width: 66.66667% !important;
   }
   .lg\:w-screen-6\/9 {
-    width: 66.66667vh !important;
+    width: 66.66667vw !important;
   }
   .lg\:w-7\/9 {
     width: 77.77778% !important;
   }
   .lg\:w-screen-7\/9 {
-    width: 77.77778vh !important;
+    width: 77.77778vw !important;
   }
   .lg\:w-8\/9 {
     width: 88.88889% !important;
   }
   .lg\:w-screen-8\/9 {
-    width: 88.88889vh !important;
+    width: 88.88889vw !important;
   }
   .lg\:w-9\/9 {
     width: 100% !important;
   }
   .lg\:w-screen-9\/9 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .lg\:w-1\/10 {
     width: 10% !important;
   }
   .lg\:w-screen-1\/10 {
-    width: 10vh !important;
+    width: 10vw !important;
   }
   .lg\:w-2\/10 {
     width: 20% !important;
   }
   .lg\:w-screen-2\/10 {
-    width: 20vh !important;
+    width: 20vw !important;
   }
   .lg\:w-3\/10 {
     width: 30% !important;
   }
   .lg\:w-screen-3\/10 {
-    width: 30vh !important;
+    width: 30vw !important;
   }
   .lg\:w-4\/10 {
     width: 40% !important;
   }
   .lg\:w-screen-4\/10 {
-    width: 40vh !important;
+    width: 40vw !important;
   }
   .lg\:w-5\/10 {
     width: 50% !important;
   }
   .lg\:w-screen-5\/10 {
-    width: 50vh !important;
+    width: 50vw !important;
   }
   .lg\:w-6\/10 {
     width: 60% !important;
   }
   .lg\:w-screen-6\/10 {
-    width: 60vh !important;
+    width: 60vw !important;
   }
   .lg\:w-7\/10 {
     width: 70% !important;
   }
   .lg\:w-screen-7\/10 {
-    width: 70vh !important;
+    width: 70vw !important;
   }
   .lg\:w-8\/10 {
     width: 80% !important;
   }
   .lg\:w-screen-8\/10 {
-    width: 80vh !important;
+    width: 80vw !important;
   }
   .lg\:w-9\/10 {
     width: 90% !important;
   }
   .lg\:w-screen-9\/10 {
-    width: 90vh !important;
+    width: 90vw !important;
   }
   .lg\:w-10\/10 {
     width: 100% !important;
   }
   .lg\:w-screen-10\/10 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .lg\:w-1\/11 {
     width: 9.09091% !important;
   }
   .lg\:w-screen-1\/11 {
-    width: 9.09091vh !important;
+    width: 9.09091vw !important;
   }
   .lg\:w-2\/11 {
     width: 18.18182% !important;
   }
   .lg\:w-screen-2\/11 {
-    width: 18.18182vh !important;
+    width: 18.18182vw !important;
   }
   .lg\:w-3\/11 {
     width: 27.27273% !important;
   }
   .lg\:w-screen-3\/11 {
-    width: 27.27273vh !important;
+    width: 27.27273vw !important;
   }
   .lg\:w-4\/11 {
     width: 36.36364% !important;
   }
   .lg\:w-screen-4\/11 {
-    width: 36.36364vh !important;
+    width: 36.36364vw !important;
   }
   .lg\:w-5\/11 {
     width: 45.45455% !important;
   }
   .lg\:w-screen-5\/11 {
-    width: 45.45455vh !important;
+    width: 45.45455vw !important;
   }
   .lg\:w-6\/11 {
     width: 54.54545% !important;
   }
   .lg\:w-screen-6\/11 {
-    width: 54.54545vh !important;
+    width: 54.54545vw !important;
   }
   .lg\:w-7\/11 {
     width: 63.63636% !important;
   }
   .lg\:w-screen-7\/11 {
-    width: 63.63636vh !important;
+    width: 63.63636vw !important;
   }
   .lg\:w-8\/11 {
     width: 72.72727% !important;
   }
   .lg\:w-screen-8\/11 {
-    width: 72.72727vh !important;
+    width: 72.72727vw !important;
   }
   .lg\:w-9\/11 {
     width: 81.81818% !important;
   }
   .lg\:w-screen-9\/11 {
-    width: 81.81818vh !important;
+    width: 81.81818vw !important;
   }
   .lg\:w-10\/11 {
     width: 90.90909% !important;
   }
   .lg\:w-screen-10\/11 {
-    width: 90.90909vh !important;
+    width: 90.90909vw !important;
   }
   .lg\:w-11\/11 {
     width: 100% !important;
   }
   .lg\:w-screen-11\/11 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .lg\:w-1\/12 {
     width: 8.33333% !important;
   }
   .lg\:w-screen-1\/12 {
-    width: 8.33333vh !important;
+    width: 8.33333vw !important;
   }
   .lg\:w-2\/12 {
     width: 16.66667% !important;
   }
   .lg\:w-screen-2\/12 {
-    width: 16.66667vh !important;
+    width: 16.66667vw !important;
   }
   .lg\:w-3\/12 {
     width: 25% !important;
   }
   .lg\:w-screen-3\/12 {
-    width: 25vh !important;
+    width: 25vw !important;
   }
   .lg\:w-4\/12 {
     width: 33.33333% !important;
   }
   .lg\:w-screen-4\/12 {
-    width: 33.33333vh !important;
+    width: 33.33333vw !important;
   }
   .lg\:w-5\/12 {
     width: 41.66667% !important;
   }
   .lg\:w-screen-5\/12 {
-    width: 41.66667vh !important;
+    width: 41.66667vw !important;
   }
   .lg\:w-6\/12 {
     width: 50% !important;
   }
   .lg\:w-screen-6\/12 {
-    width: 50vh !important;
+    width: 50vw !important;
   }
   .lg\:w-7\/12 {
     width: 58.33333% !important;
   }
   .lg\:w-screen-7\/12 {
-    width: 58.33333vh !important;
+    width: 58.33333vw !important;
   }
   .lg\:w-8\/12 {
     width: 66.66667% !important;
   }
   .lg\:w-screen-8\/12 {
-    width: 66.66667vh !important;
+    width: 66.66667vw !important;
   }
   .lg\:w-9\/12 {
     width: 75% !important;
   }
   .lg\:w-screen-9\/12 {
-    width: 75vh !important;
+    width: 75vw !important;
   }
   .lg\:w-10\/12 {
     width: 83.33333% !important;
   }
   .lg\:w-screen-10\/12 {
-    width: 83.33333vh !important;
+    width: 83.33333vw !important;
   }
   .lg\:w-11\/12 {
     width: 91.66667% !important;
   }
   .lg\:w-screen-11\/12 {
-    width: 91.66667vh !important;
+    width: 91.66667vw !important;
   }
   .lg\:w-12\/12 {
     width: 100% !important;
   }
   .lg\:w-screen-12\/12 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .lg\:w-auto {
     width: auto !important;
@@ -25972,469 +25972,469 @@ i.icon.large {
     width: 100% !important;
   }
   .xl\:w-screen-1\/1, .xl\:w-screen-full {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .xl\:w-1\/2, .xl\:w-half {
     width: 50% !important;
   }
   .xl\:w-screen-1\/2, .xl\:w-screen-half {
-    width: 50vh !important;
+    width: 50vw !important;
   }
   .xl\:w-2\/2 {
     width: 100% !important;
   }
   .xl\:w-screen-2\/2 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .xl\:w-1\/3 {
     width: 33.33333% !important;
   }
   .xl\:w-screen-1\/3 {
-    width: 33.33333vh !important;
+    width: 33.33333vw !important;
   }
   .xl\:w-2\/3 {
     width: 66.66667% !important;
   }
   .xl\:w-screen-2\/3 {
-    width: 66.66667vh !important;
+    width: 66.66667vw !important;
   }
   .xl\:w-3\/3 {
     width: 100% !important;
   }
   .xl\:w-screen-3\/3 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .xl\:w-1\/4 {
     width: 25% !important;
   }
   .xl\:w-screen-1\/4 {
-    width: 25vh !important;
+    width: 25vw !important;
   }
   .xl\:w-2\/4 {
     width: 50% !important;
   }
   .xl\:w-screen-2\/4 {
-    width: 50vh !important;
+    width: 50vw !important;
   }
   .xl\:w-3\/4 {
     width: 75% !important;
   }
   .xl\:w-screen-3\/4 {
-    width: 75vh !important;
+    width: 75vw !important;
   }
   .xl\:w-4\/4 {
     width: 100% !important;
   }
   .xl\:w-screen-4\/4 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .xl\:w-1\/5 {
     width: 20% !important;
   }
   .xl\:w-screen-1\/5 {
-    width: 20vh !important;
+    width: 20vw !important;
   }
   .xl\:w-2\/5 {
     width: 40% !important;
   }
   .xl\:w-screen-2\/5 {
-    width: 40vh !important;
+    width: 40vw !important;
   }
   .xl\:w-3\/5 {
     width: 60% !important;
   }
   .xl\:w-screen-3\/5 {
-    width: 60vh !important;
+    width: 60vw !important;
   }
   .xl\:w-4\/5 {
     width: 80% !important;
   }
   .xl\:w-screen-4\/5 {
-    width: 80vh !important;
+    width: 80vw !important;
   }
   .xl\:w-5\/5 {
     width: 100% !important;
   }
   .xl\:w-screen-5\/5 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .xl\:w-1\/6 {
     width: 16.66667% !important;
   }
   .xl\:w-screen-1\/6 {
-    width: 16.66667vh !important;
+    width: 16.66667vw !important;
   }
   .xl\:w-2\/6 {
     width: 33.33333% !important;
   }
   .xl\:w-screen-2\/6 {
-    width: 33.33333vh !important;
+    width: 33.33333vw !important;
   }
   .xl\:w-3\/6 {
     width: 50% !important;
   }
   .xl\:w-screen-3\/6 {
-    width: 50vh !important;
+    width: 50vw !important;
   }
   .xl\:w-4\/6 {
     width: 66.66667% !important;
   }
   .xl\:w-screen-4\/6 {
-    width: 66.66667vh !important;
+    width: 66.66667vw !important;
   }
   .xl\:w-5\/6 {
     width: 83.33333% !important;
   }
   .xl\:w-screen-5\/6 {
-    width: 83.33333vh !important;
+    width: 83.33333vw !important;
   }
   .xl\:w-6\/6 {
     width: 100% !important;
   }
   .xl\:w-screen-6\/6 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .xl\:w-1\/7 {
     width: 14.28571% !important;
   }
   .xl\:w-screen-1\/7 {
-    width: 14.28571vh !important;
+    width: 14.28571vw !important;
   }
   .xl\:w-2\/7 {
     width: 28.57143% !important;
   }
   .xl\:w-screen-2\/7 {
-    width: 28.57143vh !important;
+    width: 28.57143vw !important;
   }
   .xl\:w-3\/7 {
     width: 42.85714% !important;
   }
   .xl\:w-screen-3\/7 {
-    width: 42.85714vh !important;
+    width: 42.85714vw !important;
   }
   .xl\:w-4\/7 {
     width: 57.14286% !important;
   }
   .xl\:w-screen-4\/7 {
-    width: 57.14286vh !important;
+    width: 57.14286vw !important;
   }
   .xl\:w-5\/7 {
     width: 71.42857% !important;
   }
   .xl\:w-screen-5\/7 {
-    width: 71.42857vh !important;
+    width: 71.42857vw !important;
   }
   .xl\:w-6\/7 {
     width: 85.71429% !important;
   }
   .xl\:w-screen-6\/7 {
-    width: 85.71429vh !important;
+    width: 85.71429vw !important;
   }
   .xl\:w-7\/7 {
     width: 100% !important;
   }
   .xl\:w-screen-7\/7 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .xl\:w-1\/8 {
     width: 12.5% !important;
   }
   .xl\:w-screen-1\/8 {
-    width: 12.5vh !important;
+    width: 12.5vw !important;
   }
   .xl\:w-2\/8 {
     width: 25% !important;
   }
   .xl\:w-screen-2\/8 {
-    width: 25vh !important;
+    width: 25vw !important;
   }
   .xl\:w-3\/8 {
     width: 37.5% !important;
   }
   .xl\:w-screen-3\/8 {
-    width: 37.5vh !important;
+    width: 37.5vw !important;
   }
   .xl\:w-4\/8 {
     width: 50% !important;
   }
   .xl\:w-screen-4\/8 {
-    width: 50vh !important;
+    width: 50vw !important;
   }
   .xl\:w-5\/8 {
     width: 62.5% !important;
   }
   .xl\:w-screen-5\/8 {
-    width: 62.5vh !important;
+    width: 62.5vw !important;
   }
   .xl\:w-6\/8 {
     width: 75% !important;
   }
   .xl\:w-screen-6\/8 {
-    width: 75vh !important;
+    width: 75vw !important;
   }
   .xl\:w-7\/8 {
     width: 87.5% !important;
   }
   .xl\:w-screen-7\/8 {
-    width: 87.5vh !important;
+    width: 87.5vw !important;
   }
   .xl\:w-8\/8 {
     width: 100% !important;
   }
   .xl\:w-screen-8\/8 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .xl\:w-1\/9 {
     width: 11.11111% !important;
   }
   .xl\:w-screen-1\/9 {
-    width: 11.11111vh !important;
+    width: 11.11111vw !important;
   }
   .xl\:w-2\/9 {
     width: 22.22222% !important;
   }
   .xl\:w-screen-2\/9 {
-    width: 22.22222vh !important;
+    width: 22.22222vw !important;
   }
   .xl\:w-3\/9 {
     width: 33.33333% !important;
   }
   .xl\:w-screen-3\/9 {
-    width: 33.33333vh !important;
+    width: 33.33333vw !important;
   }
   .xl\:w-4\/9 {
     width: 44.44444% !important;
   }
   .xl\:w-screen-4\/9 {
-    width: 44.44444vh !important;
+    width: 44.44444vw !important;
   }
   .xl\:w-5\/9 {
     width: 55.55556% !important;
   }
   .xl\:w-screen-5\/9 {
-    width: 55.55556vh !important;
+    width: 55.55556vw !important;
   }
   .xl\:w-6\/9 {
     width: 66.66667% !important;
   }
   .xl\:w-screen-6\/9 {
-    width: 66.66667vh !important;
+    width: 66.66667vw !important;
   }
   .xl\:w-7\/9 {
     width: 77.77778% !important;
   }
   .xl\:w-screen-7\/9 {
-    width: 77.77778vh !important;
+    width: 77.77778vw !important;
   }
   .xl\:w-8\/9 {
     width: 88.88889% !important;
   }
   .xl\:w-screen-8\/9 {
-    width: 88.88889vh !important;
+    width: 88.88889vw !important;
   }
   .xl\:w-9\/9 {
     width: 100% !important;
   }
   .xl\:w-screen-9\/9 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .xl\:w-1\/10 {
     width: 10% !important;
   }
   .xl\:w-screen-1\/10 {
-    width: 10vh !important;
+    width: 10vw !important;
   }
   .xl\:w-2\/10 {
     width: 20% !important;
   }
   .xl\:w-screen-2\/10 {
-    width: 20vh !important;
+    width: 20vw !important;
   }
   .xl\:w-3\/10 {
     width: 30% !important;
   }
   .xl\:w-screen-3\/10 {
-    width: 30vh !important;
+    width: 30vw !important;
   }
   .xl\:w-4\/10 {
     width: 40% !important;
   }
   .xl\:w-screen-4\/10 {
-    width: 40vh !important;
+    width: 40vw !important;
   }
   .xl\:w-5\/10 {
     width: 50% !important;
   }
   .xl\:w-screen-5\/10 {
-    width: 50vh !important;
+    width: 50vw !important;
   }
   .xl\:w-6\/10 {
     width: 60% !important;
   }
   .xl\:w-screen-6\/10 {
-    width: 60vh !important;
+    width: 60vw !important;
   }
   .xl\:w-7\/10 {
     width: 70% !important;
   }
   .xl\:w-screen-7\/10 {
-    width: 70vh !important;
+    width: 70vw !important;
   }
   .xl\:w-8\/10 {
     width: 80% !important;
   }
   .xl\:w-screen-8\/10 {
-    width: 80vh !important;
+    width: 80vw !important;
   }
   .xl\:w-9\/10 {
     width: 90% !important;
   }
   .xl\:w-screen-9\/10 {
-    width: 90vh !important;
+    width: 90vw !important;
   }
   .xl\:w-10\/10 {
     width: 100% !important;
   }
   .xl\:w-screen-10\/10 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .xl\:w-1\/11 {
     width: 9.09091% !important;
   }
   .xl\:w-screen-1\/11 {
-    width: 9.09091vh !important;
+    width: 9.09091vw !important;
   }
   .xl\:w-2\/11 {
     width: 18.18182% !important;
   }
   .xl\:w-screen-2\/11 {
-    width: 18.18182vh !important;
+    width: 18.18182vw !important;
   }
   .xl\:w-3\/11 {
     width: 27.27273% !important;
   }
   .xl\:w-screen-3\/11 {
-    width: 27.27273vh !important;
+    width: 27.27273vw !important;
   }
   .xl\:w-4\/11 {
     width: 36.36364% !important;
   }
   .xl\:w-screen-4\/11 {
-    width: 36.36364vh !important;
+    width: 36.36364vw !important;
   }
   .xl\:w-5\/11 {
     width: 45.45455% !important;
   }
   .xl\:w-screen-5\/11 {
-    width: 45.45455vh !important;
+    width: 45.45455vw !important;
   }
   .xl\:w-6\/11 {
     width: 54.54545% !important;
   }
   .xl\:w-screen-6\/11 {
-    width: 54.54545vh !important;
+    width: 54.54545vw !important;
   }
   .xl\:w-7\/11 {
     width: 63.63636% !important;
   }
   .xl\:w-screen-7\/11 {
-    width: 63.63636vh !important;
+    width: 63.63636vw !important;
   }
   .xl\:w-8\/11 {
     width: 72.72727% !important;
   }
   .xl\:w-screen-8\/11 {
-    width: 72.72727vh !important;
+    width: 72.72727vw !important;
   }
   .xl\:w-9\/11 {
     width: 81.81818% !important;
   }
   .xl\:w-screen-9\/11 {
-    width: 81.81818vh !important;
+    width: 81.81818vw !important;
   }
   .xl\:w-10\/11 {
     width: 90.90909% !important;
   }
   .xl\:w-screen-10\/11 {
-    width: 90.90909vh !important;
+    width: 90.90909vw !important;
   }
   .xl\:w-11\/11 {
     width: 100% !important;
   }
   .xl\:w-screen-11\/11 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .xl\:w-1\/12 {
     width: 8.33333% !important;
   }
   .xl\:w-screen-1\/12 {
-    width: 8.33333vh !important;
+    width: 8.33333vw !important;
   }
   .xl\:w-2\/12 {
     width: 16.66667% !important;
   }
   .xl\:w-screen-2\/12 {
-    width: 16.66667vh !important;
+    width: 16.66667vw !important;
   }
   .xl\:w-3\/12 {
     width: 25% !important;
   }
   .xl\:w-screen-3\/12 {
-    width: 25vh !important;
+    width: 25vw !important;
   }
   .xl\:w-4\/12 {
     width: 33.33333% !important;
   }
   .xl\:w-screen-4\/12 {
-    width: 33.33333vh !important;
+    width: 33.33333vw !important;
   }
   .xl\:w-5\/12 {
     width: 41.66667% !important;
   }
   .xl\:w-screen-5\/12 {
-    width: 41.66667vh !important;
+    width: 41.66667vw !important;
   }
   .xl\:w-6\/12 {
     width: 50% !important;
   }
   .xl\:w-screen-6\/12 {
-    width: 50vh !important;
+    width: 50vw !important;
   }
   .xl\:w-7\/12 {
     width: 58.33333% !important;
   }
   .xl\:w-screen-7\/12 {
-    width: 58.33333vh !important;
+    width: 58.33333vw !important;
   }
   .xl\:w-8\/12 {
     width: 66.66667% !important;
   }
   .xl\:w-screen-8\/12 {
-    width: 66.66667vh !important;
+    width: 66.66667vw !important;
   }
   .xl\:w-9\/12 {
     width: 75% !important;
   }
   .xl\:w-screen-9\/12 {
-    width: 75vh !important;
+    width: 75vw !important;
   }
   .xl\:w-10\/12 {
     width: 83.33333% !important;
   }
   .xl\:w-screen-10\/12 {
-    width: 83.33333vh !important;
+    width: 83.33333vw !important;
   }
   .xl\:w-11\/12 {
     width: 91.66667% !important;
   }
   .xl\:w-screen-11\/12 {
-    width: 91.66667vh !important;
+    width: 91.66667vw !important;
   }
   .xl\:w-12\/12 {
     width: 100% !important;
   }
   .xl\:w-screen-12\/12 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .xl\:w-auto {
     width: auto !important;
@@ -26464,469 +26464,469 @@ i.icon.large {
     width: 100% !important;
   }
   .xxl\:w-screen-1\/1, .xxl\:w-screen-full {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .xxl\:w-1\/2, .xxl\:w-half {
     width: 50% !important;
   }
   .xxl\:w-screen-1\/2, .xxl\:w-screen-half {
-    width: 50vh !important;
+    width: 50vw !important;
   }
   .xxl\:w-2\/2 {
     width: 100% !important;
   }
   .xxl\:w-screen-2\/2 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .xxl\:w-1\/3 {
     width: 33.33333% !important;
   }
   .xxl\:w-screen-1\/3 {
-    width: 33.33333vh !important;
+    width: 33.33333vw !important;
   }
   .xxl\:w-2\/3 {
     width: 66.66667% !important;
   }
   .xxl\:w-screen-2\/3 {
-    width: 66.66667vh !important;
+    width: 66.66667vw !important;
   }
   .xxl\:w-3\/3 {
     width: 100% !important;
   }
   .xxl\:w-screen-3\/3 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .xxl\:w-1\/4 {
     width: 25% !important;
   }
   .xxl\:w-screen-1\/4 {
-    width: 25vh !important;
+    width: 25vw !important;
   }
   .xxl\:w-2\/4 {
     width: 50% !important;
   }
   .xxl\:w-screen-2\/4 {
-    width: 50vh !important;
+    width: 50vw !important;
   }
   .xxl\:w-3\/4 {
     width: 75% !important;
   }
   .xxl\:w-screen-3\/4 {
-    width: 75vh !important;
+    width: 75vw !important;
   }
   .xxl\:w-4\/4 {
     width: 100% !important;
   }
   .xxl\:w-screen-4\/4 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .xxl\:w-1\/5 {
     width: 20% !important;
   }
   .xxl\:w-screen-1\/5 {
-    width: 20vh !important;
+    width: 20vw !important;
   }
   .xxl\:w-2\/5 {
     width: 40% !important;
   }
   .xxl\:w-screen-2\/5 {
-    width: 40vh !important;
+    width: 40vw !important;
   }
   .xxl\:w-3\/5 {
     width: 60% !important;
   }
   .xxl\:w-screen-3\/5 {
-    width: 60vh !important;
+    width: 60vw !important;
   }
   .xxl\:w-4\/5 {
     width: 80% !important;
   }
   .xxl\:w-screen-4\/5 {
-    width: 80vh !important;
+    width: 80vw !important;
   }
   .xxl\:w-5\/5 {
     width: 100% !important;
   }
   .xxl\:w-screen-5\/5 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .xxl\:w-1\/6 {
     width: 16.66667% !important;
   }
   .xxl\:w-screen-1\/6 {
-    width: 16.66667vh !important;
+    width: 16.66667vw !important;
   }
   .xxl\:w-2\/6 {
     width: 33.33333% !important;
   }
   .xxl\:w-screen-2\/6 {
-    width: 33.33333vh !important;
+    width: 33.33333vw !important;
   }
   .xxl\:w-3\/6 {
     width: 50% !important;
   }
   .xxl\:w-screen-3\/6 {
-    width: 50vh !important;
+    width: 50vw !important;
   }
   .xxl\:w-4\/6 {
     width: 66.66667% !important;
   }
   .xxl\:w-screen-4\/6 {
-    width: 66.66667vh !important;
+    width: 66.66667vw !important;
   }
   .xxl\:w-5\/6 {
     width: 83.33333% !important;
   }
   .xxl\:w-screen-5\/6 {
-    width: 83.33333vh !important;
+    width: 83.33333vw !important;
   }
   .xxl\:w-6\/6 {
     width: 100% !important;
   }
   .xxl\:w-screen-6\/6 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .xxl\:w-1\/7 {
     width: 14.28571% !important;
   }
   .xxl\:w-screen-1\/7 {
-    width: 14.28571vh !important;
+    width: 14.28571vw !important;
   }
   .xxl\:w-2\/7 {
     width: 28.57143% !important;
   }
   .xxl\:w-screen-2\/7 {
-    width: 28.57143vh !important;
+    width: 28.57143vw !important;
   }
   .xxl\:w-3\/7 {
     width: 42.85714% !important;
   }
   .xxl\:w-screen-3\/7 {
-    width: 42.85714vh !important;
+    width: 42.85714vw !important;
   }
   .xxl\:w-4\/7 {
     width: 57.14286% !important;
   }
   .xxl\:w-screen-4\/7 {
-    width: 57.14286vh !important;
+    width: 57.14286vw !important;
   }
   .xxl\:w-5\/7 {
     width: 71.42857% !important;
   }
   .xxl\:w-screen-5\/7 {
-    width: 71.42857vh !important;
+    width: 71.42857vw !important;
   }
   .xxl\:w-6\/7 {
     width: 85.71429% !important;
   }
   .xxl\:w-screen-6\/7 {
-    width: 85.71429vh !important;
+    width: 85.71429vw !important;
   }
   .xxl\:w-7\/7 {
     width: 100% !important;
   }
   .xxl\:w-screen-7\/7 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .xxl\:w-1\/8 {
     width: 12.5% !important;
   }
   .xxl\:w-screen-1\/8 {
-    width: 12.5vh !important;
+    width: 12.5vw !important;
   }
   .xxl\:w-2\/8 {
     width: 25% !important;
   }
   .xxl\:w-screen-2\/8 {
-    width: 25vh !important;
+    width: 25vw !important;
   }
   .xxl\:w-3\/8 {
     width: 37.5% !important;
   }
   .xxl\:w-screen-3\/8 {
-    width: 37.5vh !important;
+    width: 37.5vw !important;
   }
   .xxl\:w-4\/8 {
     width: 50% !important;
   }
   .xxl\:w-screen-4\/8 {
-    width: 50vh !important;
+    width: 50vw !important;
   }
   .xxl\:w-5\/8 {
     width: 62.5% !important;
   }
   .xxl\:w-screen-5\/8 {
-    width: 62.5vh !important;
+    width: 62.5vw !important;
   }
   .xxl\:w-6\/8 {
     width: 75% !important;
   }
   .xxl\:w-screen-6\/8 {
-    width: 75vh !important;
+    width: 75vw !important;
   }
   .xxl\:w-7\/8 {
     width: 87.5% !important;
   }
   .xxl\:w-screen-7\/8 {
-    width: 87.5vh !important;
+    width: 87.5vw !important;
   }
   .xxl\:w-8\/8 {
     width: 100% !important;
   }
   .xxl\:w-screen-8\/8 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .xxl\:w-1\/9 {
     width: 11.11111% !important;
   }
   .xxl\:w-screen-1\/9 {
-    width: 11.11111vh !important;
+    width: 11.11111vw !important;
   }
   .xxl\:w-2\/9 {
     width: 22.22222% !important;
   }
   .xxl\:w-screen-2\/9 {
-    width: 22.22222vh !important;
+    width: 22.22222vw !important;
   }
   .xxl\:w-3\/9 {
     width: 33.33333% !important;
   }
   .xxl\:w-screen-3\/9 {
-    width: 33.33333vh !important;
+    width: 33.33333vw !important;
   }
   .xxl\:w-4\/9 {
     width: 44.44444% !important;
   }
   .xxl\:w-screen-4\/9 {
-    width: 44.44444vh !important;
+    width: 44.44444vw !important;
   }
   .xxl\:w-5\/9 {
     width: 55.55556% !important;
   }
   .xxl\:w-screen-5\/9 {
-    width: 55.55556vh !important;
+    width: 55.55556vw !important;
   }
   .xxl\:w-6\/9 {
     width: 66.66667% !important;
   }
   .xxl\:w-screen-6\/9 {
-    width: 66.66667vh !important;
+    width: 66.66667vw !important;
   }
   .xxl\:w-7\/9 {
     width: 77.77778% !important;
   }
   .xxl\:w-screen-7\/9 {
-    width: 77.77778vh !important;
+    width: 77.77778vw !important;
   }
   .xxl\:w-8\/9 {
     width: 88.88889% !important;
   }
   .xxl\:w-screen-8\/9 {
-    width: 88.88889vh !important;
+    width: 88.88889vw !important;
   }
   .xxl\:w-9\/9 {
     width: 100% !important;
   }
   .xxl\:w-screen-9\/9 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .xxl\:w-1\/10 {
     width: 10% !important;
   }
   .xxl\:w-screen-1\/10 {
-    width: 10vh !important;
+    width: 10vw !important;
   }
   .xxl\:w-2\/10 {
     width: 20% !important;
   }
   .xxl\:w-screen-2\/10 {
-    width: 20vh !important;
+    width: 20vw !important;
   }
   .xxl\:w-3\/10 {
     width: 30% !important;
   }
   .xxl\:w-screen-3\/10 {
-    width: 30vh !important;
+    width: 30vw !important;
   }
   .xxl\:w-4\/10 {
     width: 40% !important;
   }
   .xxl\:w-screen-4\/10 {
-    width: 40vh !important;
+    width: 40vw !important;
   }
   .xxl\:w-5\/10 {
     width: 50% !important;
   }
   .xxl\:w-screen-5\/10 {
-    width: 50vh !important;
+    width: 50vw !important;
   }
   .xxl\:w-6\/10 {
     width: 60% !important;
   }
   .xxl\:w-screen-6\/10 {
-    width: 60vh !important;
+    width: 60vw !important;
   }
   .xxl\:w-7\/10 {
     width: 70% !important;
   }
   .xxl\:w-screen-7\/10 {
-    width: 70vh !important;
+    width: 70vw !important;
   }
   .xxl\:w-8\/10 {
     width: 80% !important;
   }
   .xxl\:w-screen-8\/10 {
-    width: 80vh !important;
+    width: 80vw !important;
   }
   .xxl\:w-9\/10 {
     width: 90% !important;
   }
   .xxl\:w-screen-9\/10 {
-    width: 90vh !important;
+    width: 90vw !important;
   }
   .xxl\:w-10\/10 {
     width: 100% !important;
   }
   .xxl\:w-screen-10\/10 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .xxl\:w-1\/11 {
     width: 9.09091% !important;
   }
   .xxl\:w-screen-1\/11 {
-    width: 9.09091vh !important;
+    width: 9.09091vw !important;
   }
   .xxl\:w-2\/11 {
     width: 18.18182% !important;
   }
   .xxl\:w-screen-2\/11 {
-    width: 18.18182vh !important;
+    width: 18.18182vw !important;
   }
   .xxl\:w-3\/11 {
     width: 27.27273% !important;
   }
   .xxl\:w-screen-3\/11 {
-    width: 27.27273vh !important;
+    width: 27.27273vw !important;
   }
   .xxl\:w-4\/11 {
     width: 36.36364% !important;
   }
   .xxl\:w-screen-4\/11 {
-    width: 36.36364vh !important;
+    width: 36.36364vw !important;
   }
   .xxl\:w-5\/11 {
     width: 45.45455% !important;
   }
   .xxl\:w-screen-5\/11 {
-    width: 45.45455vh !important;
+    width: 45.45455vw !important;
   }
   .xxl\:w-6\/11 {
     width: 54.54545% !important;
   }
   .xxl\:w-screen-6\/11 {
-    width: 54.54545vh !important;
+    width: 54.54545vw !important;
   }
   .xxl\:w-7\/11 {
     width: 63.63636% !important;
   }
   .xxl\:w-screen-7\/11 {
-    width: 63.63636vh !important;
+    width: 63.63636vw !important;
   }
   .xxl\:w-8\/11 {
     width: 72.72727% !important;
   }
   .xxl\:w-screen-8\/11 {
-    width: 72.72727vh !important;
+    width: 72.72727vw !important;
   }
   .xxl\:w-9\/11 {
     width: 81.81818% !important;
   }
   .xxl\:w-screen-9\/11 {
-    width: 81.81818vh !important;
+    width: 81.81818vw !important;
   }
   .xxl\:w-10\/11 {
     width: 90.90909% !important;
   }
   .xxl\:w-screen-10\/11 {
-    width: 90.90909vh !important;
+    width: 90.90909vw !important;
   }
   .xxl\:w-11\/11 {
     width: 100% !important;
   }
   .xxl\:w-screen-11\/11 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .xxl\:w-1\/12 {
     width: 8.33333% !important;
   }
   .xxl\:w-screen-1\/12 {
-    width: 8.33333vh !important;
+    width: 8.33333vw !important;
   }
   .xxl\:w-2\/12 {
     width: 16.66667% !important;
   }
   .xxl\:w-screen-2\/12 {
-    width: 16.66667vh !important;
+    width: 16.66667vw !important;
   }
   .xxl\:w-3\/12 {
     width: 25% !important;
   }
   .xxl\:w-screen-3\/12 {
-    width: 25vh !important;
+    width: 25vw !important;
   }
   .xxl\:w-4\/12 {
     width: 33.33333% !important;
   }
   .xxl\:w-screen-4\/12 {
-    width: 33.33333vh !important;
+    width: 33.33333vw !important;
   }
   .xxl\:w-5\/12 {
     width: 41.66667% !important;
   }
   .xxl\:w-screen-5\/12 {
-    width: 41.66667vh !important;
+    width: 41.66667vw !important;
   }
   .xxl\:w-6\/12 {
     width: 50% !important;
   }
   .xxl\:w-screen-6\/12 {
-    width: 50vh !important;
+    width: 50vw !important;
   }
   .xxl\:w-7\/12 {
     width: 58.33333% !important;
   }
   .xxl\:w-screen-7\/12 {
-    width: 58.33333vh !important;
+    width: 58.33333vw !important;
   }
   .xxl\:w-8\/12 {
     width: 66.66667% !important;
   }
   .xxl\:w-screen-8\/12 {
-    width: 66.66667vh !important;
+    width: 66.66667vw !important;
   }
   .xxl\:w-9\/12 {
     width: 75% !important;
   }
   .xxl\:w-screen-9\/12 {
-    width: 75vh !important;
+    width: 75vw !important;
   }
   .xxl\:w-10\/12 {
     width: 83.33333% !important;
   }
   .xxl\:w-screen-10\/12 {
-    width: 83.33333vh !important;
+    width: 83.33333vw !important;
   }
   .xxl\:w-11\/12 {
     width: 91.66667% !important;
   }
   .xxl\:w-screen-11\/12 {
-    width: 91.66667vh !important;
+    width: 91.66667vw !important;
   }
   .xxl\:w-12\/12 {
     width: 100% !important;
   }
   .xxl\:w-screen-12\/12 {
-    width: 100vh !important;
+    width: 100vw !important;
   }
   .xxl\:w-auto {
     width: auto !important;
@@ -41348,6 +41348,103 @@ ol li {
 ol li::before {
   width: 2.4rem;
   content: counter(list-counter) ".";
+}
+
+.tagger {
+  position: relative;
+  height: 33vh;
+}
+
+.tagger > .image {
+  width: 100%;
+  height: 100%;
+  background-color: #eee;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.tagger > .image img {
+  width: auto;
+  height: 100%;
+}
+
+.tagger > .tags {
+  display: none;
+}
+
+.tagger > .tag-points .tag-point {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  margin-top: -16px;
+  margin-left: -16px;
+  background-color: #fff;
+  border-radius: 50%;
+  z-index: 8000;
+  -webkit-box-shadow: inset 0 0 0 16px #fff;
+          box-shadow: inset 0 0 0 16px #fff;
+  opacity: 0.7;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.tagger > .tag-points .tag-point::before {
+  content: "";
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  margin-top: -5px;
+  margin-left: -5px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+.tagger > .tag-points .tag-point::after {
+  content: "";
+  position: absolute;
+  margin-left: calc(-50% - 4px);
+  margin-top: 0;
+  padding: 4px 8px;
+  font-size: 0.8em;
+  font-weight: 600;
+  color: #171717;
+  white-space: nowrap;
+  border-radius: 4px;
+  -webkit-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+  opacity: 0;
+}
+
+.tagger > .tag-points .tag-point:hover {
+  background-color: #116D63;
+  -webkit-box-shadow: inset 0 0 0 4px #fff;
+          box-shadow: inset 0 0 0 4px #fff;
+  opacity: 1;
+}
+
+.tagger > .tag-points .tag-point:hover::after {
+  content: "Ini Label";
+  margin-left: calc(-50% - 4px);
+  margin-top: calc(-1em - 18px);
+  background: #fff;
+  opacity: 1;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.tagger > .tag-points .tag-point:active {
+  background-color: #116D63;
+  -webkit-box-shadow: inset 0 0 0 6px #fff;
+          box-shadow: inset 0 0 0 6px #fff;
+  opacity: 1;
+  -webkit-transition: none;
+  transition: none;
 }
 
 body {
