@@ -7,7 +7,7 @@
 // * Mixins
 // --------------------------------------------------------------------
 
-@mixin row					{ @include flex; flex-wrap: wrap; }
+@mixin row					{ display: flex; flex-wrap: wrap; }
 @mixin col($i)				{ @include w-percent($i,12); }
 @mixin col-offset($i)		{ margin-left: $i / 12 * 100% !important; }
 

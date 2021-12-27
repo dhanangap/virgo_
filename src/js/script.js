@@ -6,9 +6,9 @@ import { Modal } from "./_modal.js";
 import { Tab } from "./_tab.js";
 import { Tagger } from "./_tagger.js";
 import { Carousel } from "./_carousel.js";
+import { Gallery } from "./_gallery.js";
 
-document.addEventListener('DOMContentLoaded', function () {
-    
+window.onload = () => {
     Form.initForms();
     Button.initDropdownButtons();
     Navbar.initNavbar();
@@ -17,5 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
     Tab.init();
     Tagger.init();
     Carousel.init();
+    Gallery.init();
+};
 
-}, false);
+window.Modal = Modal;

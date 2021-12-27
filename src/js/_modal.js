@@ -52,7 +52,9 @@ export class Modal {
     }
 
     // ========== [ Display or Hide Modal ]
-    static toggle(modalId, action = "open") {
+    static toggle(modalId, action = "open", contentElement = null) {
+
+        console.log(modalId);
 
         // ----- Display container
         
@@ -73,8 +75,17 @@ export class Modal {
             setTimeout(() => {
                 container.dataset["state"] = "hidden";
                 container.dataset["active"] = null;
+                modal.style.display = "none";
             }, 1500);
             return;
+        }
+
+        // ----- Replace modal content
+        if (contentElement) {
+            let modalBody = modal.querySelector(".modal-body");
+            if (!modalBody) modalBody = modal;
+            modalBody.innerHTML = "";
+            modalBody.appendChild(contentElement);
         }
         
         // ----- Toggle display/hide container state
@@ -97,6 +108,10 @@ export class Modal {
 
     static close(modalId) {
         this.toggle(modalId, "close");
+    }
+
+    static open(modalId) {
+        this.toggle(modalId, "open");
     }
 
 }

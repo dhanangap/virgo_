@@ -1,6 +1,6 @@
 // ====================================================================
-// - Virgo Utility Class
-// - Components > Tagger
+// - Virgo Component Class
+// - Tagger
 // ====================================================================
 
 .tagger {
@@ -57,8 +57,8 @@
 			&::after {
 				content: "";
 				position: absolute;
-				margin-left: calc(-50% - 4px);
-				margin-top: 0;
+				margin-left: 0;
+				margin-top: calc(0.5em - 4px);
 				padding: 4px 8px;
 				font-size: 0.8em;
 				font-weight: 600;
@@ -75,9 +75,8 @@
 				opacity: 1;
 
 				&::after {
-					content: "Ini Label";
-					margin-left: calc(-50% - 4px);
-					margin-top: calc(-1em - 18px);
+					content: attr(data-label);
+					margin-left: 44px;
 					background: #fff;
 					opacity: 1;
 					transition: all 0.3s ease-out;

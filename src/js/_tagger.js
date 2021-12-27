@@ -43,7 +43,17 @@ export class Tagger {
 				tagPoint.style.left = xPos + "px";
 				const yPos = (window.scrollY) + (targetImage.clientHeight * y);
 				tagPoint.style.top = yPos + "px";
-				console.log(yPos);
+				// - Add event listener
+				const contentElement = tag.querySelector("div") ? tag.querySelector("div").cloneNode(true) : null;
+				if (tag.dataset["click"]) {
+					tagPoint.addEventListener("click", () => {
+						window[tag.dataset["click"]]({
+							taggerId: id,
+							index: tagIndex,
+							content: contentElement
+						});
+					});
+				}
 			}
 			
 		}
