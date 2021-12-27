@@ -1,35 +1,135 @@
-// ====================================================================
+// ================================================================================================
 // - Virgo Component
 // - Gallery
-// ====================================================================
+// ================================================================================================
 export class Gallery {
 
+	// [ Class static properties ] ================================================================
+	// Stores all galleries on the page.
 	static index;
 
-	element;
-	id;
-	cols;
-	rows;
-	transition;
-	duration;
-	activePageIndex;
+	// [ Object properties ] ======================================================================
+	element;					// The gallery DOM element
+	id;							// String of id for the gallery
+	cols;						// Number of columns in one gallery page
+	rows;						// Number of rows in one gallery page
+	transition;					// Gallery page transition ["default", "slide", "fade", "none"]
+	duration;					// Page transition duration in miliseconds
+	activePageIndex;			// Index of current active gallery page
 
-	items;
-	numPageItems;
-	pages;
+	items;						// Stores all item DOM elements inside the gallery
+	pages;						// Stores all gallery pages
 
-	pagesElement;
-	controlElement;
-	indicatorElement;
-	navigationElement;
+	pagesElement;				// DOM element of gallery pages container
+	controlElement;				// DOM element of gallery control
+	indicatorElement;			// DOM element of gallery indicator
+	navigationElement;			// DOM element of gallery navigation
 
-	navlock;
-	scrollAmount;
-	isScrolling;
+	navlock;					// Navigation lock { true: prevent navigation event }
+	scrollAmount;				// The amount of scrolling applied to gallery
+	isScrolling;				// State of scrolling { true: gallery is being scrolled }
 
-	externalIndicators;
-	externalNavigations;
+	externalIndicators;			// Stores DOM elements of external indicators
+	externalNavigations;		// Stores DOM elements of external navigations
+
+	// [ Computed properties ] ====================================================================
+	// --------------------------------------------------------------------------------------------
+	// • Get total pages inside the gallery
+	// --------------------------------------------------------------------------------------------
+	get totalPages()			{ return Math.ceil(this.items.length / this.numPageItems) }
 	
+	// --------------------------------------------------------------------------------------------
+	// • Maximum items inside one gallery page
+	// --------------------------------------------------------------------------------------------
+	get numPageItems()			{ return this.cols * this.rows; }
+
+	// [ Class static functions ] =================================================================
+	// --------------------------------------------------------------------------------------------
+	// • Initialize Component
+	// --------------------------------------------------------------------------------------------
+	static init() {
+		// Initialize the value of static properties
+		this.index = [];
+		this.externalIndicators = {};
+		this.externalNavigations = {};
+		// Initialize the instances of this class
+		let galleryElements = document.querySelectorAll(".gallery");
+		if (galleryElements.length > 0) {
+			for (let index = 0; index < galleryElements.length; index++) {
+				const galleryElement = galleryElements[index];
+				this.index.push(new this(index, galleryElement));
+			}
+			// Add window resize event listener
+			window.addEventListener("resize", () => {
+				this.resizeListener();
+			});
+		}
+		// Initialize external controls of all class instances
+		this.initExternalIndicators();
+		this.initExternalNavigations();
+
+	}
+
+	// --------------------------------------------------------------------------------------------
+	// • Window resize event listener
+	// --------------------------------------------------------------------------------------------
+	static resizeListener() {
+		for (const gallery of this.index) {
+			gallery.resize();
+		}
+	}
+
+	// --------------------------------------------------------------------------------------------
+	// • Initialize external indicators of the component
+	// --------------------------------------------------------------------------------------------
+	static initExternalIndicators() {
+		let externalIndicators = document.querySelectorAll("[data-gallery-indicator]");
+		for (const indicator of externalIndicators) {
+			const galleryId = indicator.dataset["galleryIndicator"];
+			const gallery = this.index.find(gallery => gallery.id === galleryId);
+
+			if (gallery) {
+				if (!this.externalIndicators[galleryId]) this.externalIndicators[galleryId] = [];
+				this.externalIndicators[galleryId].push(indicator);
+				gallery.initExternalIndicators();
+			}
+		}
+	}
+
+	// --------------------------------------------------------------------------------------------
+	// • Initialize external navigations of the component
+	// --------------------------------------------------------------------------------------------
+	static initExternalNavigations() {
+		let externalNavigations = document.querySelectorAll("[data-gallery-navigation]");
+		for (const navigation of externalNavigations) {
+			const galleryId = navigation.dataset["galleryNavigation"];
+			const gallery = this.index.find(gallery => gallery.id === galleryId);
+
+			if (gallery) {
+				if (!this.externalNavigations[galleryId]) this.externalNavigations[galleryId] = [];
+				this.externalNavigations[galleryId].push(navigation);
+
+				// Add event listeners
+				let prevButton = navigation.querySelector(`[data-navigation="prev"]`);
+				let nextButton = navigation.querySelector(`[data-navigation="next"]`);
+				if (prevButton) {
+					prevButton.addEventListener("click", () => {
+						gallery.back();
+					});
+				}
+				if (nextButton) {
+					nextButton.addEventListener("click", () => {
+						gallery.forward();
+					});
+				}
+			}
+		}
+	}
+
+	// [ Object instance functions ] ==============================================================
+	// --------------------------------------------------------------------------------------------
+	// • Constructor
+	// --------------------------------------------------------------------------------------------
 	constructor (index, element) {
 
 		this.element = element;
@@ -44,7 +144,6 @@ export class Gallery {
 		this.duration = element.dataset["duration"] ? parseInt(element.dataset["duration"]) : 500;
 		this.activePageIndex = element.dataset["active"] ? parseInt(element.dataset["active"]) : 0;
 		this.items = element.querySelectorAll(".item");
-		this.numPageItems = this.cols * this.rows;
 		this.pages = [];
 		this.navlock = false;
 		this.scrollAmount = 0;
@@ -54,10 +153,9 @@ export class Gallery {
 
 	}
 
-	get totalPages () {
-		return Math.ceil(this.items.length / this.numPageItems);
-	}
-
+	// --------------------------------------------------------------------------------------------
+	// • Create gallery pages and organize items into pages
+	// --------------------------------------------------------------------------------------------
 	initPages () {
 
 		// - Create page elements
@@ -88,9 +186,17 @@ export class Gallery {
 			// Adjust item size
 			item.style.width = `${1 / this.cols * 100}%`;
 			item.style.height = `${1 / this.rows * 100}%`;
+
+			// Add click event listener
+			item.addEventListener("click", () => {
+				this.handleItemClick(this.element.dataset["click"]);
+			});
 		}
 	}
 
+	// --------------------------------------------------------------------------------------------
+	// • Create container element for indicator and navigation
+	// --------------------------------------------------------------------------------------------
 	initControlElement() {
 		// - Control element
 		if (!this.controlElement) {
@@ -100,6 +206,9 @@ export class Gallery {
 		}
 	}
 
+	// --------------------------------------------------------------------------------------------
+	// • Create indicator container and button elements
+	// --------------------------------------------------------------------------------------------
 	initIndicator () {
 		// - Indicator element
 		if (!this.indicatorElement) {
@@ -119,7 +228,31 @@ export class Gallery {
 			});
 		}
 	}
+
+	// --------------------------------------------------------------------------------------------
+	// • Create buttons for every external indicators
+	// --------------------------------------------------------------------------------------------
+	initExternalIndicators () {
+		// - Indicator element
+		if (Gallery.externalIndicators[this.id]) {
+			for (let indicatorElement of Gallery.externalIndicators[this.id]) {
+				indicatorElement.innerHTML = "";
+				for (let pageIndex = 0; pageIndex < this.totalPages; pageIndex++) {
+					let indicatorButton = document.createElement("button");
+					indicatorButton.dataset["target"] = pageIndex;
+					if (pageIndex === this.activePageIndex) indicatorButton.classList.add("active");
+					indicatorElement.appendChild(indicatorButton);
+					indicatorButton.addEventListener("click", () => {
+						this.setActivePage(pageIndex);
+					});
+				}		
+			}
+		}
+	}
 	
+	// --------------------------------------------------------------------------------------------
+	// • Create navigation elements
+	// --------------------------------------------------------------------------------------------
 	initNavigation () {
 		// - Navigation element
 		if (!this.navigationElement) {
@@ -144,6 +277,9 @@ export class Gallery {
 		this.navigationElement.appendChild(nextButton);
 	}
 
+	// --------------------------------------------------------------------------------------------
+	// • Add event listener to the element
+	// --------------------------------------------------------------------------------------------
 	initEventListeners () {
 		// - Scroll event
 		this.element.addEventListener("wheel", (event) => {
@@ -173,14 +309,15 @@ export class Gallery {
 		});
 	}
 
+	// --------------------------------------------------------------------------------------------
+	// • Update element's UI and functionalities
+	// --------------------------------------------------------------------------------------------
 	resize () {
 		// ----- Smaller screen
 		if (this.element.getBoundingClientRect().width <= 450) {
 			this.cols = Math.min(this.cols, 2);
-			this.numPageItems = this.cols * this.rows;
 		} else {
 			this.cols = this.element.dataset["cols"] ? parseInt(this.element.dataset["cols"]) : 1;
-			this.numPageItems = this.cols * this.rows;
 		}
 
 		// ----- Prepare element
@@ -191,9 +328,14 @@ export class Gallery {
 			this.initIndicator();
 			this.initNavigation();
 
+			this.initExternalIndicators();
+
 		}
 	}
 
+	// --------------------------------------------------------------------------------------------
+	// • Navigate to a page
+	// --------------------------------------------------------------------------------------------
 	setActivePage (index, direction = null) {
 		if (!this.navlock) {
 			let currentPage = this.pages[this.activePageIndex];
@@ -214,6 +356,9 @@ export class Gallery {
 		}
 	}
 
+	// --------------------------------------------------------------------------------------------
+	// • Update indicator buttons to reflect current conditions
+	// --------------------------------------------------------------------------------------------
 	updateIndicator () {
 		if (this.indicatorElement) {
 			let buttons = this.indicatorElement.querySelectorAll("button");
@@ -223,8 +368,21 @@ export class Gallery {
 				if (buttonIndex === this.activePageIndex) button.classList.add("active");
 			}
 		}
+		if (Gallery.externalIndicators[this.id]) {
+			for (const indicatorElement of Gallery.externalIndicators[this.id]) {
+				let buttons = indicatorElement.querySelectorAll("button");
+				for (let buttonIndex = 0; buttonIndex < buttons.length; buttonIndex++) {
+					let button = buttons[buttonIndex];
+					button.classList.remove("active");
+					if (buttonIndex === this.activePageIndex) button.classList.add("active");
+				}
+			}
+		}
 	}
 
+	// --------------------------------------------------------------------------------------------
+	// • Page transition
+	// --------------------------------------------------------------------------------------------
 	updatePages (fromPage, targetPage, direction = 1) {
 		if (this.pages) {
 			// - Transition
@@ -274,6 +432,9 @@ export class Gallery {
 		}
 	}
 
+	// --------------------------------------------------------------------------------------------
+	// • Navigate to previous page
+	// --------------------------------------------------------------------------------------------
 	back() {
 		let targetIndex = this.activePageIndex - 1;
 		if (targetIndex < 0) {
@@ -282,6 +443,9 @@ export class Gallery {
 		this.setActivePage(targetIndex, -1);
 	}
 
+	// --------------------------------------------------------------------------------------------
+	// • Navigate to next page
+	// --------------------------------------------------------------------------------------------
 	forward () {
 		let targetIndex = this.activePageIndex + 1;
 		if (targetIndex >= this.totalPages) {
@@ -290,6 +454,9 @@ export class Gallery {
 		this.setActivePage(targetIndex, 1);
 	}
 
+	// --------------------------------------------------------------------------------------------
+	// • Update UI to respond scrolling and dragging events
+	// --------------------------------------------------------------------------------------------
 	scroll (amount) {
 		const elementWidth = this.element.getBoundingClientRect().width;
 		if (!this.navlock) {
@@ -365,73 +532,17 @@ export class Gallery {
 			}, 50);
 		}
 	}
+
+	// --------------------------------------------------------------------------------------------
+	// • Handle gallery item click event
+	// --------------------------------------------------------------------------------------------
+	handleItemClick (functionName) {
+		if (!functionName) return;
+		const fn = window[functionName];
+		if (!fn) return;
+
+		// Execute function
+		fn();
+	}
 	
-	static init () {
-		this.index = [];
-		this.externalIndicators = {};
-		this.externalNavigations = {};
-
-		let galleryElements = document.querySelectorAll(".gallery");
-		if (galleryElements.length > 0) {
-			for (let index = 0; index < galleryElements.length; index++) {
-				const galleryElement = galleryElements[index];
-				this.index.push(new this(index, galleryElement));
-			}
-			// Listen to window resize event
-			window.addEventListener("resize", () => {
-				this.resizeListener();
-			});
-		}
-
-		this.initExternalIndicators();
-		this.initExternalNavigations();
-		
-	}
-
-	static resizeListener () {
-		for (const gallery of this.index) {
-			gallery.resize();
-		}
-	}
-
-	static initExternalIndicators () {
-		let externalIndicators = document.querySelectorAll("[data-gallery-indicator]");
-		for (const indicator of externalIndicators) {
-			const galleryId = indicator.dataset["galleryIndicator"];
-			const gallery = this.index.find(gallery => gallery.id === galleryId);
-			
-			if (gallery) {
-				if (!this.externalIndicators[galleryId]) this.externalIndicators[galleryId] = [];
-				this.externalIndicators[galleryId].push(indicator);
-			}
-		}
-	}
-
-	static initExternalNavigations() {
-		let externalNavigations = document.querySelectorAll("[data-gallery-navigation]");
-		for (const navigation of externalNavigations) {
-			const galleryId = navigation.dataset["galleryNavigation"];
-			const gallery = this.index.find(gallery => gallery.id === galleryId);
-
-			if (gallery) {
-				if (!this.externalNavigations[galleryId]) this.externalNavigations[galleryId] = [];
-				this.externalNavigations[galleryId].push(navigation);
-
-				// Add event listeners
-				let prevButton = navigation.querySelector(`[data-navigation="prev"]`);
-				let nextButton = navigation.querySelector(`[data-navigation="next"]`);
-				if (prevButton) {
-					prevButton.addEventListener("click", () => {
-						gallery.back();
-					});
-				}
-				if (nextButton) {
-					nextButton.addEventListener("click", () => {
-						gallery.forward();
-					});
-				}
-			}
-		}
-	}
-
 }
