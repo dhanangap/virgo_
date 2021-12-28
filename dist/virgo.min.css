@@ -4166,10 +4166,6 @@ i.icon.large {
           box-shadow: 0 3px 12px #00000017;
   border-radius: 0;
   overflow: hidden;
-  -webkit-transition: opacity 0.5s ease-out, -webkit-transform 0.7s ease-out;
-  transition: opacity 0.5s ease-out, -webkit-transform 0.7s ease-out;
-  transition: opacity 0.5s ease-out, transform 0.7s ease-out;
-  transition: opacity 0.5s ease-out, transform 0.7s ease-out, -webkit-transform 0.7s ease-out;
 }
 
 .modal > .modal-header {
@@ -4226,7 +4222,6 @@ i.icon.large {
       -ms-flex-align: center;
           align-items: center;
   z-index: 9900;
-  display: none;
 }
 
 .modal-backdrop {
@@ -4240,73 +4235,16 @@ i.icon.large {
   transition: opacity 1.5s ease-out;
 }
 
-.modal-container {
+.modal-container[data-state="hidden"] {
   display: none;
 }
 
-.modal-container > .modal-backdrop {
+.modal-container[data-state="hidden"] > .modal-backdrop {
   opacity: 0;
 }
 
-.modal-container > .modal {
-  opacity: 0;
+.modal[data-state="closed"] {
   display: none;
-}
-
-.modal-container[data-state="visible"] {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.modal-container[data-state="visible"] > .modal-backdrop {
-  opacity: 1;
-}
-
-.modal-container[data-state="visible"] > .modal {
-  opacity: 1;
-}
-
-.modal-container[data-state="pre-transition"] {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.modal-container[data-state="pre-transition"] > .modal-backdrop {
-  opacity: 0;
-}
-
-.modal-container[data-state="pre-transition"] > .modal {
-  opacity: 0;
-}
-
-.modal-container[data-state="transition-in"] {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.modal-container[data-state="transition-in"] > .modal-backdrop {
-  opacity: 1;
-}
-
-.modal-container[data-state="transition-in"] > .modal {
-  opacity: 1;
-}
-
-.modal-container[data-state="transition-out"] {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.modal-container[data-state="transition-out"] > .modal-backdrop {
-  opacity: 0;
-}
-
-.modal-container[data-state="transition-out"] > .modal {
-  opacity: 0;
 }
 
 .absolute {

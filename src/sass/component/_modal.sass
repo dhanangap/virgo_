@@ -8,7 +8,7 @@
     box-shadow: 0 3px 12px #00000017
     border-radius: $roundness
     overflow: hidden
-    transition: opacity 0.5s ease-out, transform 0.7s ease-out
+    // transition: opacity 0.5s ease-out, transform 0.7s ease-out
 
     > .modal-header
         position: absolute
@@ -49,7 +49,7 @@
     align-items: center
     z-index: 9900
 
-    display: none
+    // display: none
 
 // ========== Modal Backdrop
 .modal-backdrop
@@ -62,44 +62,35 @@
     transition: opacity 1.5s ease-out
 
 // ========== Modal Hidden/Visible State
-.modal-container
+.modal-container[data-state="hidden"]
     display: none
 
     > .modal-backdrop
         opacity: 0
 
-    > .modal
-        opacity: 0
-        display: none
+.modal[data-state="closed"]
+    display: none
 
-    &[data-state="visible"]
-        display: flex
+//     &[data-state="pre-transition"]
+//         display: flex
 
-        > .modal-backdrop
-            opacity: 1
-        > .modal
-            opacity: 1
-
-    &[data-state="pre-transition"]
-        display: flex
-
-        > .modal-backdrop
-            opacity: 0
-        > .modal
-            opacity: 0
+//         > .modal-backdrop
+//             opacity: 0
+//         > .modal
+//             opacity: 0
     
-    &[data-state="transition-in"]
-        display: flex
+//     &[data-state="transition-in"]
+//         display: flex
         
-        > .modal-backdrop
-            opacity: 1
-        > .modal
-            opacity: 1
+//         > .modal-backdrop
+//             opacity: 1
+//         > .modal
+//             opacity: 1
     
-    &[data-state="transition-out"]
-        display: flex
+//     &[data-state="transition-out"]
+//         display: flex
 
-        > .modal-backdrop
-            opacity: 0
-        > .modal
-            opacity: 0
+//         > .modal-backdrop
+//             opacity: 0
+//         > .modal
+//             opacity: 0

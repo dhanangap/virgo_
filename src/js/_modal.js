@@ -1,131 +1,249 @@
+// ==========================================================================================================
+// - Virgo Component
+// - Modal
+// ==========================================================================================================
 export class Modal {
+	
+	// [ Class static properties ] ==========================================================================
+	static index;						// Stores all class instances on the page
+	static containerElement;			// DOM element of modal container
+	static backdropElement;				// DOM element of modal backdrop
 
-    static init() {
-        
-        let modals = document.querySelectorAll(".modal");
-        if (modals.length > 0) {
+	static openModal;					// The id of currently open modal
 
-            // ===== [ Initialize Modal ]
+	// [ Object properties ] ================================================================================
+	element;							// DOM element of modal instance
+	id;									// String of id for the modal
+	transition;							// Open and close transition effect
+	// ["fade", "slideLeft", "slideRight", "none"]
+	duration;							// Transition duration in miliseconds
+	
+	toggleElements;						// List of modal toggle DOM elements
+	
+	// [ Object computed properties ] =======================================================================
+	// State of modal instance["closed", "open"]
+	get state () 						{ return this.element.dataset["state"]; }
+	set state (value)					{ this.element.dataset["state"] = value; }
 
-            // ----- Create container element
-            let container = document.createElement("div");
-            container.classList.add("modal-container");
-            container.dataset["state"] = "hidden";
-            document.body.appendChild(container);
+	// [ Class static functions ] ===========================================================================
+	// ------------------------------------------------------------------------------------------------------
+	// • Initialize Component
+	// ------------------------------------------------------------------------------------------------------
+	static init () {
+		// Initial value assignment of static properties
+		this.index = [];
+		// Initialize container and backdrop elements
+		this.initContainer();
+		this.initBackdrop();
+		// Register all component instances to index
+		let modalElements = document.querySelectorAll(".modal");
+		for (let modalIndex = 0; modalIndex < modalElements.length; modalIndex++) {
+			let modalElement = modalElements[modalIndex];
+			this.index.push(new this(modalIndex, modalElement));
+		}
+		// Initialize openModal property
+		this.openModal = null;
+		// Initialize toggle elements
+		this.initModalToggles();
+	}
 
-            // ----- Create backdrop element
-            let backdrop = document.createElement("div");
-            backdrop.classList.add("modal-backdrop");
-            container.appendChild(backdrop);
+	// ------------------------------------------------------------------------------------------------------
+	// • Get modal by id
+	// ------------------------------------------------------------------------------------------------------
+	static getById(id) {
+		return this.index.find(modal => modal.id === id);
+	}
 
-            // ----- Initialize modal elements
-            for (let i = 0; i < modals.length; i++) {
-                let modal = modals[i].cloneNode(true);
-                modals[i].remove();
-                
-                // - Put modal inside container
-                container.appendChild(modal);
+	// ------------------------------------------------------------------------------------------------------
+	// • Initialize container element
+	// ------------------------------------------------------------------------------------------------------
+	static initContainer () {
+		if (!this.containerElement) {
+			// Check for existing modal container on the page
+			this.containerElement = document.querySelector(".modal-container");
+			// No existing modal container, create a new one
+			if (!this.containerElement) {
+				this.containerElement = document.createElement("div");
+				this.containerElement.classList.add("modal-container");
+				this.containerElement.dataset["state"] = "hidden";
+				document.body.appendChild(this.containerElement);
+			}
+		}
+	}
 
-                // - Set modal identifier
-                let id = modal.id ? modal.id : `modal-${i}`;
-                modal.id = id;
+	// ------------------------------------------------------------------------------------------------------
+	// • Initialize backdrop element
+	// ------------------------------------------------------------------------------------------------------
+	static initBackdrop() {
+		if (this.containerElement) {
+			// Check for existing backdrop element inside modal container
+			this.backdropElement = this.containerElement.querySelector(".modal-backdrop");
+			// No existing backdrop, create a new one
+			if (!this.backdropElement) {
+				this.backdropElement = document.createElement("div");
+				this.backdropElement.classList.add("modal-backdrop");
+				this.containerElement.appendChild(this.backdropElement);
+			}
+		}
+	}
 
-                // - Initialize close button
-                let close = modal.querySelector("button.close");
-                if (close) {
-                    close.dataset["modal"] = id;
-                    close.addEventListener("click", closeListener);
-                }
+	// ------------------------------------------------------------------------------------------------------
+	// • Initialize modal toggles (triggers)
+	// ------------------------------------------------------------------------------------------------------
+	static initModalToggles () {
+		let toggleElements = document.querySelectorAll(`[data-modal-toggle]`);
+		for (let toggle of toggleElements) {
+			const modal = this.index.find(modal => modal.id === toggle.dataset["modalToggle"]);
+			if (modal) {
+				toggle.addEventListener("click", () => {
+					modal.toggle();
+				});
+			}
+		}
+	}
 
-            }
+	// ------------------------------------------------------------------------------------------------------
+	// • Open modal container
+	// ------------------------------------------------------------------------------------------------------
+	static openContainer () {
+		this.containerElement.dataset["state"] = "visible";
+		this.containerElement.animate([
+			{ opacity: 0 },
+			{ opacity: 1 },
+		], {
+			duration: 300,
+			easing: "ease-out"
+		});
+	}
 
-            // ===== Initialize Toggle
-            let toggles = document.querySelectorAll(".modal-toggle");
-            if (toggles.length > 0) {
-                for (const toggle of toggles) {
-                    toggle.addEventListener("click", toggleListener);
-                }
-            }
+	// ------------------------------------------------------------------------------------------------------
+	// • Close modal container
+	// ------------------------------------------------------------------------------------------------------
+	static closeContainer() {
+		this.containerElement.animate([
+			{ opacity: 1 },
+			{ opacity: 0 },
+		], {
+			duration: 300,
+			easing: "ease-out"
+		});
+		setTimeout(() => {
+			this.containerElement.dataset["state"] = "hidden";
+			this.openModal = null;
+		}, 300);
+	}
 
-        }
+	// ------------------------------------------------------------------------------------------------------
+	// • Close all open modals
+	// ------------------------------------------------------------------------------------------------------
+	static closeAll () { }
 
-    }
+	// ------------------------------------------------------------------------------------------------------
+	// • Open modal by id
+	// ------------------------------------------------------------------------------------------------------
+	static open(id, data = undefined) {
+		let modal = this.getById(id);
+		if (modal) {
+			modal.open(data);
+		}
+	}
 
-    // ========== [ Display or Hide Modal ]
-    static toggle(modalId, action = "open", contentElement = null) {
+	// ------------------------------------------------------------------------------------------------------
+	// • Close modal by id
+	// ------------------------------------------------------------------------------------------------------
+	static close(id) {
+		let modal = this.getById(id);
+		if(moda) {
+			modal.close();
+		}
+	}
 
-        console.log(modalId);
+	// [ Object instance functions ] ========================================================================
+	// ------------------------------------------------------------------------------------------------------
+	// • Constructor
+	// ------------------------------------------------------------------------------------------------------
+	constructor (index, element) {
+		this.element = element;
+		
+		// Set identifier
+		this.id = this.element.id ? this.element.id : `modal-${index}`;
+		this.element.id = this.id;
 
-        // ----- Display container
-        
-        let container = document.querySelector(`.modal-container`);
-        if (!container) return;
+		// Assign transition and duration
+		this.transition = this.element.dataset["transition"] ? this.element.dataset["transition"] : "fade";
+		this.duration = this.element.dataset["duration"] ? parseInt(this.element.dataset["duration"]) : 300;
 
-        let backdrop = container.querySelector(`.modal-backdrop`);
-        if (!backdrop) return;
-        
-        let modal = container.querySelector(`#${modalId}`);
-        if (!modal) return;
-        
-        let activeId = container.dataset["active"];
+		// Assign "closed" to modal state
+		this.state = "closed";
 
-        // ----- Close container
-        if (action === "close") {
-            container.dataset["state"] = "transition-out";
-            setTimeout(() => {
-                container.dataset["state"] = "hidden";
-                container.dataset["active"] = null;
-                modal.style.display = "none";
-            }, 1500);
-            return;
-        }
+		// Move modal element to container
+		Modal.containerElement.appendChild(this.element);
 
-        // ----- Replace modal content
-        if (contentElement) {
-            let modalBody = modal.querySelector(".modal-body");
-            if (!modalBody) modalBody = modal;
-            modalBody.innerHTML = "";
-            modalBody.appendChild(contentElement);
-        }
-        
-        // ----- Toggle display/hide container state
-        // - Show container
-        if (container.dataset["state"] === "hidden") {
-            container.dataset["state"] = "pre-transition";
-            container.dataset["active"] = modal.id;
-            modal.style.display = "block";
-            setTimeout(() => {
-                container.dataset["state"] = "transition-in";
-            }, 5);
-            setTimeout(() => {
-                container.dataset["state"] = "visible";
-            }, 5);
-        }
-        // - Toggle active modal
-        else if (container.dataset["state"] === "visible" && activeId) {
-        }
-    }
+		// Add event listener to close button
+		let closeButton = this.element.querySelector("button.close");
+		if (closeButton) {
+			closeButton.addEventListener("click", () => {
+				this.close();
+			});
+		}
+	}
 
-    static close(modalId) {
-        this.toggle(modalId, "close");
-    }
+	// ------------------------------------------------------------------------------------------------------
+	// • Open modal instance
+	// ------------------------------------------------------------------------------------------------------
+	open (data = undefined) {
+		Modal.openContainer();
+		// Open animation
+		if (this.transition !== "none") {
 
-    static open(modalId) {
-        this.toggle(modalId, "open");
-    }
+			// Fade transition
+			this.element.animate([
+				{ opacity: 0 },
+				{ opacity: 1 },
+			], {
+				duration: this.duration,
+				easing: "ease-out"
+			});
+			this.element.style.opacity = 1;
 
-}
+		}
+		// Set modal state to "closed"
+		this.state = "open";
+	}
 
-function toggleListener(event) {
-    const id = event.currentTarget.dataset["modal"];
-    if (!id) return;
-    
-    Modal.toggle(id);
-}
+	// ------------------------------------------------------------------------------------------------------
+	// • Close modal instance
+	// ------------------------------------------------------------------------------------------------------
+	close () {
+		// Close animation
+		if (this.transition !== "none") {
 
-function closeListener(event) {
-    const id = event.currentTarget.dataset["modal"];
-    if (!id) return;
+			// Fade transition
+			this.element.animate([
+				{ opacity: 1 },
+				{ opacity: 0 },
+			], {
+				duration: this.duration,
+				easing: "ease-out"
+			});
+			this.element.style.opacity = 0;
 
-    Modal.close(id);
+		}
+		setTimeout(() => {
+			// Set modal state to "closed"
+			this.state = "closed";
+			Modal.closeContainer();
+		}, this.duration);
+	}
+
+	// ------------------------------------------------------------------------------------------------------
+	// • Toggle open or close modal instance
+	// ------------------------------------------------------------------------------------------------------
+	toggle(data = undefined) {
+		if (this.state === "closed")	{ this.open(data); }
+		else							{ this.close(); }
+	}
+
+
+	
 }

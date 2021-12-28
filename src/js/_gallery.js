@@ -15,6 +15,7 @@ export class Gallery {
 	rows;						// Number of rows in one gallery page
 	transition;					// Gallery page transition ["default", "slide", "fade", "none"]
 	duration;					// Page transition duration in miliseconds
+	modal;						// Custom modal id
 	activePageIndex;			// Index of current active gallery page
 
 	items;						// Stores all item DOM elements inside the gallery
@@ -142,6 +143,7 @@ export class Gallery {
 		this.rows = element.dataset["rows"] ? parseInt(element.dataset["rows"]) : 1;
 		this.transition = element.dataset["transition"] ? element.dataset["transition"] : "default";
 		this.duration = element.dataset["duration"] ? parseInt(element.dataset["duration"]) : 500;
+		this.modal = element.dataset["modal"] ? element.dataset["modal"] : null;
 		this.activePageIndex = element.dataset["active"] ? parseInt(element.dataset["active"]) : 0;
 		this.items = element.querySelectorAll(".item");
 		this.pages = [];
@@ -189,7 +191,14 @@ export class Gallery {
 
 			// Add click event listener
 			item.addEventListener("click", () => {
-				this.handleItemClick(this.element.dataset["click"]);
+				// Custom click event
+				if (item.dataset["click"] && item.dataset["click"] !== "") {
+					this.customClickEvent(item);
+				}
+				// Default click event
+				else {
+					this.defaultClickEvent(item);
+				}
 			});
 		}
 	}
@@ -534,15 +543,33 @@ export class Gallery {
 	}
 
 	// --------------------------------------------------------------------------------------------
-	// • Handle gallery item click event
+	// • Handle custom click event
 	// --------------------------------------------------------------------------------------------
-	handleItemClick (functionName) {
+	customClickEvent (itemElement) {
+		const functionName = itemElement.dataset["click"];
 		if (!functionName) return;
 		const fn = window[functionName];
 		if (!fn) return;
-
 		// Execute function
-		fn();
+		fn({
+			galleryId: this.id,
+			itemData: Object.assign({}, itemElement.dataset)
+		});
+	}
+
+	// --------------------------------------------------------------------------------------------
+	// • Handle default click event
+	// --------------------------------------------------------------------------------------------
+	// - Show popup when user clicks one of gallery items.
+	// --------------------------------------------------------------------------------------------
+	defaultClickEvent (itemElement) {
+		// - Display default popup when custom modal id is not provided.
+		if (!this.modal) {}
+		// - Display custom modal
+		else {
+			// ...
+		}
+
 	}
 	
 }
