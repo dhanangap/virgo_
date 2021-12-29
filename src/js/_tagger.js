@@ -1,63 +1,159 @@
+// ================================================================================================
+// - Virgo Component
+// - Tagger
+// ================================================================================================
 export class Tagger {
 
+	// [ Class static properties ] ================================================================
+	static index;					// Stores all instances on the page
+
+	// [ Object properties ] ======================================================================
+	element;						// The instance DOM element
+	id;								// String of id for the instance
+	targetImage;					// DOM element of image to be tagged
+
+	containerElement;				// DOM element of tag points container
+	tagPoints;						// List of tag point DOM elements
+
+	// [ Object computed properties ] =============================================================
+	// --------------------------------------------------------------------------------------------
+	// • Get the dimension of target image
+	// --------------------------------------------------------------------------------------------
+	get imageDimension () {
+		return this.targetImage.getBoundingClientRect();
+	}
+
+
+	// [ Class static functions ] =================================================================
+	// --------------------------------------------------------------------------------------------
+	// • Initialize Component
+	// --------------------------------------------------------------------------------------------
 	static init () {
-
-		// ---------- Initialize all tagger elements
+		// Static variable initial assignment
+		this.index = [];
+		// Get all corresponding elements to create instances of this class
 		let taggers = document.querySelectorAll(".tagger");
-		for (let index = 0; index < taggers.length; index++) {
-			const tagger = taggers[index];
-
-			// ---------- Identifier
-			let id = tagger.id;
-			if (!id) {
-				id = `tagger-${index}`;
-				tagger.id = id;
-			}
-
-			// ---------- Target Image
-			let targetImage = tagger.querySelector(".image > img");
-			if(!targetImage) return;
-			let targetRect = targetImage.getBoundingClientRect();
-
-			// ---------- Tags
-			let tags = tagger.querySelectorAll(".tags > .tag");
-			let tagPoints = document.createElement("div");
-			tagPoints.classList.add("tag-points");
-			tagger.appendChild(tagPoints);
-			for (let tagIndex = 0; tagIndex < tags.length; tagIndex++) {
-				const tag = tags[tagIndex];
-				const x = tag.dataset["x"] ? parseFloat(tag.dataset["x"]) : 0;
-				const y = tag.dataset["y"] ? parseFloat(tag.dataset["y"]) : 0;
-				const label = tag.dataset["label"] ? tag.dataset["label"] : "";
-				// - Add tagPoint to tagger
-				let tagPoint = document.createElement("div");
-				tagPoint.classList.add("tag-point");
-				tagPoint.dataset["tagger"] = id;
-				tagPoint.dataset["index"] = tagIndex;
-				tagPoint.dataset["x"] = x;
-				tagPoint.dataset["y"] = y;
-				tagPoint.dataset["label"] = label;
-				tagPoints.appendChild(tagPoint);
-				// - Adjust tagPoint position
-				const xPos = (targetRect.x - window.scrollX) + (targetImage.clientWidth * x);
-				tagPoint.style.left = xPos + "px";
-				const yPos = (window.scrollY) + (targetImage.clientHeight * y);
-				tagPoint.style.top = yPos + "px";
-				// - Add event listener
-				const contentElement = tag.querySelector("div") ? tag.querySelector("div") : null;
-				if (tag.dataset["click"]) {
-					tagPoint.addEventListener("click", () => {
-						window[tag.dataset["click"]]({
-							taggerId: id,
-							index: tagIndex,
-							content: contentElement
-						});
-					});
-				}
-			}
-			
+		for (let i = 0; i < taggers.length; i++) {
+			let tagger = taggers[i];
+			this.index.push(new this(i, tagger));
 		}
 
+		// Listen to window resize event
+		window.addEventListener("resize", () => {
+			this.resizeListener();
+		});
+	}
+
+	// --------------------------------------------------------------------------------------------
+	// • Get tagger by id
+	// --------------------------------------------------------------------------------------------
+	static getById(id) {
+		return this.index.find(tagger => tagger.id === id);
+	}
+
+	// --------------------------------------------------------------------------------------------
+	// • Window resize event listener
+	// --------------------------------------------------------------------------------------------
+	static resizeListener () {
+		for (const tagger of this.index) {
+			tagger.repositionTags();
+		}
+	}
+
+	// [ Object instance functions ] ==============================================================
+	// --------------------------------------------------------------------------------------------
+	// • Constructor
+	// --------------------------------------------------------------------------------------------
+	constructor(index, element) {
+		// Element reference
+		this.element = element;
+		
+		// Instance identifier
+		this.id 			= this.element.id ? this.element.id : `tagger-${index}`;
+		this.element.id 	= this.id;
+		
+		// Target image
+		this.targetImage 	= this.element.querySelector(".image > img");
+		
+		// Initialize tag points
+		this.initTagPoints();
+
+	}
+
+	// --------------------------------------------------------------------------------------------
+	// • Create tag points
+	// --------------------------------------------------------------------------------------------
+	initTagPoints () {
+		this.tagPoints = [];
+
+		// Tag points container
+		this.containerElement = document.createElement("div");
+		this.containerElement.classList.add("tag-points");
+		this.element.appendChild(this.containerElement);
+
+		// Tag points
+		let tagElements = this.element.querySelectorAll(".tags > .tag");
+		for (let i = 0; i < tagElements.length; i++) {
+			let tagElement	= tagElements[i];
+			const label 	= tagElement.dataset["label"] 	? tagElement.dataset["label"] : "";
+			const x 		= tagElement.dataset["x"] 		? parseFloat(tagElement.dataset["x"]) : 0;
+			const y 		= tagElement.dataset["y"] 		? parseFloat(tagElement.dataset["y"]) : 0;
+
+			let tagPoint	= new TagPoint(this, i, label, x, y);
+			this.containerElement.appendChild(tagPoint.element);
+			this.tagPoints.push(tagPoint);
+		}
+	}
+
+	// --------------------------------------------------------------------------------------------
+	// • Reposition tags
+	// --------------------------------------------------------------------------------------------
+	repositionTags () {
+		for (const tagPoint of this.tagPoints) {
+			tagPoint.setPosition();
+		}
+	}
+
+}
+
+export class TagPoint {
+	
+	// [ Object properties ] ======================================================================
+	tagger;						// Tagger id
+	element;					// Tag point element
+	index;						// Tag point index
+	label;						// Tag point label
+	x;							// Tag point x position in ratio [0..1]
+	y;							// Tag point y position in ratio [0..1]
+
+	// [ Object instance functions ] ==============================================================
+	// --------------------------------------------------------------------------------------------
+	// • Constructor
+	// --------------------------------------------------------------------------------------------
+	constructor (tagger, index, label, x, y) {
+		this.tagger		= tagger;
+		this.index 		= index;
+		this.label 		= label;
+		this.x	 		= x;
+		this.y 			= y;
+		this.element 	= document.createElement("div");
+
+		// Add attributes to element
+		this.element.classList.add("tag-point");
+		this.element.dataset["tagger"] 	= this.tagger.id;
+		this.element.dataset["index"] 	= this.index;
+		this.element.dataset["label"] 	= this.label;
+		this.element.dataset["x"] 		= this.x;
+		this.element.dataset["y"] 		= this.y;
+
+		this.setPosition();
+	}
+
+	setPosition () {
+		const xPos 					= (this.tagger.imageDimension.x - window.scrollX) + (this.tagger.targetImage.clientWidth * this.x);
+		const yPos 					= this.tagger.targetImage.clientHeight * this.y;
+		this.element.style.left 	= xPos + "px";
+		this.element.style.top		= yPos + "px";
 	}
 
 }

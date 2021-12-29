@@ -7,6 +7,8 @@ export class Gallery {
 	// [ Class static properties ] ================================================================
 	// Stores all galleries on the page.
 	static index;
+	static externalIndicators;  // DOM element of external indicators
+	static externalNavigations; // DOM element of external navigations
 
 	// [ Object properties ] ======================================================================
 	element;					// The gallery DOM element
@@ -16,7 +18,7 @@ export class Gallery {
 	transition;					// Gallery page transition ["default", "slide", "fade", "none"]
 	duration;					// Page transition duration in miliseconds
 	modal;						// Custom modal id
-	activePageIndex;			// Index of current active gallery page
+	activePageIndex;			// Index of currently active gallery page
 
 	items;						// Stores all item DOM elements inside the gallery
 	pages;						// Stores all gallery pages
