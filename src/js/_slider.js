@@ -252,6 +252,7 @@ function indicatorButtonListener (event) {
     let button = event.target;
     let sliderId = button.dataset["target"];
     let index = button.dataset["index"];
+    console.log("asdf");
     Slider.setActiveIndex(sliderId, index);
 }
 

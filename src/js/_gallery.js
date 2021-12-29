@@ -553,7 +553,8 @@ export class Gallery {
 		// Execute function
 		fn({
 			galleryId: this.id,
-			itemData: Object.assign({}, itemElement.dataset)
+			itemData: Object.assign({}, itemElement.dataset),
+			trigger: itemElement
 		});
 	}
 

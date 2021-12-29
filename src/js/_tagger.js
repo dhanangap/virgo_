@@ -44,7 +44,7 @@ export class Tagger {
 				const yPos = (window.scrollY) + (targetImage.clientHeight * y);
 				tagPoint.style.top = yPos + "px";
 				// - Add event listener
-				const contentElement = tag.querySelector("div") ? tag.querySelector("div").cloneNode(true) : null;
+				const contentElement = tag.querySelector("div") ? tag.querySelector("div") : null;
 				if (tag.dataset["click"]) {
 					tagPoint.addEventListener("click", () => {
 						window[tag.dataset["click"]]({
