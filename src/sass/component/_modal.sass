@@ -68,3 +68,10 @@
 .modal[data-state="closed"]
     display: none
 
+
+// Small Screen
+@media screen and ( max-width: ($md - 1px) )
+    .modal
+        &.sm\:center
+            align-self: center !important
+            justify-self: center !important

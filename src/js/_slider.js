@@ -34,6 +34,8 @@ export class Slider {
 	externalIndicators;				// Stores DOM elements of external indicators
 	externalNavigations;			// Stores DOM elements of external navigations
 
+	isFlexible;						// True if slider dimension is set to flexible
+
 	// [ Computed properties ] ====================================================================
 	// --------------------------------------------------------------------------------------------
 	// • Get total slides
@@ -145,7 +147,8 @@ export class Slider {
 		this.duration			= element.dataset["duration"]	? parseInt(element.dataset["duration"]) : Slider.defaultDuration;
 		this.easing				= element.dataset["easing"]		? element.dataset["easing"] 			: Slider.defaultEasing;
 		this.activeSlideIndex	= element.dataset["active"]		? parseInt(element.dataset["active"]) 	: 0;
-		
+		this.isFlexible			= element.classList.contains("flexible") ? true : false;
+
 		element.dataset["active"] = this.activeSlideIndex;
 		
 		this.slidesElement		= this.element.querySelector(".slides");
@@ -166,7 +169,20 @@ export class Slider {
 	initSlides () {
 		for (let slideIndex = 0; slideIndex < this.totalSlides; slideIndex++) {
 			let slide = this.slides[slideIndex];
-			if (slideIndex === this.activeSlideIndex) slide.classList.add("active");
+			if (slideIndex === this.activeSlideIndex) {
+				slide.classList.add("active");
+			}
+		}
+	}
+
+	// --------------------------------------------------------------------------------------------
+	// • Flexible slide dimension
+	// --------------------------------------------------------------------------------------------
+	updateFlexibleSize () {
+		// If slider is flexible, resize to match its content
+		if (this.isFlexible) {
+			let slideHeight = this.slides[this.activeSlideIndex].getBoundingClientRect().height;
+			this.slidesElement.style.height = `${slideHeight}px`;
 		}
 	}
 
@@ -292,13 +308,11 @@ export class Slider {
 
 		// ----- Prepare element
 		if (this.totalSlides > 0) {
-
+			this.updateFlexibleSize();
 			this.initControlElement();
 			this.initIndicator();
 			this.initNavigation();
-
 			this.initExternalIndicators();
-
 		}
 	}
 
@@ -430,6 +444,7 @@ export class Slider {
 					let slide = this.slides[slideIndex];
 					slide.classList.remove("active");
 					if (slideIndex === this.activeSlideIndex) slide.classList.add("active");
+					this.updateFlexibleSize();
 				}
 			}, this.duration);
 		}

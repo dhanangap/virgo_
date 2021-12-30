@@ -102,7 +102,20 @@ export class Tagger {
 			let tagPoint	= new TagPoint(this, i, label, x, y);
 			this.containerElement.appendChild(tagPoint.element);
 			this.tagPoints.push(tagPoint);
+
+			if (tagElement.dataset["click"]) {
+				const contentElement = tagElement.querySelector("div") ? tagElement.querySelector("div") : null;
+				tagPoint.element.addEventListener("click", () => {
+					window[tagElement.dataset["click"]]({
+						taggerId: this.id,
+						index: i,
+						content: contentElement
+					});
+				});
+			}
 		}
+
+
 	}
 
 	// --------------------------------------------------------------------------------------------
