@@ -1,0 +1,35 @@
+// ====================================================================
+// - Virgo Library
+// - Variables
+// ====================================================================
+:root {
+
+	// ----------------------------------------------------------------
+	// Typefaces
+	// ----------------------------------------------------------------
+	--font-sans			: "Helvetica Neue", "Arial", sans-serif;
+	--font-serif		: "New York", "Georgia", serif;
+	--font-mono			: "SF Mono", "Consolas", monospace;
+	--font-icon			: "Material Icons";
+	// ----------------------------------------------------------------
+	--font-heading		: var(--font-sans);
+	--font-body			: var(--font-sans);
+	--font-element		: var(--font-sans);
+
+	// ----------------------------------------------------------------
+	// Dimension
+	// ----------------------------------------------------------------
+	--base-size			: 10px;
+	--font-size			: 1.6rem;
+	--roundness			: 0.25em;
+
+	// ----------------------------------------------------------------
+	// Colors
+	// ----------------------------------------------------------------
+	--color-primary		: #1e88e5;
+	--color-secondary	: #fbc02d;
+	--color-border		: #bbbbbb;
+	--color-background	: #ffffff;
+	--color-text		: #222222;
+
+} // end of :root selector

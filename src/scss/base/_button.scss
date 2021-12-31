@@ -1,0 +1,124 @@
+// ====================================================================
+// - Virgo Base Class
+// - Button
+// ====================================================================
+
+button.button, a.button {
+
+	// ----------------------------------------------------------------
+	// • Default style
+	// ----------------------------------------------------------------
+
+	display				: inline-flex;
+	justify-content		: center;
+	align-items			: center;
+	vertical-align		: middle;
+	font-size			: var(--font-size, 1em);
+	line-height			: 2rem;
+	text-decoration		: none;
+	user-select			: none;
+	
+	height				: 4rem;
+	margin				: 0;
+	padding				: 0 1.2rem;
+
+	background-color	: var(--color-background);
+	border 				: 1px solid var(--color-border);
+	border-radius		: var(--roundness, 0px);
+	cursor				: pointer;
+
+	// Hover state ----------------------------------------------------
+	&:hover {
+		filter: brightness(95%);
+	}
+
+	// Pressed stat ---------------------------------------------------
+	&:active {
+		filter: brightness(90%);
+	}
+
+	// ----------------------------------------------------------------
+	// • Coloring
+	// ----------------------------------------------------------------
+	// - Primary
+	// ----------------------------------------------------------------
+	&.primary {
+		color				: var(--color-background);
+		background-color	: var(--color-primary);
+		border-color		: var(--color-primary);
+	}
+
+	// ----------------------------------------------------------------
+	// • Outlined Style
+	// ----------------------------------------------------------------
+	// - Default outlined style
+	// ----------------------------------------------------------------
+	&.outline {
+		background-color: transparent;
+		
+		// ------------------------------------------------------------
+		// - Outlined with primary style
+		// ------------------------------------------------------------
+		&.primary {
+			color: var(--color-primary);
+
+			// Hover state --------------------------------------------
+			&:hover {
+				filter: none;
+				color: var(--color-background);
+				background-color: var(--color-primary);
+			}
+
+			// Pressed state ------------------------------------------
+			&:active {
+				filter: brightness(95%);
+			}
+		}
+	
+	} // End of outlined style
+
+	// ----------------------------------------------------------------
+	// • Icon
+	// ----------------------------------------------------------------
+	// - Icon inside button
+	// ----------------------------------------------------------------
+	// Icon in left-hand side before the text
+	> i.icon {
+		margin: 0 0.6rem 0 0;
+		font-size: 2rem;
+	}
+	
+	// Icon in right-hand side after the text
+	> i.icon.right {
+		margin: 0 -0.6rem 0 0.6rem;
+	}
+
+	// ----------------------------------------------------------------
+	// • Sizing
+	// ----------------------------------------------------------------
+	// - Block
+	// ----------------------------------------------------------------
+	&.block {
+		display: block;
+		width: 100%;
+	}
+
+	// ----------------------------------------------------------------
+	// - Small
+	// ----------------------------------------------------------------
+	&.small {
+		height: 3rem;
+		padding: 0 0.8rem;
+		font-size: 0.90em;
+	}
+
+	// ----------------------------------------------------------------
+	// - Large
+	// ----------------------------------------------------------------
+	&.large {
+		height: 5rem;
+		padding: 0 2rem;
+		font-size: 1.2em;
+	}
+
+} // End of button style

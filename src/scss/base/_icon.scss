@@ -1,0 +1,12 @@
+// ====================================================================
+// - Virgo Base Class
+// - Icon
+// ====================================================================
+
+// Import icon font family
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+i.icon {
+	font-style	: normal;
+	font-family	: var(--font-icon);
+}

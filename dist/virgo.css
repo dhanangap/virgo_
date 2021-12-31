@@ -3906,121 +3906,6 @@ i.icon.large {
   z-index: 5002;
 }
 
-.carousel {
-  position: relative;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
-}
-
-.carousel .nav-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 2.4rem;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.carousel .nav-container > .navigation button.carousel-prev {
-  margin-right: 1.2rem;
-}
-
-.carousel .nav-container > .indicator {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.carousel .nav-container > .indicator > button {
-  position: relative;
-  margin: 0 0.4rem;
-  width: 4rem;
-  height: 0.4rem;
-  background: #444;
-  opacity: 0.4;
-  -webkit-transition: opacity 0.3s ease-out;
-  transition: opacity 0.3s ease-out;
-}
-
-.carousel .nav-container > .indicator > button::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  padding: 0.8rem 0;
-  top: -0.8rem;
-  background-color: transparent;
-}
-
-.carousel .nav-container > .indicator > button:hover {
-  opacity: 0.8;
-}
-
-.carousel .nav-container > .indicator > button:active {
-  opacity: 0.2;
-}
-
-.carousel .nav-container > .indicator > button.active {
-  opacity: 1;
-}
-
-.carousel .pages {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.carousel .pages .page {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.carousel .pages .page.hidden {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 5000;
-  opacity: 0;
-}
-
-.carousel .pages .page.active {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 5010;
-  opacity: 1;
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
-}
-
 .modal {
   position: relative;
   min-width: 320px;
@@ -4111,6 +3996,16 @@ i.icon.large {
 
 .modal[data-state="closed"] {
   display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .modal.sm\:center {
+    -ms-flex-item-align: center !important;
+        -ms-grid-row-align: center !important;
+        align-self: center !important;
+    -ms-grid-column-align: center !important;
+        justify-self: center !important;
+  }
 }
 
 .absolute {
@@ -41413,6 +41308,133 @@ ol li::before {
   display: none;
 }
 
+.carousel {
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.carousel > .pages {
+  position: relative;
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.carousel > .pages > .page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-transform: translate3d(100%, 0, 0);
+          transform: translate3d(100%, 0, 0);
+}
+
+.carousel > .pages > .page.active {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.carousel > .pages > .page > .item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.carousel > .control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2rem;
+  background-color: #eaeaea;
+}
+
+.carousel > .control > .indicator {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 1rem;
+}
+
+.carousel > .control > .indicator > button {
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #00000022;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.carousel > .control > .indicator > button:hover {
+  background-color: #00000044;
+}
+
+.carousel > .control > .indicator > button.active {
+  background-color: #00000066;
+}
+
+.carousel > .control > .navigation {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.carousel > .control > .navigation > button {
+  width: 2rem;
+  height: 2rem;
+  font-family: "Material Icons";
+  font-size: 1.8rem;
+  line-height: 2rem;
+  color: #00000044;
+  cursor: pointer;
+  background-color: #00000000;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.carousel > .control > .navigation > button:hover {
+  background-color: #00000022;
+}
+
+.carousel > .control > .navigation > button:active {
+  background-color: #00000044;
+}
+
+.carousel > .control > .navigation > button.prev::before {
+  content: "navigate_before";
+}
+
+.carousel > .control > .navigation > button.next::before {
+  content: "navigate_next";
+}
+
+.carousel[data-control="false"] > .control {
+  display: none;
+}
+
 .slider {
   position: relative;
   overflow: hidden;
@@ -41539,6 +41561,21 @@ ol li::before {
   display: none;
 }
 
+.slider.flexible {
+  height: auto;
+}
+
+.slider.flexible > .slides {
+  height: auto;
+  min-height: 100%;
+  -webkit-transition: height 0.3s ease-out;
+  transition: height 0.3s ease-out;
+}
+
+.slider.flexible > .slides > .slide {
+  height: auto;
+}
+
 .slider[data-transition="fade"] > .slides > .slide {
   opacity: 0;
   display: none;
@@ -41569,4 +41606,4 @@ body {
   font-family: "Montserrat", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
   font-weight: 400;
 }
-/*# sourceMappingURL=virgo.min.css.map */
+/*# sourceMappingURL=virgo.css.map */
