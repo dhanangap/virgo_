@@ -6,7 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Virgo Style Library</title>
 	<!-- <link rel="stylesheet" href="../dist/css/bundle.css"> -->
-	<link rel="stylesheet" href="https://virgo-dist.netlify.app/css/bundle.css">
+	<link rel="stylesheet" href="./css/bundle.css">
+	<!-- <link rel="stylesheet" href="https://virgo-dist.netlify.app/css/bundle.css"> -->
 	<link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -54,16 +55,37 @@
 				<div id="hello-1" class="slide">
 					<div class="row h-full padding-navbar">
 						<div class="col-6">
-							<div class="cover flex flex-column align-center justify-center h-full w-full">
-								<div>
+							<div class="cover flex flex-column align-start justify-center h-full w-full">
+								<div class="pl-5">
 									<h1>Hello, <br> this is Virgo.</h1>
 									<h2 class="text-light">Your next generation style library.</h2>
 								</div>
 							</div>
 						</div>
 						<div class="col-6">
-							<div class="content h-full w-full">
-								a
+							<div class="content h-full w-full flex flex-column justify-center align-center">
+								
+								<div id="hello-1-1">
+									<div class="box-1">Box 1</div>
+									<div class="box-2">Box 2</div>
+									<div class="box-3">Box 3</div>
+								</div>
+
+								<div id="hello-1-2">
+									<div class="titlebar">
+										<img src="./img/traffic.svg">
+									</div>
+									<div class="codebox">
+<pre>
+&lt;<span class="color-red">div</span><strong class="code-1 hide"><span class="color-green">class</span>=<span class="color-yellow">"flex"</span></strong>&gt;
+  &lt;<span class="color-red">div</span>&gt;Box 1&lt;/<span class="color-red">div</span>&gt;
+  &lt;<span class="color-red">div</span><strong class="code-2 hide"><span class="color-green">class</span>=<span class="color-yellow">"grow-1"</span></strong>&gt;Box 2&lt;/<span class="color-red">div</span>&gt;
+  &lt;<span class="color-red">div</span>&gt;Box 3&lt;/<span class="color-red">div</span>&gt;
+&lt;/<span class="color-red">div</span>&gt;
+</pre>
+									</div>
+								</div>
+
 							</div>
 						</div>
 					</div>
@@ -72,10 +94,28 @@
 				<div id="hello-2" class="slide">
 					<div class="row h-full padding-navbar">
 						<div class="col-6">
-							<div class="cover flex flex-column align-center justify-center h-full w-full">
-								<div>
-									<h1>Hello, <br> this is Virgo.</h1>
-									<h2 class="text-light">Your next generation style library.</h2>
+							<div class="cover flex flex-column align-start justify-center h-full w-full">
+								<div class="pl-5">
+									<h1>Components are <br> ready for you.</h1>
+									<h2 class="text-light">And it's easy to customize.</h2>
+								</div>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="content h-full w-full pa-4">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="hello-3" class="slide">
+					<div class="row h-full padding-navbar">
+						<div class="col-6">
+							<div class="cover flex flex-column align-start justify-center h-full w-full">
+								<div class="pl-5">
+									<h1>Virgo is also <br> a data visualization library.</h1>
+									<h2 class="text-light">Present your data beautifully.</h2>
 								</div>
 							</div>
 						</div>
@@ -93,7 +133,17 @@
 	</div><!-- .page -->
 
 	<!-- <script type="module" src="../src/js/script.js"></script> -->
-	<script type="module" src="https://virgo-dist.netlify.app/js/script.js"></script>
+	<script type="module" src="./js/script.js"></script>
+	<!-- <script type="module" src="https://virgo-dist.netlify.app/js/script.js" crossorigin="anonymous"></script> -->
+
+	<script>
+		setTimeout(() => {
+			document.querySelector(".code-1").classList.remove("hide");
+		}, 1000);
+		setTimeout(() => {
+			document.querySelector(".code-2").classList.remove("hide");
+		}, 3000);
+	</script>
 
 </body>
 </html>

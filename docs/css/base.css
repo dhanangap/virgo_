@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+:root {
+  --font-sans: "Helvetica Neue", "Arial", sans-serif;
+  --font-serif: "New York", "Georgia", serif;
+  --font-mono: "SF Mono", "Consolas", monospace;
+  --font-icon: "Material Icons";
+  --font-heading: var(--font-sans);
+  --font-body: var(--font-sans);
+  --font-element: var(--font-sans);
+  --base-size: 10px;
+  --font-size: 1.6rem;
+  --roundness: 0.25em;
+  --media-sm: 640px;
+  --media-md: 768px;
+  --media-lg: 1024px;
+  --media-xl: 1280px;
+  --media-xxl: 1536px;
+  --color-primary: #1e88e5;
+  --color-secondary: #fbc02d;
+  --color-border: #bbbbbb;
+  --color-shade: #f6f6f6;
+  --color-background: #ffffff;
+  --color-text: #2e2e2f;
+  --navbar-height: 8rem;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: var(--base-size, 10px);
+}
+
+body,
+h1, h2, h3, h4, h5, h6, p
+figure, blockquote,
+li, ol,
+dl, dd {
+  margin: 0;
+}
+
+ul, ol {
+  padding: 0;
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: geometricPrecision;
+  line-height: 1;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img, picture {
+  max-width: 100%;
+  display: block;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--font-size);
+  color: var(--color-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.2em;
+  margin-bottom: 0.4em;
+  letter-spacing: -1px;
+}
+
+h2 {
+  font-size: 2.0em;
+  margin-bottom: 0.4em;
+  letter-spacing: -1px;
+}
+
+h3 {
+  font-size: 1.8em;
+  margin-bottom: 0.4em;
+}
+
+h4 {
+  font-size: 1.6em;
+  margin-bottom: 0.4em;
+}
+
+h5 {
+  font-size: 1.4em;
+  margin-bottom: 0.6em;
+}
+
+h6 {
+  font-size: 1.2em;
+  margin-bottom: 0.8em;
+}
+
+p {
+  margin: 0 0 1em;
+  line-height: 1.2;
+}
+
+a:not([class]) {
+  color: var(--color-primary);
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+button.button, a.button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  vertical-align: middle;
+  font-size: var(--font-size, 1em);
+  line-height: 2rem;
+  text-decoration: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  height: 4rem;
+  margin: 0;
+  padding: 0 1.2rem;
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--roundness, 0px);
+  cursor: pointer;
+}
+
+button.button:hover, a.button:hover {
+  -webkit-filter: brightness(95%);
+          filter: brightness(95%);
+}
+
+button.button:active, a.button:active {
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
+}
+
+button.button.primary, a.button.primary {
+  color: var(--color-background);
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+button.button.outline, a.button.outline {
+  background-color: transparent;
+}
+
+button.button.outline.primary, a.button.outline.primary {
+  color: var(--color-primary);
+}
+
+button.button.outline.primary:hover, a.button.outline.primary:hover {
+  -webkit-filter: none;
+          filter: none;
+  color: var(--color-background);
+  background-color: var(--color-primary);
+}
+
+button.button.outline.primary:active, a.button.outline.primary:active {
+  -webkit-filter: brightness(95%);
+          filter: brightness(95%);
+}
+
+button.button > i.icon, a.button > i.icon {
+  margin: 0 0.6rem 0 0;
+  font-size: 2rem;
+}
+
+button.button > i.icon.right, a.button > i.icon.right {
+  margin: 0 -0.6rem 0 0.6rem;
+}
+
+button.button.block, a.button.block {
+  display: block;
+  width: 100%;
+}
+
+button.button.small, a.button.small {
+  height: 3rem;
+  padding: 0 0.8rem;
+  font-size: 0.90em;
+}
+
+button.button.large, a.button.large {
+  height: 5rem;
+  padding: 0 2rem;
+  font-size: 1.2em;
+}
+
+i.icon {
+  font-style: normal;
+  font-family: var(--font-icon);
+}
+/*# sourceMappingURL=base.css.map */
