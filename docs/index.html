@@ -5,56 +5,94 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Virgo Style Library</title>
-	<!-- <link rel="stylesheet" href="../dist/bundle.css"> -->
-	<link rel="stylesheet" href="https://virgo-dist.netlify.app/css/bundle.css">
+	<link rel="stylesheet" href="../dist/css/bundle.css">
+	<!-- <link rel="stylesheet" href="https://virgo-dist.netlify.app/css/bundle.css"> -->
+	<link rel="stylesheet" href="./style.css">
 </head>
 <body>
 	
-	<div style="padding:20px;">
-	
-		<h3>Buttons</h3>
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quos? Dolorem enim est hic deleniti aliquid! Repudiandae doloremque incidunt deserunt! Rerum porro, mollitia incidunt molestias recusandae aliquam sequi tempora possimus.</p>
-		<div>
-			<button class="button">Default Button</button>
-			<button class="button primary">Primary Button</button>
-			<button class="button outline">Outline Button</button>
-			<button class="button outline primary">Outline Primary Button</button>
+	<div class="navbar fixed-top">
+		<div class="brand">
+			<a href="#">
+				<img src="./img/logo.svg">
+			</a>
 		</div>
-
-		<br><br>
-
-		<h3>Buttons</h3>
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quos? Dolorem enim est hic deleniti aliquid!
-			Repudiandae doloremque incidunt deserunt! Rerum porro, mollitia incidunt molestias recusandae aliquam sequi tempora
-			possimus.</p>
-		<div>
-			<button class="button block primary">Block Primary Button</button>
+		<div class="menu center">
+			<a class="active" href="#">Hello</a>
+			<a href="#">Getting Started</a>
+			<div class="has-dropdown">
+				<a href="#">Documentation</a>
+				<div class="dropdown">
+					<a href="#">Layouting</a>
+					<a href="#">Typography</a>
+					<a href="#">Buttons</a>
+					<a href="#">Forms</a>
+					<div class="has-dropdown">
+						<a href="#">Components</a>
+						<div class="dropdown">
+							<a href="#">Carousel</a>
+							<a href="#">Gallery</a>
+							<a href="#">Slider</a>
+							<a href="#">Tagger</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a href="#">Data Visualization</a>
+			<a href="#">Styling</a>
 		</div>
-		<br>
-		<div>
-			<button class="button small primary">Small Primary Button</button>
-			<button class="button small">Small Default Button</button>
+		<div class="actions">
+			<button class="button primary">Explore</button>
 		</div>
-		<br>
-		<div>
-			<button class="button large primary">Large Primary Button</button>
-			<button class="button large">Large Default Button</button>
-		</div>
-
-		<br><br>
-
-		<h3>Buttons</h3>
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quos? Dolorem enim est hic deleniti aliquid!
-			Repudiandae doloremque incidunt deserunt! Rerum porro, mollitia incidunt molestias recusandae aliquam sequi tempora
-			possimus.</p>
-		<div>
-			<button class="button"><i class="icon">favorite</i> I Love You</button>
-			<button class="button primary">Okay, that's great <i class="icon right">check</i></button>
-			<button class="button outline">This should be a dropdown <i class="icon right">arrow_drop_down</i></button>
-			<button class="button outline primary">Outline Primary Button</button>
-		</div>
-	
 	</div>
+
+	<div class="page">
+
+		<div id="hello-slider" class="slider">
+			<div class="slides">
+				
+				<div id="hello-1" class="slide">
+					<div class="row h-full padding-navbar">
+						<div class="col-6">
+							<div class="cover flex flex-column align-center justify-center h-full w-full">
+								<div>
+									<h1>Hello, <br> this is Virgo.</h1>
+									<h2 class="text-light">Your next generation style library.</h2>
+								</div>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="content h-full w-full">
+								a
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="hello-2" class="slide">
+					<div class="row h-full padding-navbar">
+						<div class="col-6">
+							<div class="cover flex flex-column align-center justify-center h-full w-full">
+								<div>
+									<h1>Hello, <br> this is Virgo.</h1>
+									<h2 class="text-light">Your next generation style library.</h2>
+								</div>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="content h-full w-full">
+								a
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div><!-- .page -->
+
+	<script type="module" src="../src/js/script.js"></script>
 
 </body>
 </html>

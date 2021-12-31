@@ -22,27 +22,27 @@ a.button, button.button
     // ========== Color
     // ---------- Primary
     &.primary
-        border-color: $color-primary
-        background-color: $color-primary
+        border-color: var(--color-primary)
+        background-color: var(--color-primary)
         color: #fff
 
         &:hover
-            background-color: lighten($color-primary, 5%)
-            border-color: lighten($color-primary, 5%)
+            background-color: lighten(var(--color-primary), 5%)
+            border-color: lighten(var(--color-primary), 5%)
         &:active
-            background-color: darken($color-primary, 5%)
-            border-color: darken($color-primary, 5%)
+            background-color: darken(var(--color-primary), 5%)
+            border-color: darken(var(--color-primary), 5%)
 
         &.outline
             background-color: transparent
-            border-color: $color-primary
-            color: $color-primary
+            border-color: var(--color-primary)
+            color: var(--color-primary)
 
             &:hover
-                background-color: $color-primary
+                background-color: var(--color-primary)
                 color: #fff
             &:active
-                background-color: darken($color-primary, 5%)
+                background-color: darken(var(--color-primary), 5%)
                 color: #fff
 
     // ---------- Success
@@ -104,7 +104,7 @@ a.button, button.button
 
             &:hover
                 background-color: #fff
-                color: $color-primary
+                color: var(--color-primary)
             &:active
                 background-color: darken(#fff, 5%)
                 color: #fff
@@ -113,10 +113,10 @@ a.button, button.button
     &.transparent
         border-color: transparent
         background-color: transparent
-        color: $color-primary
+        color: var(--color-primary)
 
         > *
-            color: $color-primary
+            color: var(--color-primary)
 
         &:hover
             background-color: transparent
@@ -244,12 +244,12 @@ a.button, button.button
             padding: 0.8rem 2.4rem
 
             &:hover
-                background-color: $color-primary
+                background-color: var(--color-primary)
                 color: #fff
                 box-shadow: none
             
             &:active   
-                background-color: darken($color-primary, 5%)
+                background-color: darken(var(--color-primary), 5%)
 
         .divider
             height: 1px

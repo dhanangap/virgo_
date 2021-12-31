@@ -79,7 +79,7 @@
 // * Extra-Extra-Large Screen
 // --------------------------------------------------------------------
 @media screen and
-( min-width: var(--media-xxl) )                 {
+( min-width: var(--media-xxl) )     {
 
 .xxl\:bg-none						{ @include background-none; }
 .xxl\:bg-transparent				{ @include background-color(transparent); }

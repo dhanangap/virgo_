@@ -1,0 +1,52 @@
+/* Import Web Fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+/* Change variables */
+:root {
+	--font-sans: "DM Sans", sans-serif;
+	--base-size: 11px;
+}
+
+/* Add padding top */
+.padding-navbar {
+	padding-top: var(--navbar-height, 8rem);
+}
+
+/* Hello Slider */
+#hello-slider {
+	height: 100vh;
+	background-color: #111;
+}
+	#hello-slider .indicator {
+		padding-left: 2rem;
+		justify-content: flex-start;
+	}
+	#hello-slider .navigation {
+		position: absolute;
+		left: 1rem;
+		bottom: 5rem;
+	}
+		#hello-slider .navigation button {
+			position: relative;
+			left: 0;
+			margin: 0;
+			padding: 0;
+		}
+	/* Page 1 */
+	#hello-slider #hello-1 .cover {
+		background: linear-gradient(to right, #9d50bb, #6e48aa);
+		color: #fff;
+	}
+	#hello-slider #hello-1 .content {
+		background: #5a3a8e;
+		color: #fff;
+	}
+	/* Page 2 */
+	#hello-slider #hello-2 .cover {
+		background: linear-gradient(-45deg, #0753c4, #019b53);
+		color: #fff;
+	}
+	#hello-slider #hello-2 .content {
+		background: #1d4b8f;
+		color: #fff;
+	}

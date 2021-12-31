@@ -18,7 +18,7 @@ form
             font-family: $font-sans
 
             &:focus
-                border-color: $color-primary
+                border-color: var(--color-primary)
 
         ::placeholder
             color: $color-grey-12
@@ -31,7 +31,7 @@ form
             display: grid
             
             &:focus
-                box-shadow: inset -3rem 0 0 $color-primary
+                box-shadow: inset -3rem 0 0 var(--color-primary)
 
         // ----- Radio
         .radio
@@ -70,9 +70,9 @@ form
                         background: $color-grey-6
 
                 &:checked
-                    border-color: $color-primary
+                    border-color: var(--color-primary)
                     &::after
-                        background: $color-primary
+                        background: var(--color-primary)
 
         // ----- Checkbox
         .checkbox
@@ -115,9 +115,9 @@ form
                         background: $color-grey-6
 
                 &:checked
-                    border-color: $color-primary
+                    border-color: var(--color-primary)
                     &::after
-                        background: $color-primary
+                        background: var(--color-primary)
                 
             &.switch
                 input[type="checkbox"]
@@ -143,14 +143,14 @@ form
                         background: $color-grey-6
 
                     &:checked
-                        border-color: $color-primary
-                        background: $color-primary
+                        border-color: var(--color-primary)
+                        background: var(--color-primary)
                         &::after
-                            border-color: $color-primary
+                            border-color: var(--color-primary)
                             transform: translateX(1rem)
                     
                     &:checked:hover
-                        background: darken($color-primary, 5%)
+                        background: darken(var(--color-primary), 5%)
         
     // ========== Form Validation
     .control.required

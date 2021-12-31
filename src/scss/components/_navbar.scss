@@ -1,0 +1,255 @@
+// ====================================================================
+// - Virgo Component Class
+// - Navigation Bar
+// ====================================================================
+
+.navbar {
+
+	display		: flex;
+	align-items	: center;
+    width		: 100%;
+    height		: var(--navbar-height, 8rem);
+	padding		: 0 2rem 0 0;
+    background	: var(--color-background, #ffffff);
+    overflow	: visible;
+
+	// ----------------------------------------------------------------
+	// • Brand
+	// ----------------------------------------------------------------
+	> .brand {
+
+		min-width: 200px;
+		flex-shrink	: 0;
+
+		// Brand logo / name link -------------------------------------
+		> a {
+			display			: flex;
+			height			: 100%;
+			padding			: 0 2rem;
+			align-items		: center;
+			text-decoration	: none;
+			color			: var(--color-text);
+			font-weight		: 600;
+
+			img {
+				display			: inline-block;
+				width			: auto;
+				height			: calc(var(--navbar-height) - 4rem);
+				margin-right	: 2rem;
+			}
+		
+		} // End of brand link
+	} // End of navbar brand style
+
+	// ----------------------------------------------------------------
+	// • Menu
+	// ----------------------------------------------------------------
+	> .menu {
+
+		min-width		: 200px;
+		flex-grow		: 1;
+        display			: flex;
+        justify-content	: flex-start;
+		align-items		: center;
+        padding			: 0;
+
+		// Direct child link ------------------------------------------
+		> a, > .has-dropdown > a {
+
+			text-decoration	: none;
+			white-space		: nowrap;
+
+			height			: 4rem;
+			margin			: 0 0.4rem;
+			padding			: 1rem;
+			line-height		: 2rem;
+			color			: var(--color-text);
+			border-radius	: var(--roundness);
+			white-space		: nowrap;
+
+			// Hover state --------------------------------------------
+			&:hover {
+				background-color: var(--color-shade);
+			}
+
+			// Pressed state ------------------------------------------
+			&:active {
+				filter: brightness(97%);
+			}
+
+			// Active state -------------------------------------------
+			&.active {
+				font-weight: 500;
+				background-color: var(--color-shade);
+			}
+
+		} // End of direct child menu link style
+
+		// Direct link with dropdown
+		> .has-dropdown {
+			position		: relative;
+
+			> a {
+				display		: block;
+
+				&::after {
+					content			: "expand_more";
+					position		: relative;
+					top				: -0.1rem;
+					right			: 0;
+					margin			: 0 -0.6rem 0 0.6rem;
+					font-style		: normal;
+					font-family		: var(--font-icon);
+					font-size 		: 2rem;
+					line-height		: 2rem;
+					vertical-align	: middle;
+				}
+			}
+
+			&:hover > a {
+				background-color: var(--color-shade);
+			}
+
+			// Dropdown container -------------------------------------
+			.dropdown {
+
+				position			: absolute;
+				top					: calc(100% - var(--roundness) - 0.1rem);
+				left				: 0.4rem;
+
+				display				: flex;
+				min-width			: calc(100% + 2rem);
+				padding				: 1rem 0 1rem;
+				flex-direction		: column;
+
+				background-color	: var(--color-shade);
+				border-radius		: var(--roundness);
+
+				// Link style -----------------------------------------
+				a, .has-dropdown > a {
+					display			: block;
+					padding			: 0.8rem 1rem;
+					color			: var(--color-text);
+					text-decoration	: none;
+
+					// Hover state ------------------------------------
+					&:hover {
+						background-color	: var(--color-shade);
+						filter				: brightness(97%);
+					}
+
+					// Pressed state ----------------------------------
+					&:active {
+						background-color	: var(--color-shade);
+						filter				: brightness(95%);
+					}
+				} // End of link style
+
+				// Dropdown inside dropdown ---------------------------
+				.has-dropdown {
+				
+					position: relative;
+
+					> a {
+						
+						position: relative;
+
+						&::after {
+							content			: "chevron_right";
+							position		: absolute;
+							top				: -0.1rem;
+							right			: 1rem;
+							margin			: 0 -0.6rem 0 0.6rem;
+							padding 		: 1rem 0;
+							font-style		: normal;
+							font-family		: var(--font-icon);
+							font-size 		: 2rem;
+							line-height		: var(--font-size);
+							height			: 100%;
+							vertical-align	: middle;
+						}
+					}
+
+					.dropdown {
+						top		: -1rem;
+						left	: calc(100% + 0.4rem);
+						
+						// Invisible hoverable area
+						&::before {
+							content 			: "";
+							position			: absolute;
+							top 				: 0;
+							left 				: -0.4rem;
+							width				: 0.4rem;
+							height				: 100%;
+							background-color	: transparent;
+						}
+					}
+
+					&:hover > a {
+						background-color	: var(--color-shade);
+						filter				: brightness(97%);
+					}
+
+					// Hide dropdown when not hovered
+					&:not(:hover) {
+						.dropdown {
+							display: none;
+						}
+					}
+
+				} // End of dropdown inside dropdown style
+
+			} // End of dropdown container style
+
+			// Hide dropdown when not hovered
+			&:not(:hover) {
+				.dropdown {
+					display: none;
+				}
+			}
+
+		} // End of .has-dropdown
+
+		// Center menu positioning ------------------------------------
+		&.center {
+			justify-content: center;
+		}
+
+		// Right menu positioning -------------------------------------
+		&.right {
+			justify-content: flex-end;
+		}
+
+	} // End of navbar menu style
+
+	// ----------------------------------------------------------------
+	// • Actions
+	// ----------------------------------------------------------------
+	> .actions {
+		min-width		: 200px;
+		padding 		: 0 0 0 2rem;
+		flex-shrink		: 0;
+        display			: flex;
+        justify-content	: flex-end;
+        align-items		: center;
+	}
+
+	// ----------------------------------------------------------------
+	// • Navbar fixed position
+	// ----------------------------------------------------------------
+	&.fixed-top {
+		position	: fixed;
+		top			: 0;
+		left		: 0;
+		z-index		: 9000;
+	}
+
+} // End of component style
+
+// --------------------------------------------------------------------
+// • Helper to fix content positioning
+// --------------------------------------------------------------------
+.has-navbar-fixed-top {
+	padding-top: var(--navbar-height);
+}

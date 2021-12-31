@@ -9,9 +9,9 @@ import { Carousel } from "./_carousel.js";
 import { Gallery } from "./_gallery.js";
 
 window.onload = () => {
-    Form.initForms();
-    Button.initDropdownButtons();
-    Navbar.initNavbar();
+    // Form.initForms();
+    // Button.initDropdownButtons();
+    // Navbar.initNavbar();
     Slider.init();
     Modal.init();
     Tab.init();

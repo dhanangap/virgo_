@@ -10,11 +10,18 @@
   --base-size: 10px;
   --font-size: 1.6rem;
   --roundness: 0.25em;
+  --media-sm: 640px;
+  --media-md: 768px;
+  --media-lg: 1024px;
+  --media-xl: 1280px;
+  --media-xxl: 1536px;
   --color-primary: #1e88e5;
   --color-secondary: #fbc02d;
   --color-border: #bbbbbb;
+  --color-shade: #f6f6f6;
   --color-background: #ffffff;
-  --color-text: #222222;
+  --color-text: #2e2e2f;
+  --navbar-height: 8rem;
 }
 
 *, *::before, *::after {
@@ -45,7 +52,7 @@ html:focus-within {
 
 body {
   min-height: 100vh;
-  text-rendering: optimizeSpeed;
+  text-rendering: geometricPrecision;
   line-height: 1;
 }
 
@@ -126,6 +133,11 @@ p {
 
 a:not([class]) {
   color: var(--color-primary);
+}
+
+button {
+  border: none;
+  background-color: transparent;
 }
 
 button.button, a.button {

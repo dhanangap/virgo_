@@ -27,7 +27,7 @@ img 									{
 // * Small Screen
 // --------------------------------------------------------------------
 @media screen and
-( max-width: ($md - 1px) )	{
+( max-width: calc(var(--media-md) - 1px) )	{
 
 img 									{
 &.sm\:fit-fill							{ @include img-object-fit(fill); }
@@ -41,8 +41,8 @@ img 									{
 // * Medium Screen
 // --------------------------------------------------------------------
 @media screen and
-( min-width: $md ) and
-( max-width: ($lg - 1px) )	{
+( min-width: var(--media-md) ) and
+( max-width: calc(var(--media-lg) - 1px) )	{
 
 img 									{
 &.md\:fit-fill							{ @include img-object-fit(fill); }
@@ -56,8 +56,8 @@ img 									{
 // * Large Screen
 // --------------------------------------------------------------------
 @media screen and
-( min-width: $lg ) and
-( max-width: ($xl - 1px) )	{
+( min-width: var(--media-lg) ) and
+( max-width: calc(var(--media-xl) - 1px) )	{
 
 img 									{
 &.lg\:fit-fill							{ @include img-object-fit(fill); }
@@ -71,8 +71,8 @@ img 									{
 // * Extra-Large Screen
 // --------------------------------------------------------------------
 @media screen and
-( min-width: $xl ) and
-( max-width: ($xxl - 1px) )	{
+( min-width: var(--media-xl) ) and
+( max-width: calc(var(--media-xxl) - 1px) )	{
 
 img 									{
 &.xl\:fit-fill							{ @include img-object-fit(fill); }
@@ -86,7 +86,7 @@ img 									{
 // * Extra-Extra-Large Screen
 // --------------------------------------------------------------------
 @media screen and
-( min-width: $xxl )                		{
+( min-width: var(--media-xxl) )                		{
 
 img 									{
 &.xxl\:fit-fill							{ @include img-object-fit(fill); }
