@@ -2,7 +2,7 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "../src/scss/utilities.scss"
+        "../../src/scss/utilities.scss"
     ],
     "names": [],
     "file": "utilities.css"
