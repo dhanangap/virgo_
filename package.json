@@ -1,0 +1,23 @@
+{
+    "name": "virgo",
+    "version": "0.0.1",
+    "description": "Virgo style library",
+    "main": "./src/js/bundle.js",
+    "directories": {
+        "doc": "docs"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build-sass": "sass ./src/scss/bundle.scss ./dist/virgo.bundle.css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dhanangap/virgo.git"
+    },
+    "author": "@dhanangap",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/dhanangap/virgo/issues"
+    },
+    "homepage": "https://github.com/dhanangap/virgo#readme"
+}
