@@ -163,7 +163,7 @@ export class TagPoint {
 	}
 
 	setPosition () {
-		const xPos 					= (this.tagger.imageDimension.x - window.scrollX) + (this.tagger.targetImage.clientWidth * this.x);
+		const xPos 					= (this.tagger.targetImage.clientWidth * this.x);
 		const yPos 					= this.tagger.targetImage.clientHeight * this.y;
 		this.element.style.left 	= xPos + "px";
 		this.element.style.top		= yPos + "px";

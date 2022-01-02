@@ -49,7 +49,7 @@
 
 	<div class="page">
 
-		<div id="hello-slider" class="slider">
+		<div id="hello-slider" class="slider" data-active="1">
 			<div class="slides">
 				
 				<div id="hello-1" class="slide">
@@ -59,6 +59,11 @@
 								<div class="pl-5">
 									<h1>Hello, <br> this is Virgo.</h1>
 									<h2 class="text-light">Your next generation style library.</h2>
+									<div class="my-4 flex align-center">
+										<a href="#" class="button large primary text-bold mr-1">Get Started <i class="icon right">arrow_forward</i></a>
+										<span class="mr-1">or,</span>
+										<a href="#" class="text-color-white text-bold">read the documentation.</a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -78,9 +83,9 @@
 									<div class="codebox">
 <pre>
 &lt;<span class="color-red">div</span><strong class="code-1 hide"><span class="color-green">class</span>=<span class="color-yellow">"flex"</span></strong>&gt;
-  &lt;<span class="color-red">div</span>&gt;Box 1&lt;/<span class="color-red">div</span>&gt;
-  &lt;<span class="color-red">div</span><strong class="code-2 hide"><span class="color-green">class</span>=<span class="color-yellow">"grow-1"</span></strong>&gt;Box 2&lt;/<span class="color-red">div</span>&gt;
-  &lt;<span class="color-red">div</span>&gt;Box 3&lt;/<span class="color-red">div</span>&gt;
+  <span id="animate-home-1-1-1" class="hide">&lt;<span class="color-red">div</span>&gt;Box 1&lt;/<span class="color-red">div</span>&gt;</span>
+  <span id="animate-home-1-1-2" class="hide">&lt;<span class="color-red">div</span><strong class="code-2 hide"><span class="color-green">class</span>=<span class="color-yellow">"grow-1"</span></strong>&gt;Box 2&lt;/<span class="color-red">div</span>&gt;</span>
+  <span id="animate-home-1-1-3" class="hide">&lt;<span class="color-red">div</span>&gt;Box 3&lt;/<span class="color-red">div</span>&gt;</span>
 &lt;/<span class="color-red">div</span>&gt;
 </pre>
 									</div>
@@ -98,12 +103,37 @@
 								<div class="pl-5">
 									<h1>Components are <br> ready for you.</h1>
 									<h2 class="text-light">And it's easy to customize.</h2>
+									<div class="my-4">
+										<a href="#" class="button white">Virgo Component Library <i class="icon right">arrow_forward</i></a>
+									</div>
 								</div>
 							</div>
 						</div>
 						<div class="col-6">
 							<div class="content h-full w-full pa-4">
-								
+								<div id="wireframe" class="h-full w-full flex align-center justify-center">
+									<img src="./img/hello/slider-lines.svg" id="slider-lines">
+									<img src="./img/hello/phone-lines.svg" id="phone-lines" class="absolute">
+									<img src="./img/hello/phone.svg" id="phone" class="absolute">
+									<img src="./img/hello/app-lines.svg" id="app-lines" class="absolute">
+									<img src="./img/hello/markings.svg" id="markings" class="absolute">
+									<!-- Tagger -->
+									<div id="tagger-container" class="absolute">
+										<div class="tagger relative">
+											<div class="image">
+												<img src="./img/hello/lion.jpg">
+											</div>
+											<div class="tags">
+												<div class="tag" data-x="0.25" data-y="0.65" data-label="Little Lion">
+													hai
+												</div>
+												<div class="tag" data-x="0.75" data-y="0.5" data-label="Big Lion">
+													hai 2
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -138,11 +168,21 @@
 
 	<script>
 		setTimeout(() => {
-			document.querySelector(".code-1").classList.remove("hide");
+			document.querySelector("#animate-home-1-1-1").classList.remove("hide");
+		}, 100);
+		setTimeout(() => {
+			document.querySelector("#animate-home-1-1-2").classList.remove("hide");
 		}, 1000);
 		setTimeout(() => {
+			document.querySelector("#animate-home-1-1-3").classList.remove("hide");
+		}, 2000);
+
+		setTimeout(() => {
+			document.querySelector(".code-1").classList.remove("hide");
+		}, 4100);
+		setTimeout(() => {
 			document.querySelector(".code-2").classList.remove("hide");
-		}, 3000);
+		}, 6900);
 	</script>
 
 </body>

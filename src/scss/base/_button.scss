@@ -51,6 +51,22 @@ button.button, a.button {
 		background-color	: var(--color-primary);
 		border-color		: var(--color-primary);
 	}
+	// ----------------------------------------------------------------
+	// - Secondary
+	// ----------------------------------------------------------------
+	&.secondary {
+		color				: var(--color-background);
+		background-color	: var(--color-secondary);
+		border-color		: var(--color-secondary);
+	}
+	// ----------------------------------------------------------------
+	// - White
+	// ----------------------------------------------------------------
+	&.white {
+		color				: var(--color-text);
+		background-color	: #ffffff;
+		border-color		: #ffffff;
+	}
 
 	// ----------------------------------------------------------------
 	// • Outlined Style
@@ -71,6 +87,25 @@ button.button, a.button {
 				filter: none;
 				color: var(--color-background);
 				background-color: var(--color-primary);
+			}
+
+			// Pressed state ------------------------------------------
+			&:active {
+				filter: brightness(95%);
+			}
+		}
+
+		// ------------------------------------------------------------
+		// - Outlined with white coloring
+		// ------------------------------------------------------------
+		&.white {
+			color: #ffffff;
+
+			// Hover state --------------------------------------------
+			&:hover {
+				filter: none;
+				color: var(--color-text);
+				background-color: #ffffff;
 			}
 
 			// Pressed state ------------------------------------------

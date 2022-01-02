@@ -5,6 +5,8 @@
 :root {
 	--font-sans: "DM Sans", sans-serif;
 	--base-size: 11px;
+	--color-primary: #7819c5;
+	--roundness: 6px;
 }
 
 /* Add padding top */
@@ -52,34 +54,71 @@
 	}
 	/* Page 3 */
 	#hello-slider #hello-3 .cover {
-		background: linear-gradient(90deg, rgba(231,148,32,1) 0%, #fb6234 100%);
+		background: linear-gradient(90deg, #052261 0%, #0f0635 100%);
 		color: #fff;
 	}
 	#hello-slider #hello-3 .content {
-		background-color: #f9f2ea;
+		background-color: #0b0425;
 	}
 
 /* Hello 1 Animation */
 @keyframes box1 {
-	from {
-		top: 0;
+	0% {
+		top: -20px;
+		opacity: 0;
 	}
-	to {
+	10% {
+		top: 0;
+		opacity: 1;
+	}
+	40% {
+		top: 0;
+		opacity: 1;
+	}
+	50% {
+		top: 80px;
+	}
+	100% {
 		top: 80px;
 	}
 }
 @keyframes box2 {
 	0% {
-		top: 0;
+		top: -20px;
+		opacity: 0;
 		left: 0;
 	}
-	25% {
-		top: -40px;
-		left: 120px;
+	10% {
+		top: -20px;
+		opacity: 0;
+		left: 0;
+	}
+	20% {
+		top: 0;
+		left: 0;
+		opacity: 1;
+	}
+	40% {
+		top: 0;
+		left: 0;
+		opacity: 1;
 	}
 	50% {
 		top: -40px;
+		left: 120px;
+	}
+	60% {
+		top: -40px;
+		left: 120px;
+	}
+	70% {
+		top: -40px;
 		width: 100px;
+		left: 120px;
+	}
+	80% {
+		top: -40px;
+		width: 320px;
 		left: 120px;
 	}
 	100% {
@@ -90,16 +129,36 @@
 }
 @keyframes box3 {
 	0% {
+		top: -20px;
+		left: 0;
+		opacity: 0;
+	}
+	20% {
+		top: -20px;
+		left: 0;
+		opacity: 0;
+	}
+	30% {
 		top: 0;
 		left: 0;
+		opacity: 1;
 	}
-	25% {
-		top: -160px;
-		left: 240px;
+	40% {
+		top: 0;
+		left: 0;
+		opacity: 1;
 	}
 	50% {
 		top: -160px;
 		left: 240px;
+	}
+	70% {
+		top: -160px;
+		left: 240px;
+	}
+	80% {
+		top: -160px;
+		left: 460px;
 	}
 	100% {
 		top: -160px;
@@ -125,10 +184,9 @@
 	font-weight: 600;
 	border-radius: 12px;
 	position: relative;
-	animation-duration: 1s;
+	animation-duration: 10s;
   	animation-name: box1;
 	animation-fill-mode: forwards;
-	animation-delay: 1s;
 }
 
 #hello-1-1 .box-2 {
@@ -144,10 +202,9 @@
 	font-weight: 600;
 	border-radius: 12px;
 	position: relative;
-	animation-duration: 4s;
+	animation-duration: 10s;
   	animation-name: box2;
 	animation-fill-mode: forwards;
-	animation-delay: 1s;
 }
 
 #hello-1-1 .box-3 {
@@ -161,10 +218,9 @@
 	font-weight: 600;
 	border-radius: 12px;
 	position: relative;
-	animation-duration: 4s;
+	animation-duration: 10s;
   	animation-name: box3;
 	animation-fill-mode: forwards;
-	animation-delay: 1s;
 }
 
 #hello-1-2 {
@@ -215,3 +271,86 @@
 .color-green {
 	color: #52C35E;
 }
+
+@keyframes wireframe1 {
+	0%		{ opacity: 0;  transform: scale(1);}
+	10%		{ opacity: 1;  transform: scale(1.2);}
+	100%	{ opacity: 1;  transform: scale(1.2);}
+}
+@keyframes wireframe2 {
+	0%		{ opacity: 0;  transform: scale(1.4);}
+	8%		{ opacity: 0;  transform: scale(1.4);}
+	18%		{ opacity: 1;  transform: scale(1.2);}
+	100%	{ opacity: 1;  transform: scale(1.2);}
+}
+@keyframes wireframe3 {
+	0%		{ opacity: 0;  transform: scale(1.5);}
+	15%		{ opacity: 0;  transform: scale(1.5);}
+	25%		{ opacity: 1;  transform: scale(1.2);}
+	100%	{ opacity: 1;  transform: scale(1.2);}
+}
+@keyframes wireframe4 {
+	0%		{ opacity: 0;  transform: scale(1.6);}
+	23%		{ opacity: 0;  transform: scale(1.6);}
+	33%		{ opacity: 1;  transform: scale(1.2);}
+	100%	{ opacity: 1;  transform: scale(1.2);}
+}
+@keyframes wireframe5 {
+	0%		{ opacity: 0;  transform: scale(0);}
+	30%		{ opacity: 0;  transform: scale(0);}
+	40%		{ opacity: 1;  transform: scale(1.1);}
+	100%	{ opacity: 1;  transform: scale(1.1);}
+}
+@keyframes wireframe6 {
+	0%		{ opacity: 0;  transform: scale(1.2);}
+	35%		{ opacity: 0;  transform: scale(1.2);}
+	45%		{ opacity: 1;  transform: scale(1);}
+	100%	{ opacity: 1;  transform: scale(1);}
+}
+
+#hello-2 #wireframe {
+	transform: scale(1);
+}
+	#hello-2 #wireframe > * {
+		opacity: 0;
+	}
+
+	#hello-2 #wireframe #slider-lines {
+		margin-top: -120px;
+		animation-duration: 10s;
+		animation-name: wireframe1;
+		animation-fill-mode: forwards;
+	}
+	#hello-2 #wireframe #phone-lines {
+		animation-duration: 10s;
+		animation-name: wireframe2;
+		animation-fill-mode: forwards;
+	}
+	#hello-2 #wireframe #phone {
+		animation-duration: 10s;
+		animation-name: wireframe3;
+		animation-fill-mode: forwards;
+	}
+	#hello-2 #wireframe #app-lines {
+		animation-duration: 10s;
+		animation-name: wireframe4;
+		animation-fill-mode: forwards;
+	}
+	#hello-2 #wireframe #markings {
+		margin-top: -60px;
+		animation-duration: 10s;
+		animation-name: wireframe5;
+		animation-fill-mode: forwards;
+	}
+	#hello-2 #wireframe #tagger-container {
+		width: 174px;
+		margin-top: -118px;
+		animation-duration: 10s;
+		animation-name: wireframe6;
+		animation-fill-mode: forwards;
+		box-shadow: 0 0 32px #00000055;
+	}
+	#hello-2 #wireframe #tagger-container .tagger {
+		height: unset;
+	}
+
