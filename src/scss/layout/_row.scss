@@ -9,7 +9,7 @@
 
 @mixin row					{ display: flex; flex-wrap: wrap; }
 @mixin col($i)				{ @include w-percent($i,12); }
-@mixin col-offset($i)		{ margin-left: $i / 12 * 100% !important; }
+@mixin col-offset($i)		{ margin-left: calc($i / 12) * 100% !important; }
 
 // --------------------------------------------------------------------
 // * Default Classes
@@ -28,7 +28,7 @@
 // * Small Screen
 // --------------------------------------------------------------------
 @media screen and
-( max-width: calc(var(--media-md) - 1px) )	{
+( max-width: calc($media-md - 1px) )	{
 
 .row						{ @include row;
 
@@ -43,8 +43,8 @@
 // * Medium Screen
 // --------------------------------------------------------------------
 @media screen and
-( min-width: var(--media-md) ) and
-( max-width: calc(var(--media-lg) - 1px) )	{
+( min-width: $media-md ) and
+( max-width: calc($media-lg - 1px) )	{
 
 .row						{ @include row;
 
@@ -59,8 +59,8 @@
 // * Large Screen
 // --------------------------------------------------------------------
 @media screen and
-( min-width: var(--media-lg) ) and
-( max-width: calc(var(--media-xl) - 1px) )	{
+( min-width: $media-lg ) and
+( max-width: calc($media-xl - 1px) )	{
 
 .row						{ @include row;
 
@@ -75,8 +75,8 @@
 // * Extra-Large Screen
 // --------------------------------------------------------------------
 @media screen and
-( min-width: var(--media-xl) ) and
-( max-width: calc(var(--media-xxl) - 1px) )	{
+( min-width: $media-xl ) and
+( max-width: calc($media-xxl - 1px) )	{
 
 .row						{ @include row;
 
@@ -91,7 +91,7 @@
 // * Extra-Extra-Large Screen
 // --------------------------------------------------------------------
 @media screen and
-( min-width: var(--media-xxl) )         {
+( min-width: $media-xxl )         {
 
 .row						{ @include row;
 

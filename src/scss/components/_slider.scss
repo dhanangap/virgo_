@@ -28,10 +28,12 @@ height: 100%;
 top: 0;
 left: 0;
 transform: translate3d(100%, 0, 0);
+// z-index: 8000;
 
 // Active state
 &.active {
 	transform: translate3d(0, 0, 0);
+	// z-index: 8010;
 }
 
 }}
@@ -104,7 +106,7 @@ z-index: 8020;
 	&:hover {
 		opacity: 1;
 	}
-	
+
 	&:active {
 		opacity: 0.6;
 	}
@@ -176,7 +178,7 @@ z-index: 8020;
 &[data-transition="slide"] {
     > .slides {
 		background: #000;
-        
+
         > .slide {
             opacity: 0;
 			transform: translate3d(100%, 0, 0);

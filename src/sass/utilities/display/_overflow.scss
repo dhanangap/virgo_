@@ -35,7 +35,7 @@
 // * Small Screen
 // --------------------------------------------------------------------
 @media screen and
-( max-width: calc(var(--media-md) - 1px) )	{
+( max-width: calc($media-md - 1px) )	{
 
 .sm\:overflow-auto						{ @include overflow(auto, auto); }
 .sm\:overflow-hidden					{ @include overflow(hidden, hidden); }
@@ -54,8 +54,8 @@
 // * Medium Screen
 // --------------------------------------------------------------------
 @media screen and
-( min-width: var(--media-md) ) and
-( max-width: calc(var(--media-lg) - 1px) )	{
+( min-width: $media-md ) and
+( max-width: calc($media-lg - 1px) )	{
 
 .md\:overflow-auto						{ @include overflow(auto, auto); }
 .md\:overflow-hidden					{ @include overflow(hidden, hidden); }
@@ -74,8 +74,8 @@
 // * Large Screen
 // --------------------------------------------------------------------
 @media screen and
-( min-width: var(--media-lg) ) and
-( max-width: calc(var(--media-xl) - 1px) )	{
+( min-width: $media-lg ) and
+( max-width: calc($media-xl - 1px) )	{
 
 .lg\:overflow-auto						{ @include overflow(auto, auto); }
 .lg\:overflow-hidden					{ @include overflow(hidden, hidden); }
@@ -94,8 +94,8 @@
 // * Extra-Large Screen
 // --------------------------------------------------------------------
 @media screen and
-( min-width: var(--media-xl) ) and
-( max-width: calc(var(--media-xxl) - 1px) )	{
+( min-width: $media-xl ) and
+( max-width: calc($media-xxl - 1px) )	{
 
 .xl\:overflow-auto						{ @include overflow(auto, auto); }
 .xl\:overflow-hidden					{ @include overflow(hidden, hidden); }
@@ -114,7 +114,7 @@
 // * Extra-Extra-Large Screen
 // --------------------------------------------------------------------
 @media screen and
-( min-width: var(--media-xxl) )         {
+( min-width: $media-xxl )         {
 
 .xxl\:overflow-auto						{ @include overflow(auto, auto); }
 .xxl\:overflow-hidden					{ @include overflow(hidden, hidden); }

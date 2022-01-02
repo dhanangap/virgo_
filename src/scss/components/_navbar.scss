@@ -145,6 +145,15 @@
 					}
 				} // End of link style
 
+				// Divider style --------------------------------------
+				.divider {
+					width: calc(100% - 2rem);
+					height: 1px;
+					margin: 0.4rem 1rem;
+					background-color: var(--color-shade);
+					filter: brightness(95%);
+				}
+
 				// Dropdown inside dropdown ---------------------------
 				.has-dropdown {
 				

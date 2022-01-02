@@ -12,10 +12,10 @@
 @mixin bottom ($value: 0)	{ bottom: $value !important; }
 @mixin left ($value: 0)		{ left: $value !important; }
 
-@mixin top-screen($x,$y)	{ top: $x / $y * 100vh !important; }
-@mixin right-screen($x,$y)	{ right: $x / $y * 100vh !important; }
-@mixin bottom-screen($x,$y)	{ bottom: $x / $y * 100vh !important; }
-@mixin left-screen($x,$y)	{ left: $x / $y * 100vh !important; }
+@mixin top-screen($x,$y)	{ top: calc($x / $y) * 100vh !important; }
+@mixin right-screen($x,$y)	{ right: calc($x / $y) * 100vh !important; }
+@mixin bottom-screen($x,$y)	{ bottom: calc($x / $y) * 100vh !important; }
+@mixin left-screen($x,$y)	{ left: calc($x / $y) * 100vh !important; }
 
 // --------------------------------------------------------------------
 // * Default Classes
@@ -44,7 +44,7 @@
 // * Small Screen
 // --------------------------------------------------------------------
 @media screen and
-( max-width: calc(var(--media-md) - 1px) )	{
+( max-width: calc($media-md - 1px) )	{
 
 @for $i from 0 to 12 		{
 	
@@ -68,8 +68,8 @@
 // * Medium Screen
 // --------------------------------------------------------------------
 @media screen and
-( min-width: var(--media-md) ) and
-( max-width: calc(var(--media-lg) - 1px) )	{
+( min-width: $media-md ) and
+( max-width: calc($media-lg - 1px) )	{
 
 @for $i from 0 to 12 		{
 	
@@ -93,8 +93,8 @@
 // * Large Screen
 // --------------------------------------------------------------------
 @media screen and
-( min-width: var(--media-lg) ) and
-( max-width: calc(var(--media-xl) - 1px) )	{
+( min-width: $media-lg ) and
+( max-width: calc($media-xl - 1px) )	{
 
 @for $i from 0 to 12 		{
 	
@@ -118,8 +118,8 @@
 // * Extra-Large Screen
 // --------------------------------------------------------------------
 @media screen and
-( min-width: var(--media-xl) ) and
-( max-width: calc(var(--media-xxl) - 1px) )	{
+( min-width: $media-xl ) and
+( max-width: calc($media-xxl - 1px) )	{
 
 @for $i from 0 to 12 		{
 	
@@ -143,7 +143,7 @@
 // * Extra-Extra-Large Screen
 // --------------------------------------------------------------------
 @media screen and
-( min-width: var(--media-xxl) )         {
+( min-width: $media-xxl )         {
 
 @for $i from 0 to 12 		{
 	

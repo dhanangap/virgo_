@@ -12,10 +12,10 @@
 @mixin h-auto			    { height: auto !important }
 
 // * Percentage-Based
-@mixin h-percent($x, $y)	{ height: ($x / $y) * 100% !important }
+@mixin h-percent($x, $y)	{ height: calc(calc($x / $y)) * 100% !important }
 
 // * Viewport-Based
-@mixin h-screen($x, $y)		{ height: ($x / $y) * 100vh !important }
+@mixin h-screen($x, $y)		{ height: calc(calc($x / $y)) * 100vh !important }
 
 // * Content-Based
 @mixin h-min				{ height: min-content !important }
@@ -51,7 +51,7 @@
 // * Small Screen
 // --------------------------------------------------------------------
 @media screen and
-( max-width: calc(var(--media-md) - 1px) )	{
+( max-width: calc($media-md - 1px) )	{
 
 @for $y from 1 through 12 	{
 @for $x from 1 through $y 	{
@@ -75,8 +75,8 @@
 // * Medium Screen
 // --------------------------------------------------------------------
 @media screen and
-( min-width: var(--media-md) ) and
-( max-width: calc(var(--media-lg) - 1px) )	{
+( min-width: $media-md ) and
+( max-width: calc($media-lg - 1px) )	{
 
 @for $y from 1 through 12	{
 @for $x from 1 through $y	{
@@ -100,8 +100,8 @@
 // * Large Screen
 // --------------------------------------------------------------------
 @media screen and
-( min-width: var(--media-lg) ) and
-( max-width: calc(var(--media-xl) - 1px) )	{
+( min-width: $media-lg ) and
+( max-width: calc($media-xl - 1px) )	{
 
 @for $y from 1 through 12 	{
 @for $x from 1 through $y 	{
@@ -125,8 +125,8 @@
 // * Extra-Large Screen
 // --------------------------------------------------------------------
 @media screen and
-( min-width: var(--media-xl) ) and
-( max-width: calc(var(--media-xxl) - 1px) )	{
+( min-width: $media-xl ) and
+( max-width: calc($media-xxl - 1px) )	{
 
 @for $y from 1 through 12 	{
 @for $x from 1 through $y 	{
@@ -150,7 +150,7 @@
 // * Extra-Extra-Large Screen
 // --------------------------------------------------------------------
 @media screen and
-( min-width: var(--media-xxl) )         {
+( min-width: $media-xxl )         {
 
 @for $y from 1 through 12 	{
 @for $x from 1 through $y 	{

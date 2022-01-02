@@ -27,31 +27,31 @@
   position: absolute;
 }
 
-@media screen and (max-width: calc(var(--media-md) - 1px)) {
+@media screen and (max-width: calc($media-md - 1px)) {
   .sm\:absolute {
     position: absolute;
   }
 }
 
-@media screen and (min-width: var(--media-md)) and (max-width: calc(var(--media-lg) - 1px)) {
+@media screen and (min-width: $media-md) and (max-width: calc($media-lg - 1px)) {
   .md\:absolute {
     position: absolute;
   }
 }
 
-@media screen and (min-width: var(--media-lg)) and (max-width: calc(var(--media-xl) - 1px)) {
+@media screen and (min-width: $media-lg) and (max-width: calc($media-xl - 1px)) {
   .lg\:absolute {
     position: absolute;
   }
 }
 
-@media screen and (min-width: var(--media-xl)) and (max-width: calc(var(--media-xxl) - 1px)) {
+@media screen and (min-width: $media-xl) and (max-width: calc($media-xxl - 1px)) {
   .xl\:absolute {
     position: absolute;
   }
 }
 
-@media screen and (min-width: var(--media-xxl)) {
+@media screen and (min-width: $media-xxl) {
   .xxl\:absolute {
     position: absolute;
   }
@@ -61,31 +61,31 @@
   position: relative;
 }
 
-@media screen and (max-width: calc(var(--media-md) - 1px)) {
+@media screen and (max-width: calc($media-md - 1px)) {
   .sm\:relative {
     position: relative;
   }
 }
 
-@media screen and (min-width: var(--media-md)) and (max-width: calc(var(--media-lg) - 1px)) {
+@media screen and (min-width: $media-md) and (max-width: calc($media-lg - 1px)) {
   .md\:relative {
     position: relative;
   }
 }
 
-@media screen and (min-width: var(--media-lg)) and (max-width: calc(var(--media-xl) - 1px)) {
+@media screen and (min-width: $media-lg) and (max-width: calc($media-xl - 1px)) {
   .lg\:relative {
     position: relative;
   }
 }
 
-@media screen and (min-width: var(--media-xl)) and (max-width: calc(var(--media-xxl) - 1px)) {
+@media screen and (min-width: $media-xl) and (max-width: calc($media-xxl - 1px)) {
   .xl\:relative {
     position: relative;
   }
 }
 
-@media screen and (min-width: var(--media-xxl)) {
+@media screen and (min-width: $media-xxl) {
   .xxl\:relative {
     position: relative;
   }
@@ -2587,7 +2587,7 @@
   left: 100vh !important;
 }
 
-@media screen and (max-width: calc(var(--media-md) - 1px)) {
+@media screen and (max-width: calc($media-md - 1px)) {
   .sm\:top-0 {
     top: 0rem !important;
   }
@@ -4462,7 +4462,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-md)) and (max-width: calc(var(--media-lg) - 1px)) {
+@media screen and (min-width: $media-md) and (max-width: calc($media-lg - 1px)) {
   .md\:top-0 {
     top: 0rem !important;
   }
@@ -6337,7 +6337,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-lg)) and (max-width: calc(var(--media-xl) - 1px)) {
+@media screen and (min-width: $media-lg) and (max-width: calc($media-xl - 1px)) {
   .lg\:top-0 {
     top: 0rem !important;
   }
@@ -8212,7 +8212,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-xl)) and (max-width: calc(var(--media-xxl) - 1px)) {
+@media screen and (min-width: $media-xl) and (max-width: calc($media-xxl - 1px)) {
   .xl\:top-0 {
     top: 0rem !important;
   }
@@ -10087,7 +10087,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-xxl)) {
+@media screen and (min-width: $media-xxl) {
   .xxl\:top-0 {
     top: 0rem !important;
   }
@@ -11966,31 +11966,31 @@
   display: block !important;
 }
 
-@media screen and (max-width: calc(var(--media-md) - 1px)) {
+@media screen and (max-width: calc($media-md - 1px)) {
   .sm\:block {
     display: block !important;
   }
 }
 
-@media screen and (min-width: var(--media-md)) and (max-width: calc(var(--media-lg) - 1px)) {
+@media screen and (min-width: $media-md) and (max-width: calc($media-lg - 1px)) {
   .md\:block {
     display: block !important;
   }
 }
 
-@media screen and (min-width: var(--media-lg)) and (max-width: calc(var(--media-xl) - 1px)) {
+@media screen and (min-width: $media-lg) and (max-width: calc($media-xl - 1px)) {
   .lg\:block {
     display: block !important;
   }
 }
 
-@media screen and (min-width: var(--media-xl)) and (max-width: calc(var(--media-xxl) - 1px)) {
+@media screen and (min-width: $media-xl) and (max-width: calc($media-xxl - 1px)) {
   .xl\:block {
     display: block !important;
   }
 }
 
-@media screen and (min-width: var(--media-xxl)) {
+@media screen and (min-width: $media-xxl) {
   .xxl\:block {
     display: block !important;
   }
@@ -12238,7 +12238,7 @@
       flex-shrink: 12;
 }
 
-@media screen and (max-width: calc(var(--media-md) - 1px)) {
+@media screen and (max-width: calc($media-md - 1px)) {
   .sm\:flex {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
@@ -12441,7 +12441,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-md)) and (max-width: calc(var(--media-lg) - 1px)) {
+@media screen and (min-width: $media-md) and (max-width: calc($media-lg - 1px)) {
   .md\:flex {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
@@ -12644,7 +12644,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-lg)) and (max-width: calc(var(--media-xl) - 1px)) {
+@media screen and (min-width: $media-lg) and (max-width: calc($media-xl - 1px)) {
   .lg\:flex {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
@@ -12847,7 +12847,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-xxl)) {
+@media screen and (min-width: $media-xxl) {
   .xl\:flex {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
@@ -13050,7 +13050,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-xl)) and (max-width: calc(var(--media-xxl) - 1px)) {
+@media screen and (min-width: $media-xl) and (max-width: calc($media-xxl - 1px)) {
   .xxl\:flex {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
@@ -13257,7 +13257,7 @@
   display: none !important;
 }
 
-@media screen and (max-width: calc(var(--media-md) - 1px)) {
+@media screen and (max-width: calc($media-md - 1px)) {
   .sm\:hide {
     display: none !important;
   }
@@ -13278,7 +13278,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-md)) and (max-width: calc(var(--media-lg) - 1px)) {
+@media screen and (min-width: $media-md) and (max-width: calc($media-lg - 1px)) {
   .md\:hide {
     display: none !important;
   }
@@ -13299,7 +13299,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-lg)) and (max-width: calc(var(--media-xl) - 1px)) {
+@media screen and (min-width: $media-lg) and (max-width: calc($media-xl - 1px)) {
   .lg\:hide {
     display: none !important;
   }
@@ -13320,7 +13320,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-xl)) and (max-width: calc(var(--media-xxl) - 1px)) {
+@media screen and (min-width: $media-xl) and (max-width: calc($media-xxl - 1px)) {
   .xl\:hide {
     display: none !important;
   }
@@ -13341,7 +13341,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-xxl)) {
+@media screen and (min-width: $media-xxl) {
   .xxl\:hide {
     display: none !important;
   }
@@ -13401,7 +13401,7 @@
   overflow-y: scroll !important;
 }
 
-@media screen and (max-width: calc(var(--media-md) - 1px)) {
+@media screen and (max-width: calc($media-md - 1px)) {
   .sm\:overflow-auto {
     overflow-x: auto !important;
     overflow-y: auto !important;
@@ -13434,7 +13434,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-md)) and (max-width: calc(var(--media-lg) - 1px)) {
+@media screen and (min-width: $media-md) and (max-width: calc($media-lg - 1px)) {
   .md\:overflow-auto {
     overflow-x: auto !important;
     overflow-y: auto !important;
@@ -13467,7 +13467,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-lg)) and (max-width: calc(var(--media-xl) - 1px)) {
+@media screen and (min-width: $media-lg) and (max-width: calc($media-xl - 1px)) {
   .lg\:overflow-auto {
     overflow-x: auto !important;
     overflow-y: auto !important;
@@ -13500,7 +13500,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-xl)) and (max-width: calc(var(--media-xxl) - 1px)) {
+@media screen and (min-width: $media-xl) and (max-width: calc($media-xxl - 1px)) {
   .xl\:overflow-auto {
     overflow-x: auto !important;
     overflow-y: auto !important;
@@ -13533,7 +13533,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-xxl)) {
+@media screen and (min-width: $media-xxl) {
   .xxl\:overflow-auto {
     overflow-x: auto !important;
     overflow-y: auto !important;
@@ -14194,7 +14194,7 @@
   min-width: 100vh !important;
 }
 
-@media screen and (max-width: calc(var(--media-md) - 1px)) {
+@media screen and (max-width: calc($media-md - 1px)) {
   .sm\:wmin-1\/1, .sm\:wmin-full {
     min-width: 100% !important;
   }
@@ -14668,7 +14668,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-md)) and (max-width: calc(var(--media-lg) - 1px)) {
+@media screen and (min-width: $media-md) and (max-width: calc($media-lg - 1px)) {
   .md\:wmin-1\/1, .md\:wmin-full {
     min-width: 100% !important;
   }
@@ -15142,7 +15142,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-lg)) and (max-width: calc(var(--media-xl) - 1px)) {
+@media screen and (min-width: $media-lg) and (max-width: calc($media-xl - 1px)) {
   .lg\:wmin-1\/1, .lg\:wmin-full {
     min-width: 100% !important;
   }
@@ -15616,7 +15616,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-xl)) and (max-width: calc(var(--media-xxl) - 1px)) {
+@media screen and (min-width: $media-xl) and (max-width: calc($media-xxl - 1px)) {
   .xl\:wmin-1\/1, .xl\:wmin-full {
     min-width: 100% !important;
   }
@@ -16090,7 +16090,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-xxl)) {
+@media screen and (min-width: $media-xxl) {
   .xxl\:wmin-1\/1, .xxl\:wmin-full {
     min-width: 100% !important;
   }
@@ -17192,7 +17192,7 @@
   max-width: 100vh !important;
 }
 
-@media screen and (max-width: calc(var(--media-md) - 1px)) {
+@media screen and (max-width: calc($media-md - 1px)) {
   .sm\:wmax-1\/1, .sm\:wmax-full {
     max-width: 100% !important;
   }
@@ -17666,7 +17666,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-md)) and (max-width: calc(var(--media-lg) - 1px)) {
+@media screen and (min-width: $media-md) and (max-width: calc($media-lg - 1px)) {
   .md\:wmax-1\/1, .md\:wmax-full {
     max-width: 100% !important;
   }
@@ -18140,7 +18140,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-lg)) and (max-width: calc(var(--media-xl) - 1px)) {
+@media screen and (min-width: $media-lg) and (max-width: calc($media-xl - 1px)) {
   .lg\:wmax-1\/1, .lg\:wmax-full {
     max-width: 100% !important;
   }
@@ -18614,7 +18614,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-xl)) and (max-width: calc(var(--media-xxl) - 1px)) {
+@media screen and (min-width: $media-xl) and (max-width: calc($media-xxl - 1px)) {
   .xl\:wmax-1\/1, .xl\:wmax-full {
     max-width: 100% !important;
   }
@@ -19088,7 +19088,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-xxl)) {
+@media screen and (min-width: $media-xxl) {
   .xxl\:wmax-1\/1, .xxl\:wmax-full {
     max-width: 100% !important;
   }
@@ -20212,7 +20212,7 @@
   width: fit-content !important;
 }
 
-@media screen and (max-width: calc(var(--media-md) - 1px)) {
+@media screen and (max-width: calc($media-md - 1px)) {
   .sm\:w-1\/1, .sm\:w-full {
     width: 100% !important;
   }
@@ -20704,7 +20704,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-md)) and (max-width: calc(var(--media-lg) - 1px)) {
+@media screen and (min-width: $media-md) and (max-width: calc($media-lg - 1px)) {
   .md\:w-1\/1, .md\:w-full {
     width: 100% !important;
   }
@@ -21196,7 +21196,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-lg)) and (max-width: calc(var(--media-xl) - 1px)) {
+@media screen and (min-width: $media-lg) and (max-width: calc($media-xl - 1px)) {
   .lg\:w-1\/1, .lg\:w-full {
     width: 100% !important;
   }
@@ -21688,7 +21688,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-xl)) and (max-width: calc(var(--media-xxl) - 1px)) {
+@media screen and (min-width: $media-xl) and (max-width: calc($media-xxl - 1px)) {
   .xl\:w-1\/1, .xl\:w-full {
     width: 100% !important;
   }
@@ -22180,7 +22180,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-xxl)) {
+@media screen and (min-width: $media-xxl) {
   .xxl\:w-1\/1, .xxl\:w-full {
     width: 100% !important;
   }
@@ -23300,7 +23300,7 @@
   min-height: 100vh !important;
 }
 
-@media screen and (max-width: calc(var(--media-md) - 1px)) {
+@media screen and (max-width: calc($media-md - 1px)) {
   .sm\:hmin-1\/1, .sm\:hmin-full {
     min-height: 100% !important;
   }
@@ -23774,7 +23774,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-md)) and (max-width: calc(var(--media-lg) - 1px)) {
+@media screen and (min-width: $media-md) and (max-width: calc($media-lg - 1px)) {
   .md\:hmin-1\/1, .md\:hmin-full {
     min-height: 100% !important;
   }
@@ -24248,7 +24248,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-lg)) and (max-width: calc(var(--media-xl) - 1px)) {
+@media screen and (min-width: $media-lg) and (max-width: calc($media-xl - 1px)) {
   .lg\:hmin-1\/1, .lg\:hmin-full {
     min-height: 100% !important;
   }
@@ -24722,7 +24722,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-xl)) and (max-width: calc(var(--media-xxl) - 1px)) {
+@media screen and (min-width: $media-xl) and (max-width: calc($media-xxl - 1px)) {
   .xl\:hmin-1\/1, .xl\:hmin-full {
     min-height: 100% !important;
   }
@@ -25196,7 +25196,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-xxl)) {
+@media screen and (min-width: $media-xxl) {
   .xxl\:hmin-1\/1, .xxl\:hmin-full {
     min-height: 100% !important;
   }
@@ -26298,7 +26298,7 @@
   max-height: 100vh !important;
 }
 
-@media screen and (max-width: calc(var(--media-md) - 1px)) {
+@media screen and (max-width: calc($media-md - 1px)) {
   .sm\:hmax-1\/1, .sm\:hmax-full {
     max-height: 100% !important;
   }
@@ -26772,7 +26772,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-md)) and (max-width: calc(var(--media-lg) - 1px)) {
+@media screen and (min-width: $media-md) and (max-width: calc($media-lg - 1px)) {
   .md\:hmax-1\/1, .md\:hmax-full {
     max-height: 100% !important;
   }
@@ -27246,7 +27246,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-lg)) and (max-width: calc(var(--media-xl) - 1px)) {
+@media screen and (min-width: $media-lg) and (max-width: calc($media-xl - 1px)) {
   .lg\:hmax-1\/1, .lg\:hmax-full {
     max-height: 100% !important;
   }
@@ -27720,7 +27720,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-xl)) and (max-width: calc(var(--media-xxl) - 1px)) {
+@media screen and (min-width: $media-xl) and (max-width: calc($media-xxl - 1px)) {
   .xl\:hmax-1\/1, .xl\:hmax-full {
     max-height: 100% !important;
   }
@@ -28194,7 +28194,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-xxl)) {
+@media screen and (min-width: $media-xxl) {
   .xxl\:hmax-1\/1, .xxl\:hmax-full {
     max-height: 100% !important;
   }
@@ -29318,7 +29318,7 @@
   height: fit-content !important;
 }
 
-@media screen and (max-width: calc(var(--media-md) - 1px)) {
+@media screen and (max-width: calc($media-md - 1px)) {
   .sm\:h-1\/1, .sm\:h-full {
     height: 100% !important;
   }
@@ -29810,7 +29810,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-md)) and (max-width: calc(var(--media-lg) - 1px)) {
+@media screen and (min-width: $media-md) and (max-width: calc($media-lg - 1px)) {
   .md\:h-1\/1, .md\:h-full {
     height: 100% !important;
   }
@@ -30302,7 +30302,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-lg)) and (max-width: calc(var(--media-xl) - 1px)) {
+@media screen and (min-width: $media-lg) and (max-width: calc($media-xl - 1px)) {
   .lg\:h-1\/1, .lg\:h-full {
     height: 100% !important;
   }
@@ -30794,7 +30794,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-xl)) and (max-width: calc(var(--media-xxl) - 1px)) {
+@media screen and (min-width: $media-xl) and (max-width: calc($media-xxl - 1px)) {
   .xl\:h-1\/1, .xl\:h-full {
     height: 100% !important;
   }
@@ -31286,7 +31286,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-xxl)) {
+@media screen and (min-width: $media-xxl) {
   .xxl\:h-1\/1, .xxl\:h-full {
     height: 100% !important;
   }
@@ -32168,7 +32168,7 @@
   margin-left: 12rem !important;
 }
 
-@media screen and (max-width: calc(var(--media-md) - 1px)) {
+@media screen and (max-width: calc($media-md - 1px)) {
   .sm\:ma-0 {
     margin: 0rem !important;
   }
@@ -32470,7 +32470,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-md)) and (max-width: calc(var(--media-lg) - 1px)) {
+@media screen and (min-width: $media-md) and (max-width: calc($media-lg - 1px)) {
   .md\:ma-0 {
     margin: 0rem !important;
   }
@@ -32772,7 +32772,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-lg)) and (max-width: calc(var(--media-xl) - 1px)) {
+@media screen and (min-width: $media-lg) and (max-width: calc($media-xl - 1px)) {
   .lg\:ma-0 {
     margin: 0rem !important;
   }
@@ -33074,7 +33074,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-xl)) and (max-width: calc(var(--media-xxl) - 1px)) {
+@media screen and (min-width: $media-xl) and (max-width: calc($media-xxl - 1px)) {
   .xl\:ma-0 {
     margin: 0rem !important;
   }
@@ -33376,7 +33376,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-xxl)) {
+@media screen and (min-width: $media-xxl) {
   .xxl\:ma-0 {
     margin: 0rem !important;
   }
@@ -34068,7 +34068,7 @@
   padding-left: 12rem !important;
 }
 
-@media screen and (max-width: calc(var(--media-md) - 1px)) {
+@media screen and (max-width: calc($media-md - 1px)) {
   .sm\:pa-0 {
     padding: 0rem !important;
   }
@@ -34370,7 +34370,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-md)) and (max-width: calc(var(--media-lg) - 1px)) {
+@media screen and (min-width: $media-md) and (max-width: calc($media-lg - 1px)) {
   .md\:pa-0 {
     padding: 0rem !important;
   }
@@ -34672,7 +34672,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-lg)) and (max-width: calc(var(--media-xl) - 1px)) {
+@media screen and (min-width: $media-lg) and (max-width: calc($media-xl - 1px)) {
   .lg\:pa-0 {
     padding: 0rem !important;
   }
@@ -34974,7 +34974,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-xl)) and (max-width: calc(var(--media-xxl) - 1px)) {
+@media screen and (min-width: $media-xl) and (max-width: calc($media-xxl - 1px)) {
   .xl\:pa-0 {
     padding: 0rem !important;
   }
@@ -35276,7 +35276,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-xxl)) {
+@media screen and (min-width: $media-xxl) {
   .xxl\:pa-0 {
     padding: 0rem !important;
   }
@@ -35598,7 +35598,7 @@
   font-size: 1.6em !important;
 }
 
-@media screen and (max-width: calc(var(--media-md) - 1px)) {
+@media screen and (max-width: calc($media-md - 1px)) {
   .sm\:text-sm {
     font-size: 0.86em !important;
   }
@@ -35616,7 +35616,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-md)) and (max-width: calc(var(--media-lg) - 1px)) {
+@media screen and (min-width: $media-md) and (max-width: calc($media-lg - 1px)) {
   .md\:text-sm {
     font-size: 0.86em !important;
   }
@@ -35634,7 +35634,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-lg)) and (max-width: calc(var(--media-xl) - 1px)) {
+@media screen and (min-width: $media-lg) and (max-width: calc($media-xl - 1px)) {
   .lg\:text-sm {
     font-size: 0.86em !important;
   }
@@ -35652,7 +35652,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-xl)) and (max-width: calc(var(--media-xxl) - 1px)) {
+@media screen and (min-width: $media-xl) and (max-width: calc($media-xxl - 1px)) {
   .xl\:text-sm {
     font-size: 0.86em !important;
   }
@@ -35670,7 +35670,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-xxl)) {
+@media screen and (min-width: $media-xxl) {
   .xxl\:text-sm {
     font-size: 0.86em !important;
   }
@@ -35708,7 +35708,7 @@
   font-weight: 700 !important;
 }
 
-@media screen and (max-width: calc(var(--media-md) - 1px)) {
+@media screen and (max-width: calc($media-md - 1px)) {
   .sm\:text-thin {
     font-weight: 200 !important;
   }
@@ -35726,7 +35726,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-md)) and (max-width: calc(var(--media-lg) - 1px)) {
+@media screen and (min-width: $media-md) and (max-width: calc($media-lg - 1px)) {
   .md\:text-thin {
     font-weight: 200 !important;
   }
@@ -35744,7 +35744,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-lg)) and (max-width: calc(var(--media-xl) - 1px)) {
+@media screen and (min-width: $media-lg) and (max-width: calc($media-xl - 1px)) {
   .lg\:text-thin {
     font-weight: 200 !important;
   }
@@ -35762,7 +35762,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-xl)) and (max-width: calc(var(--media-xxl) - 1px)) {
+@media screen and (min-width: $media-xl) and (max-width: calc($media-xxl - 1px)) {
   .xl\:text-thin {
     font-weight: 200 !important;
   }
@@ -35780,7 +35780,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-xxl)) {
+@media screen and (min-width: $media-xxl) {
   .xxl\:text-thin {
     font-weight: 200 !important;
   }
@@ -35826,7 +35826,7 @@
   line-height: 2em !important;
 }
 
-@media screen and (max-width: calc(var(--media-md) - 1px)) {
+@media screen and (max-width: calc($media-md - 1px)) {
   .sm\:text-line-0\.8 {
     line-height: 0.8em !important;
   }
@@ -35850,7 +35850,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-md)) and (max-width: calc(var(--media-lg) - 1px)) {
+@media screen and (min-width: $media-md) and (max-width: calc($media-lg - 1px)) {
   .md\:text-line-0\.8 {
     line-height: 0.8em !important;
   }
@@ -35874,7 +35874,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-lg)) and (max-width: calc(var(--media-xl) - 1px)) {
+@media screen and (min-width: $media-lg) and (max-width: calc($media-xl - 1px)) {
   .lg\:text-line-0\.8 {
     line-height: 0.8em !important;
   }
@@ -35898,7 +35898,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-xl)) and (max-width: calc(var(--media-xxl) - 1px)) {
+@media screen and (min-width: $media-xl) and (max-width: calc($media-xxl - 1px)) {
   .xl\:text-line-0\.8 {
     line-height: 0.8em !important;
   }
@@ -35922,7 +35922,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-xxl)) {
+@media screen and (min-width: $media-xxl) {
   .xxl\:text-line-0\.8 {
     line-height: 0.8em !important;
   }
@@ -35962,7 +35962,7 @@
   text-align: justify !important;
 }
 
-@media screen and (max-width: calc(var(--media-md) - 1px)) {
+@media screen and (max-width: calc($media-md - 1px)) {
   .sm\:text-left {
     text-align: left !important;
   }
@@ -35977,7 +35977,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-md)) and (max-width: calc(var(--media-lg) - 1px)) {
+@media screen and (min-width: $media-md) and (max-width: calc($media-lg - 1px)) {
   .md\:text-left {
     text-align: left !important;
   }
@@ -35992,7 +35992,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-lg)) and (max-width: calc(var(--media-xl) - 1px)) {
+@media screen and (min-width: $media-lg) and (max-width: calc($media-xl - 1px)) {
   .lg\:text-left {
     text-align: left !important;
   }
@@ -36007,7 +36007,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-xl)) and (max-width: calc(var(--media-xxl) - 1px)) {
+@media screen and (min-width: $media-xl) and (max-width: calc($media-xxl - 1px)) {
   .xl\:text-left {
     text-align: left !important;
   }
@@ -36022,7 +36022,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-xxl)) {
+@media screen and (min-width: $media-xxl) {
   .xxl\:text-left {
     text-align: left !important;
   }
@@ -36061,7 +36061,7 @@
   color: var(--color-secondary) !important;
 }
 
-@media screen and (max-width: calc(var(--media-md) - 1px)) {
+@media screen and (max-width: calc($media-md - 1px)) {
   .sm\:text-color-transparent {
     color: transparent !important;
   }
@@ -36082,7 +36082,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-md)) and (max-width: calc(var(--media-lg) - 1px)) {
+@media screen and (min-width: $media-md) and (max-width: calc($media-lg - 1px)) {
   .md\:text-color-transparent {
     color: transparent !important;
   }
@@ -36103,7 +36103,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-lg)) and (max-width: calc(var(--media-xl) - 1px)) {
+@media screen and (min-width: $media-lg) and (max-width: calc($media-xl - 1px)) {
   .lg\:text-color-transparent {
     color: transparent !important;
   }
@@ -36124,7 +36124,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-xl)) and (max-width: calc(var(--media-xxl) - 1px)) {
+@media screen and (min-width: $media-xl) and (max-width: calc($media-xxl - 1px)) {
   .xl\:text-color-transparent {
     color: transparent !important;
   }
@@ -36145,7 +36145,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-xxl)) {
+@media screen and (min-width: $media-xxl) {
   .xxl\:text-color-transparent {
     color: transparent !important;
   }
@@ -36186,7 +36186,7 @@
   background-color: #fff !important;
 }
 
-@media screen and (max-width: calc(var(--media-md) - 1px)) {
+@media screen and (max-width: calc($media-md - 1px)) {
   .sm\:bg-none {
     background: transparent none !important;
   }
@@ -36204,7 +36204,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-md)) and (max-width: calc(var(--media-lg) - 1px)) {
+@media screen and (min-width: $media-md) and (max-width: calc($media-lg - 1px)) {
   .md\:bg-none {
     background: transparent none !important;
   }
@@ -36222,7 +36222,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-lg)) and (max-width: calc(var(--media-xl) - 1px)) {
+@media screen and (min-width: $media-lg) and (max-width: calc($media-xl - 1px)) {
   .lg\:bg-none {
     background: transparent none !important;
   }
@@ -36240,7 +36240,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-xl)) and (max-width: calc(var(--media-xxl) - 1px)) {
+@media screen and (min-width: $media-xl) and (max-width: calc($media-xxl - 1px)) {
   .xl\:bg-none {
     background: transparent none !important;
   }
@@ -36258,7 +36258,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-xxl)) {
+@media screen and (min-width: $media-xxl) {
   .xxl\:bg-none {
     background: transparent none !important;
   }
@@ -36284,7 +36284,7 @@
   background-color: rgba(255, 255, 255, 0.4) !important;
 }
 
-@media screen and (max-width: calc(var(--media-md) - 1px)) {
+@media screen and (max-width: calc($media-md - 1px)) {
   .sm\:bg-backdrop-dark {
     background-color: rgba(0, 0, 0, 0.4) !important;
   }
@@ -36293,7 +36293,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-md)) and (max-width: calc(var(--media-lg) - 1px)) {
+@media screen and (min-width: $media-md) and (max-width: calc($media-lg - 1px)) {
   .md\:bg-backdrop-dark {
     background-color: rgba(0, 0, 0, 0.4) !important;
   }
@@ -36302,7 +36302,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-lg)) and (max-width: calc(var(--media-xl) - 1px)) {
+@media screen and (min-width: $media-lg) and (max-width: calc($media-xl - 1px)) {
   .lg\:bg-backdrop-dark {
     background-color: rgba(0, 0, 0, 0.4) !important;
   }
@@ -36311,7 +36311,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-xl)) and (max-width: calc(var(--media-xxl) - 1px)) {
+@media screen and (min-width: $media-xl) and (max-width: calc($media-xxl - 1px)) {
   .xl\:bg-backdrop-dark {
     background-color: rgba(0, 0, 0, 0.4) !important;
   }
@@ -36320,7 +36320,7 @@
   }
 }
 
-@media screen and (min-width: var(--media-xxl)) {
+@media screen and (min-width: $media-xxl) {
   .xxl\:bg-backdrop-dark {
     background-color: rgba(0, 0, 0, 0.4) !important;
   }

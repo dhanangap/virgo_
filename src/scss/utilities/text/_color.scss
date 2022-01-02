@@ -24,7 +24,7 @@
 // * Small Screen
 // --------------------------------------------------------------------
 @media screen and
-( max-width: calc(var(--media-md) - 1px) )	{
+( max-width: calc($media-md - 1px) )	{
 
 .sm\:text-color-transparent			{ @include text-color(transparent); }
 .sm\:text-color-unset				{ @include text-color(unset); }
@@ -38,8 +38,8 @@
 // * Medium Screen
 // --------------------------------------------------------------------
 @media screen and
-( min-width: var(--media-md) ) and
-( max-width: calc(var(--media-lg) - 1px) )	{
+( min-width: $media-md ) and
+( max-width: calc($media-lg - 1px) )	{
 
 .md\:text-color-transparent			{ @include text-color(transparent); }
 .md\:text-color-unset				{ @include text-color(unset); }
@@ -53,8 +53,8 @@
 // * Large Screen
 // --------------------------------------------------------------------
 @media screen and
-( min-width: var(--media-lg) ) and
-( max-width: calc(var(--media-xl) - 1px) )	{
+( min-width: $media-lg ) and
+( max-width: calc($media-xl - 1px) )	{
 
 .lg\:text-color-transparent			{ @include text-color(transparent); }
 .lg\:text-color-unset				{ @include text-color(unset); }
@@ -68,8 +68,8 @@
 // * Extra-Large Screen
 // --------------------------------------------------------------------
 @media screen and
-( min-width: var(--media-xl) ) and
-( max-width: calc(var(--media-xxl) - 1px) )	{
+( min-width: $media-xl ) and
+( max-width: calc($media-xxl - 1px) )	{
 
 .xl\:text-color-transparent			{ @include text-color(transparent); }
 .xl\:text-color-unset				{ @include text-color(unset); }
@@ -83,7 +83,7 @@
 // * Extra-Extra-Large Screen
 // --------------------------------------------------------------------
 @media screen and
-( min-width: var(--media-xxl) )                 {
+( min-width: $media-xxl )                 {
 
 .xxl\:text-color-transparent		{ @include text-color(transparent); }
 .xxl\:text-color-unset				{ @include text-color(unset); }

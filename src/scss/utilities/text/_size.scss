@@ -23,7 +23,7 @@
 // * Small Screen
 // --------------------------------------------------------------------
 @media screen and
-( max-width: calc(var(--media-md) - 1px) )	{
+( max-width: calc($media-md - 1px) )	{
 
 .sm\:text-sm				{ @include font-size(0.86); }
 .sm\:text-md				{ @include font-size(1.0); }
@@ -36,8 +36,8 @@
 // * Medium Screen
 // --------------------------------------------------------------------
 @media screen and
-( min-width: var(--media-md) ) and
-( max-width: calc(var(--media-lg) - 1px) )	{
+( min-width: $media-md ) and
+( max-width: calc($media-lg - 1px) )	{
 
 .md\:text-sm				{ @include font-size(0.86); }
 .md\:text-md				{ @include font-size(1.0); }
@@ -50,8 +50,8 @@
 // * Large Screen
 // --------------------------------------------------------------------
 @media screen and
-( min-width: var(--media-lg) ) and
-( max-width: calc(var(--media-xl) - 1px) )	{
+( min-width: $media-lg ) and
+( max-width: calc($media-xl - 1px) )	{
 
 .lg\:text-sm				{ @include font-size(0.86); }
 .lg\:text-md				{ @include font-size(1.0); }
@@ -64,8 +64,8 @@
 // * Extra-Large Screen
 // --------------------------------------------------------------------
 @media screen and
-( min-width: var(--media-xl) ) and
-( max-width: calc(var(--media-xxl) - 1px) )	{
+( min-width: $media-xl ) and
+( max-width: calc($media-xxl - 1px) )	{
 
 .xl\:text-sm				{ @include font-size(0.86); }
 .xl\:text-md				{ @include font-size(1.0); }
@@ -78,7 +78,7 @@
 // * Extra-Extra-Large Screen
 // --------------------------------------------------------------------
 @media screen and
-( min-width: var(--media-xxl) )         {
+( min-width: $media-xxl )         {
 
 .xxl\:text-sm				{ @include font-size(0.86); }
 .xxl\:text-md				{ @include font-size(1.0); }
