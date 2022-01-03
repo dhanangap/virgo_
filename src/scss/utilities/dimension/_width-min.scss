@@ -16,6 +16,10 @@
 // * Viewport-Based
 @mixin wmin-screen($x, $y)	{ min-width: calc(calc($x / $y)) * 100vh !important }
 
+// * rem, em-based
+@mixin w-min-rem($value)	{ min-width: $value * 1rem !important }
+@mixin w-min-em($value)		{ min-width: $value * 1em !important }
+
 // --------------------------------------------------------------------
 // * Default Classes
 // --------------------------------------------------------------------
@@ -36,6 +40,14 @@
 .wmin-screen-full			{ @extend .wmin-screen-1\/1; }
 .wmin-screen-half			{ @extend .wmin-screen-1\/2; }
 
+// Rem, em-based
+@for $i from 1 through 1000 {
+
+.wmin-#{$i}					{ @include w-min-rem($i); }
+.wmin-#{$i}x				{ @include w-min-em($i); }
+
+}
+
 // --------------------------------------------------------------------
 // * Small Screen
 // --------------------------------------------------------------------
@@ -54,6 +66,13 @@
 .sm\:wmin-half					{ @extend .sm\:wmin-1\/2; }
 .sm\:wmin-screen-full			{ @extend .sm\:wmin-screen-1\/1; }
 .sm\:wmin-screen-half			{ @extend .sm\:wmin-screen-1\/2; }
+
+@for $i from 1 through 1000 {
+
+.sm\:wmin-#{$i}					{ @include w-min-rem($i); }
+.sm\:wmin-#{$i}x				{ @include w-min-em($i); }
+
+}
 
 }
 // --------------------------------------------------------------------
@@ -76,6 +95,13 @@
 .md\:wmin-screen-full			{ @extend .md\:wmin-screen-1\/1; }
 .md\:wmin-screen-half			{ @extend .md\:wmin-screen-1\/2; }
 
+@for $i from 1 through 1000 {
+
+.md\:wmin-#{$i}					{ @include w-min-rem($i); }
+.md\:wmin-#{$i}x				{ @include w-min-em($i); }
+
+}
+
 }
 // --------------------------------------------------------------------
 // * Large Screen
@@ -96,6 +122,13 @@
 .lg\:wmin-half					{ @extend .lg\:wmin-1\/2; }
 .lg\:wmin-screen-full			{ @extend .lg\:wmin-screen-1\/1; }
 .lg\:wmin-screen-half			{ @extend .lg\:wmin-screen-1\/2; }
+
+@for $i from 1 through 1000 {
+
+.lg\:wmin-#{$i}					{ @include w-min-rem($i); }
+.lg\:wmin-#{$i}x				{ @include w-min-em($i); }
+
+}
 
 }
 // --------------------------------------------------------------------
@@ -118,6 +151,13 @@
 .xl\:wmin-screen-full			{ @extend .xl\:wmin-screen-1\/1; }
 .xl\:wmin-screen-half			{ @extend .xl\:wmin-screen-1\/2; }
 
+@for $i from 1 through 1000 {
+
+.xl\:wmin-#{$i}					{ @include w-min-rem($i); }
+.xl\:wmin-#{$i}x				{ @include w-min-em($i); }
+
+}
+
 }
 // --------------------------------------------------------------------
 // * Extra-Extra-Large Screen
@@ -137,5 +177,12 @@
 .xxl\:wmin-half				    { @extend .xxl\:wmin-1\/2; }
 .xxl\:wmin-screen-full			{ @extend .xxl\:wmin-screen-1\/1; }
 .xxl\:wmin-screen-half			{ @extend .xxl\:wmin-screen-1\/2; }
+
+@for $i from 1 through 1000 {
+
+.xxl\:wmin-#{$i}				{ @include w-min-rem($i); }
+.xxl\:wmin-#{$i}x				{ @include w-min-em($i); }
+
+}
 
 }
