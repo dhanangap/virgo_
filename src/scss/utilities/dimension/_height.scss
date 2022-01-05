@@ -22,6 +22,10 @@
 @mixin h-max				{ height: max-content !important }
 @mixin h-fit				{ height: fit-content !important }
 
+// * rem, em-based
+@mixin h-rem ($value)		{ height: $value * 1rem !important }
+@mixin h-em ($value)		{ height: $value * 1em !important }
+
 // --------------------------------------------------------------------
 // * Default Classes
 // --------------------------------------------------------------------
@@ -29,7 +33,7 @@
 // Zero height
 .h-0						{ @include h-0; }
 .h-auto						{ @include h-auto; }
-// Percentage and viewport 
+// Percentage and viewport
 @for $y from 1 through 12	{
 @for $x from 1 through $y	{
 
@@ -46,6 +50,13 @@
 .h-min						{ @include h-min; }
 .h-max						{ @include h-max; }
 .h-fit						{ @include h-fit; }
+
+@for $i from 1 through 1000 {
+
+.h-#{$i}					{ @include h-rem($i); }
+.h-#{$i}x					{ @include h-em($i); }
+
+}
 
 // --------------------------------------------------------------------
 // * Small Screen
@@ -69,6 +80,13 @@
 .sm\:h-min					{ @include h-min; }
 .sm\:h-max					{ @include h-max; }
 .sm\:h-fit					{ @include h-fit; }
+
+@for $i from 1 through 1000 {
+
+.sm\:h-#{$i}				{ @include h-rem($i); }
+.sm\:h-#{$i}x				{ @include h-em($i); }
+
+}
 
 }
 // --------------------------------------------------------------------
@@ -95,6 +113,13 @@
 .md\:h-max					{ @include h-max; }
 .md\:h-fit					{ @include h-fit; }
 
+@for $i from 1 through 1000 {
+
+.md\:h-#{$i}				{ @include h-rem($i); }
+.md\:h-#{$i}x				{ @include h-em($i); }
+
+}
+
 }
 // --------------------------------------------------------------------
 // * Large Screen
@@ -119,6 +144,13 @@
 .lg\:h-min					{ @include h-min; }
 .lg\:h-max					{ @include h-max; }
 .lg\:h-fit					{ @include h-fit; }
+
+@for $i from 1 through 1000 {
+
+.lg\:h-#{$i}				{ @include h-rem($i); }
+.lg\:h-#{$i}x				{ @include h-em($i); }
+
+}
 
 }
 // --------------------------------------------------------------------
@@ -145,6 +177,13 @@
 .xl\:h-max					{ @include h-max; }
 .xl\:h-fit					{ @include h-fit; }
 
+@for $i from 1 through 1000 {
+
+.xl\:h-#{$i}				{ @include h-rem($i); }
+.xl\:h-#{$i}x				{ @include h-em($i); }
+
+}
+
 }
 // --------------------------------------------------------------------
 // * Extra-Extra-Large Screen
@@ -168,5 +207,12 @@
 .xxl\:h-min					{ @include h-min; }
 .xxl\:h-max					{ @include h-max; }
 .xxl\:h-fit					{ @include h-fit; }
+
+@for $i from 1 through 1000 {
+
+.xxl\:h-#{$i}				{ @include h-rem($i); }
+.xxl\:h-#{$i}x				{ @include h-em($i); }
+
+}
 
 }

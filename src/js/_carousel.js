@@ -6,6 +6,7 @@ export class Carousel {
 
 	// [ Class static properties ] ================================================================
 	// Stores all galleries on the page.
+	static selector;
 	static index;
 	static externalIndicators;  // DOM element of external indicators
 	static externalNavigations; // DOM element of external navigations
@@ -52,11 +53,12 @@ export class Carousel {
 	// --------------------------------------------------------------------------------------------
 	static init() {
 		// Initialize the value of static properties
+		this.selector = ".carousel";
 		this.index = [];
 		this.externalIndicators = {};
 		this.externalNavigations = {};
 		// Initialize the instances of this class
-		let carouselElements = document.querySelectorAll(".carousel");
+		let carouselElements = document.querySelectorAll(this.selector);
 		if (carouselElements.length > 0) {
 			for (let index = 0; index < carouselElements.length; index++) {
 				const carouselElement = carouselElements[index];
@@ -185,7 +187,7 @@ export class Carousel {
 		let pageColSpan = 0;
 		for (let itemIndex = 0; itemIndex < this.items.length; itemIndex++) {
 			let item = this.items[itemIndex];
-			
+
 			// Item col and row span
 			let colspan = item.dataset["colspan"] ? parseInt(item.dataset["colspan"]) : 1;
 			let rowspan = item.dataset["rowspan"] ? parseInt(item.dataset["rowspan"]) : 1;
@@ -193,7 +195,7 @@ export class Carousel {
 			if (colspan > this.cols) {
 				colspan = this.cols;
 			}
-			
+
 			// Move item to designated page
 			if (pageColSpan + colspan > this.cols) {
 				pageNum++;
@@ -270,11 +272,11 @@ export class Carousel {
 					indicatorButton.addEventListener("click", () => {
 						this.setActivePage(pageIndex);
 					});
-				}		
+				}
 			}
 		}
 	}
-	
+
 	// --------------------------------------------------------------------------------------------
 	// • Create navigation elements
 	// --------------------------------------------------------------------------------------------
@@ -376,7 +378,7 @@ export class Carousel {
 			this.navlock = true;
 			this.updateIndicator();
 			this.updatePages(currentPage, targetPage, transitionDirection);
-			
+
 			setTimeout(() => {
 				this.navlock = false;
 			}, this.duration + 500);
@@ -414,7 +416,7 @@ export class Carousel {
 		if (this.pages) {
 			// - Transition
 			if (this.transition !== "none") {
-				
+
 				// - Slide / Default
 				if (this.transition === "slide" || this.transition === "default") {
 					if (fromPage.style.transform === "") {
@@ -559,5 +561,5 @@ export class Carousel {
 			}, 50);
 		}
 	}
-	
+
 }

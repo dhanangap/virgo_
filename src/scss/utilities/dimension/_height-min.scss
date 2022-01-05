@@ -16,13 +16,17 @@
 // * Viewport-Based
 @mixin hmin-screen($x, $y)	{ min-height: calc(calc($x / $y)) * 100vh !important }
 
+// * rem, em-based
+@mixin h-min-rem ($value)	{ min-height: $value * 1rem !important }
+@mixin h-min-em ($value)	{ min-height: $value * 1em !important }
+
 // --------------------------------------------------------------------
 // * Default Classes
 // --------------------------------------------------------------------
 
 // Zero height
 .hmin-0						{ @include hmin-0; }
-// Percentage and viewport 
+// Percentage and viewport
 @for $y from 1 through 12	{
 @for $x from 1 through $y	{
 
@@ -35,6 +39,13 @@
 .hmin-half					{ @extend .hmin-1\/2; }
 .hmin-screen-full			{ @extend .hmin-screen-1\/1; }
 .hmin-screen-half			{ @extend .hmin-screen-1\/2; }
+
+@for $i from 1 through 1000 {
+
+.hmin-#{$i}					{ @include h-min-rem($i); }
+.hmin-#{$i}x				{ @include h-min-em($i); }
+
+}
 
 // --------------------------------------------------------------------
 // * Small Screen
@@ -54,6 +65,13 @@
 .sm\:hmin-half					{ @extend .sm\:hmin-1\/2; }
 .sm\:hmin-screen-full			{ @extend .sm\:hmin-screen-1\/1; }
 .sm\:hmin-screen-half			{ @extend .sm\:hmin-screen-1\/2; }
+
+@for $i from 1 through 1000 {
+
+.sm\:hmin-#{$i}					{ @include h-min-rem($i); }
+.sm\:hmin-#{$i}x				{ @include h-min-em($i); }
+
+}
 
 }
 // --------------------------------------------------------------------
@@ -76,6 +94,13 @@
 .md\:hmin-screen-full			{ @extend .md\:hmin-screen-1\/1; }
 .md\:hmin-screen-half			{ @extend .md\:hmin-screen-1\/2; }
 
+@for $i from 1 through 1000 {
+
+.md\:hmin-#{$i}					{ @include h-min-rem($i); }
+.md\:hmin-#{$i}x				{ @include h-min-em($i); }
+
+}
+
 }
 // --------------------------------------------------------------------
 // * Large Screen
@@ -96,6 +121,13 @@
 .lg\:hmin-half					{ @extend .lg\:hmin-1\/2; }
 .lg\:hmin-screen-full			{ @extend .lg\:hmin-screen-1\/1; }
 .lg\:hmin-screen-half			{ @extend .lg\:hmin-screen-1\/2; }
+
+@for $i from 1 through 1000 {
+
+.lg\:hmin-#{$i}					{ @include h-min-rem($i); }
+.lg\:hmin-#{$i}x				{ @include h-min-em($i); }
+
+}
 
 }
 // --------------------------------------------------------------------
@@ -118,6 +150,13 @@
 .xl\:hmin-screen-full			{ @extend .xl\:hmin-screen-1\/1; }
 .xl\:hmin-screen-half			{ @extend .xl\:hmin-screen-1\/2; }
 
+@for $i from 1 through 1000 {
+
+.xl\:hmin-#{$i}					{ @include h-min-rem($i); }
+.xl\:hmin-#{$i}x				{ @include h-min-em($i); }
+
+}
+
 }
 // --------------------------------------------------------------------
 // * Extra-Extra-Large Screen
@@ -137,5 +176,12 @@
 .xxl\:hmin-half				    { @extend .xxl\:hmin-1\/2; }
 .xxl\:hmin-screen-full			{ @extend .xxl\:hmin-screen-1\/1; }
 .xxl\:hmin-screen-half			{ @extend .xxl\:hmin-screen-1\/2; }
+
+@for $i from 1 through 1000 {
+
+.xxl\:hmin-#{$i}				{ @include h-min-rem($i); }
+.xxl\:hmin-#{$i}x				{ @include h-min-em($i); }
+
+}
 
 }

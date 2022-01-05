@@ -19,6 +19,12 @@
 .text-xl					{ @include font-size(1.4); }
 .text-xxl					{ @include font-size(1.6); }
 
+@for $i from 1 through 10	{
+
+.text-#{$i}x 				{ @include font-size($i); }
+
+}
+
 // --------------------------------------------------------------------
 // * Small Screen
 // --------------------------------------------------------------------
@@ -30,6 +36,12 @@
 .sm\:text-lg				{ @include font-size(1.2); }
 .sm\:text-xl				{ @include font-size(1.4); }
 .sm\:text-xxl				{ @include font-size(1.6); }
+
+@for $i from 1 through 10	{
+
+.sm\:text-#{$i}x			{ @include font-size($i); }
+
+}
 
 }
 // --------------------------------------------------------------------
@@ -45,6 +57,12 @@
 .md\:text-xl				{ @include font-size(1.4); }
 .md\:text-xxl				{ @include font-size(1.6); }
 
+@for $i from 1 through 10	{
+
+.md\:text-#{$i}x			{ @include font-size($i); }
+
+}
+
 }
 // --------------------------------------------------------------------
 // * Large Screen
@@ -58,6 +76,12 @@
 .lg\:text-lg				{ @include font-size(1.2); }
 .lg\:text-xl				{ @include font-size(1.4); }
 .lg\:text-xxl				{ @include font-size(1.6); }
+
+@for $i from 1 through 10	{
+
+.lg\:text-#{$i}x			{ @include font-size($i); }
+
+}
 
 }
 // --------------------------------------------------------------------
@@ -73,6 +97,12 @@
 .xl\:text-xl				{ @include font-size(1.4); }
 .xl\:text-xxl				{ @include font-size(1.6); }
 
+@for $i from 1 through 10	{
+
+.xl\:text-#{$i}x			{ @include font-size($i); }
+
+}
+
 }
 // --------------------------------------------------------------------
 // * Extra-Extra-Large Screen
@@ -85,5 +115,11 @@
 .xxl\:text-lg				{ @include font-size(1.2); }
 .xxl\:text-xl				{ @include font-size(1.4); }
 .xxl\:text-xxl				{ @include font-size(1.6); }
+
+@for $i from 1 through 10	{
+
+.xxl\:text-#{$i}x			{ @include font-size($i); }
+
+}
 
 }

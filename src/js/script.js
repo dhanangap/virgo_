@@ -7,6 +7,8 @@ import { Tab } from "./_tab.js";
 import { Tagger } from "./_tagger.js";
 import { Carousel } from "./_carousel.js";
 import { Gallery } from "./_gallery.js";
+import Stack from "./components/stack.js";
+import Rating from "./components/rating.js";
 
 window.onload = () => {
     // Form.initForms();
@@ -18,6 +20,8 @@ window.onload = () => {
     Tagger.init();
     Carousel.init();
     Gallery.init();
+    Stack.init();
+    Rating.init();
 };
 
 window.Modal = Modal;

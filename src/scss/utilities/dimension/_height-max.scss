@@ -16,13 +16,17 @@
 // * Viewport-Based
 @mixin hmax-screen($x, $y)	{ max-height: calc(calc($x / $y)) * 100vh !important }
 
+// * rem, em-based
+@mixin h-max-rem ($value)	{ max-height: $value * 1rem !important }
+@mixin h-max-em ($value)	{ max-height: $value * 1em !important }
+
 // --------------------------------------------------------------------
 // * Default Classes
 // --------------------------------------------------------------------
 
 // Zero height
 .hmax-0						{ @include hmax-0; }
-// Percentage and viewport 
+// Percentage and viewport
 @for $y from 1 through 12	{
 @for $x from 1 through $y	{
 
@@ -55,6 +59,13 @@
 .sm\:hmax-screen-full			{ @extend .sm\:hmax-screen-1\/1; }
 .sm\:hmax-screen-half			{ @extend .sm\:hmax-screen-1\/2; }
 
+@for $i from 1 through 1000 {
+
+.sm\:hmin-#{$i}					{ @include h-min-rem($i); }
+.sm\:hmin-#{$i}x				{ @include h-min-em($i); }
+
+}
+
 }
 // --------------------------------------------------------------------
 // * Medium Screen
@@ -75,6 +86,13 @@
 .md\:hmax-half					{ @extend .md\:hmax-1\/2; }
 .md\:hmax-screen-full			{ @extend .md\:hmax-screen-1\/1; }
 .md\:hmax-screen-half			{ @extend .md\:hmax-screen-1\/2; }
+
+@for $i from 1 through 1000 {
+
+.md\:hmin-#{$i}					{ @include h-min-rem($i); }
+.md\:hmin-#{$i}x				{ @include h-min-em($i); }
+
+}
 
 }
 // --------------------------------------------------------------------
@@ -97,6 +115,13 @@
 .lg\:hmax-screen-full			{ @extend .lg\:hmax-screen-1\/1; }
 .lg\:hmax-screen-half			{ @extend .lg\:hmax-screen-1\/2; }
 
+@for $i from 1 through 1000 {
+
+.lg\:hmin-#{$i}					{ @include h-min-rem($i); }
+.lg\:hmin-#{$i}x				{ @include h-min-em($i); }
+
+}
+
 }
 // --------------------------------------------------------------------
 // * Extra-Large Screen
@@ -118,6 +143,13 @@
 .xl\:hmax-screen-full			{ @extend .xl\:hmax-screen-1\/1; }
 .xl\:hmax-screen-half			{ @extend .xl\:hmax-screen-1\/2; }
 
+@for $i from 1 through 1000 {
+
+.xl\:hmin-#{$i}					{ @include h-min-rem($i); }
+.xl\:hmin-#{$i}x				{ @include h-min-em($i); }
+
+}
+
 }
 // --------------------------------------------------------------------
 // * Extra-Extra-Large Screen
@@ -137,5 +169,12 @@
 .xxl\:hmax-half				    { @extend .xxl\:hmax-1\/2; }
 .xxl\:hmax-screen-full			{ @extend .xxl\:hmax-screen-1\/1; }
 .xxl\:hmax-screen-half			{ @extend .xxl\:hmax-screen-1\/2; }
+
+@for $i from 1 through 1000 {
+
+.xxl\:hmin-#{$i}				{ @include h-min-rem($i); }
+.xxl\:hmin-#{$i}x				{ @include h-min-em($i); }
+
+}
 
 }

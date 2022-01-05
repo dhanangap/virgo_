@@ -6,6 +6,7 @@ export class Gallery {
 
 	// [ Class static properties ] ================================================================
 	// Stores all galleries on the page.
+	static selector;
 	static index;
 	static externalIndicators;  // DOM element of external indicators
 	static externalNavigations; // DOM element of external navigations
@@ -40,7 +41,7 @@ export class Gallery {
 	// • Get total pages inside the gallery
 	// --------------------------------------------------------------------------------------------
 	get totalPages()			{ return Math.ceil(this.items.length / this.numPageItems) }
-	
+
 	// --------------------------------------------------------------------------------------------
 	// • Maximum items inside one gallery page
 	// --------------------------------------------------------------------------------------------
@@ -52,11 +53,12 @@ export class Gallery {
 	// --------------------------------------------------------------------------------------------
 	static init() {
 		// Initialize the value of static properties
+		this.selector = ".gallery";
 		this.index = [];
 		this.externalIndicators = {};
 		this.externalNavigations = {};
 		// Initialize the instances of this class
-		let galleryElements = document.querySelectorAll(".gallery");
+		let galleryElements = document.querySelectorAll(this.selector);
 		if (galleryElements.length > 0) {
 			for (let index = 0; index < galleryElements.length; index++) {
 				const galleryElement = galleryElements[index];
@@ -256,11 +258,11 @@ export class Gallery {
 					indicatorButton.addEventListener("click", () => {
 						this.setActivePage(pageIndex);
 					});
-				}		
+				}
 			}
 		}
 	}
-	
+
 	// --------------------------------------------------------------------------------------------
 	// • Create navigation elements
 	// --------------------------------------------------------------------------------------------
@@ -360,7 +362,7 @@ export class Gallery {
 			this.navlock = true;
 			this.updateIndicator();
 			this.updatePages(currentPage, targetPage, transitionDirection);
-			
+
 			setTimeout(() => {
 				this.navlock = false;
 			}, this.duration + 500);
@@ -398,7 +400,7 @@ export class Gallery {
 		if (this.pages) {
 			// - Transition
 			if (this.transition !== "none") {
-				
+
 				// - Slide / Default
 				if (this.transition === "slide" || this.transition === "default") {
 					if (fromPage.style.transform === "") {
@@ -574,5 +576,5 @@ export class Gallery {
 		}
 
 	}
-	
+
 }

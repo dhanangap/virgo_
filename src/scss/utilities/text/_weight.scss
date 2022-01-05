@@ -18,6 +18,7 @@
 .text-regular						{ @include font-weight(400); }
 .text-semibold						{ @include font-weight(600); }
 .text-bold							{ @include font-weight(700); }
+.text-heavy							{ @include font-weight(800); }
 
 // --------------------------------------------------------------------
 // * Small Screen
@@ -30,6 +31,7 @@
 .sm\:text-regular					{ @include font-weight(400); }
 .sm\:text-semibold					{ @include font-weight(600); }
 .sm\:text-bold						{ @include font-weight(700); }
+.sm\:text-heavy						{ @include font-weight(800); }
 
 }
 // --------------------------------------------------------------------
@@ -44,6 +46,7 @@
 .md\:text-regular					{ @include font-weight(400); }
 .md\:text-semibold					{ @include font-weight(600); }
 .md\:text-bold						{ @include font-weight(700); }
+.md\:text-heavy						{ @include font-weight(800); }
 
 }
 // --------------------------------------------------------------------
@@ -58,6 +61,7 @@
 .lg\:text-regular					{ @include font-weight(400); }
 .lg\:text-semibold					{ @include font-weight(600); }
 .lg\:text-bold						{ @include font-weight(700); }
+.lg\:text-heavy						{ @include font-weight(800); }
 
 }
 // --------------------------------------------------------------------
@@ -72,6 +76,7 @@
 .xl\:text-regular					{ @include font-weight(400); }
 .xl\:text-semibold					{ @include font-weight(600); }
 .xl\:text-bold						{ @include font-weight(700); }
+.xl\:text-heavy						{ @include font-weight(800); }
 
 }
 // --------------------------------------------------------------------
@@ -85,5 +90,6 @@
 .xxl\:text-regular					{ @include font-weight(400); }
 .xxl\:text-semibold					{ @include font-weight(600); }
 .xxl\:text-bold						{ @include font-weight(700); }
+.xxl\:text-heavy					{ @include font-weight(800); }
 
 }

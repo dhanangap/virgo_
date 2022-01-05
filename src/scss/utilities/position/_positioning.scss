@@ -17,12 +17,17 @@
 @mixin bottom-screen($x,$y)	{ bottom: calc($x / $y) * 100vh !important; }
 @mixin left-screen($x,$y)	{ left: calc($x / $y) * 100vh !important; }
 
+@mixin top-percent ($value: 0)		{ top: ($value * 1%) !important; }
+@mixin right-percent ($value: 0)	{ right: ($value * 1%) !important; }
+@mixin bottom-percent ($value: 0)	{ bottom: ($value * 1%) !important; }
+@mixin left-percent ($value: 0)		{ left: ($value * 1%) !important; }
+
 // --------------------------------------------------------------------
 // * Default Classes
 // --------------------------------------------------------------------
 
 @for $i from 0 to 12 		{
-	
+
 .top-#{$i}					{ @include top($i * 1rem); }
 .right-#{$i}				{ @include right($i * 1rem); }
 .bottom-#{$i}				{ @include bottom($i * 1rem); }
@@ -40,6 +45,15 @@
 
 }}
 
+@for $i from 0 to 100 		{
+
+.top-#{$i}\%				{ @include top-percent($i); }
+.right-#{$i}\%				{ @include right-percent($i); }
+.bottom-#{$i}\%				{ @include bottom-percent($i); }
+.left-#{$i}\%				{ @include left-percent($i); }
+
+}
+
 // --------------------------------------------------------------------
 // * Small Screen
 // --------------------------------------------------------------------
@@ -47,7 +61,7 @@
 ( max-width: calc($media-md - 1px) )	{
 
 @for $i from 0 to 12 		{
-	
+
 .sm\:top-#{$i}				{ @include top($i * 1rem); }
 .sm\:right-#{$i}			{ @include right($i * 1rem); }
 .sm\:bottom-#{$i}			{ @include bottom($i * 1rem); }
@@ -63,7 +77,18 @@
 .sm\:bottom-screen-#{$i}\/#{$j}	{ @include bottom-screen($i,$j); }
 .sm\:left-screen-#{$i}\/#{$j}	{ @include left-screen($i,$j); }
 
-}}}
+}}
+
+@for $i from 0 to 100 		{
+
+.sm\:top-#{$i}\%				{ @include top-percent($i); }
+.sm\:right-#{$i}\%				{ @include right-percent($i); }
+.sm\:bottom-#{$i}\%				{ @include bottom-percent($i); }
+.sm\:left-#{$i}\%				{ @include left-percent($i); }
+
+}
+
+}
 // --------------------------------------------------------------------
 // * Medium Screen
 // --------------------------------------------------------------------
@@ -72,7 +97,7 @@
 ( max-width: calc($media-lg - 1px) )	{
 
 @for $i from 0 to 12 		{
-	
+
 .md\:top-#{$i}				{ @include top($i * 1rem); }
 .md\:right-#{$i}			{ @include right($i * 1rem); }
 .md\:bottom-#{$i}			{ @include bottom($i * 1rem); }
@@ -88,7 +113,18 @@
 .md\:bottom-screen-#{$i}\/#{$j}	{ @include bottom-screen($i,$j); }
 .md\:left-screen-#{$i}\/#{$j}	{ @include left-screen($i,$j); }
 
-}}}
+}}
+
+@for $i from 0 to 100 		{
+
+.md\:top-#{$i}\%				{ @include top-percent($i); }
+.md\:right-#{$i}\%				{ @include right-percent($i); }
+.md\:bottom-#{$i}\%				{ @include bottom-percent($i); }
+.md\:left-#{$i}\%				{ @include left-percent($i); }
+
+}
+
+}
 // --------------------------------------------------------------------
 // * Large Screen
 // --------------------------------------------------------------------
@@ -97,7 +133,7 @@
 ( max-width: calc($media-xl - 1px) )	{
 
 @for $i from 0 to 12 		{
-	
+
 .lg\:top-#{$i}				{ @include top($i * 1rem); }
 .lg\:right-#{$i}			{ @include right($i * 1rem); }
 .lg\:bottom-#{$i}			{ @include bottom($i * 1rem); }
@@ -113,7 +149,18 @@
 .lg\:bottom-screen-#{$i}\/#{$j}	{ @include bottom-screen($i,$j); }
 .lg\:left-screen-#{$i}\/#{$j}	{ @include left-screen($i,$j); }
 
-}}}
+}}
+
+@for $i from 0 to 100 		{
+
+.lg\:top-#{$i}\%				{ @include top-percent($i); }
+.lg\:right-#{$i}\%				{ @include right-percent($i); }
+.lg\:bottom-#{$i}\%				{ @include bottom-percent($i); }
+.lg\:left-#{$i}\%				{ @include left-percent($i); }
+
+}
+
+}
 // --------------------------------------------------------------------
 // * Extra-Large Screen
 // --------------------------------------------------------------------
@@ -122,7 +169,7 @@
 ( max-width: calc($media-xxl - 1px) )	{
 
 @for $i from 0 to 12 		{
-	
+
 .xl\:top-#{$i}				{ @include top($i * 1rem); }
 .xl\:right-#{$i}			{ @include right($i * 1rem); }
 .xl\:bottom-#{$i}			{ @include bottom($i * 1rem); }
@@ -138,7 +185,18 @@
 .xl\:bottom-screen-#{$i}\/#{$j}	{ @include bottom-screen($i,$j); }
 .xl\:left-screen-#{$i}\/#{$j}	{ @include left-screen($i,$j); }
 
-}}}
+}}
+
+@for $i from 0 to 100 		{
+
+.xl\:top-#{$i}\%				{ @include top-percent($i); }
+.xl\:right-#{$i}\%				{ @include right-percent($i); }
+.xl\:bottom-#{$i}\%				{ @include bottom-percent($i); }
+.xl\:left-#{$i}\%				{ @include left-percent($i); }
+
+}
+
+}
 // --------------------------------------------------------------------
 // * Extra-Extra-Large Screen
 // --------------------------------------------------------------------
@@ -146,7 +204,7 @@
 ( min-width: $media-xxl )         {
 
 @for $i from 0 to 12 		{
-	
+
 .xxl\:top-#{$i}				{ @include top($i * 1rem); }
 .xxl\:right-#{$i}			{ @include right($i * 1rem); }
 .xxl\:bottom-#{$i}			{ @include bottom($i * 1rem); }
@@ -162,4 +220,15 @@
 .xxl\:bottom-screen-#{$i}\/#{$j}	{ @include bottom-screen($i,$j); }
 .xxl\:left-screen-#{$i}\/#{$j}		{ @include left-screen($i,$j); }
 
-}}}
+}}
+
+@for $i from 0 to 100 		{
+
+.xxl\:top-#{$i}\%				{ @include top-percent($i); }
+.xxl\:right-#{$i}\%				{ @include right-percent($i); }
+.xxl\:bottom-#{$i}\%			{ @include bottom-percent($i); }
+.xxl\:left-#{$i}\%				{ @include left-percent($i); }
+
+}
+
+}
