@@ -19,5 +19,11 @@
     "bugs": {
         "url": "https://github.com/dhanangap/virgo/issues"
     },
-    "homepage": "https://github.com/dhanangap/virgo#readme"
+    "homepage": "https://github.com/dhanangap/virgo#readme",
+    "devDependencies": {
+        "autoprefixer": "^10.4.1",
+        "cssnano": "^5.0.14",
+        "postcss": "^8.4.5",
+        "sass": "^1.45.2"
+    }
 }

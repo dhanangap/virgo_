@@ -10,18 +10,11 @@ import { Gallery } from "./_gallery.js";
 import Stack from "./components/stack.js";
 import Rating from "./components/rating.js";
 
-window.onload = () => {
-    // Form.initForms();
-    // Button.initDropdownButtons();
-    // Navbar.initNavbar();
-    Slider.init();
-    Modal.init();
-    Tab.init();
-    Tagger.init();
-    Carousel.init();
-    Gallery.init();
-    Stack.init();
-    Rating.init();
-};
-
+window.Slider = Slider;
 window.Modal = Modal;
+window.Tab = Tab;
+window.Tagger = Tagger;
+window.Carousel = Carousel;
+window.Gallery = Gallery;
+window.Stack = Stack;
+window.Rating = Rating;
