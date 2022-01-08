@@ -20,6 +20,7 @@ const config = {
 	outputDir: "./dist",
 
 	components: [
+		"accordion",
 		"carousel",
 		"gallery",
 		"preloader",
