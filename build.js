@@ -1,8 +1,18 @@
-const fs = require("fs");
-const sass = require("sass");
-const postcss = require("postcss");
-const cssnano = require("cssnano");
-const autoprefixer = require("autoprefixer");
+// =============================================================================================================================
+// * Virgo Style Library
+// -----------------------------------------------------------------------------------------------------------------------------
+// - Build Script
+// =============================================================================================================================
+
+// -----------------------------------------------------------------------------------------------------------------------------
+// - Import Dependencies
+// -----------------------------------------------------------------------------------------------------------------------------
+const fs 			= require("fs");
+const sass 			= require("sass");
+const postcss 		= require("postcss");
+const cssnano 		= require("cssnano");
+const autoprefixer 	= require("autoprefixer");
+const uglify 		= require("uglify-js");
 
 const config = {
 
@@ -10,7 +20,12 @@ const config = {
 	outputDir: "./dist",
 
 	components: [
-		"preloader"
+		"carousel",
+		"gallery",
+		"preloader",
+		"slider",
+		"stack",
+		"tagger",
 	]
 
 };
@@ -24,6 +39,7 @@ try {
 		const outDir = componentsOutDir + "/" + component;
 
 		if (!fs.existsSync(outDir)) fs.mkdirSync(outDir);
+
 		// Compile style
 		const styleInput = config.sourceDir + "/components/" + component + "/" + component + ".scss";
 		const styleOutput = outDir + "/" + component + ".min.css";
@@ -32,6 +48,14 @@ try {
 			postcss([cssnano, autoprefixer]).process(css.css.toString()).then(result => {
 				fs.writeFileSync(styleOutput, result.css);
 			})
+		}
+
+		// Compile scripts
+		const jsInput = config.sourceDir + "/components/" + component + "/" + component + ".js";
+		const jsOutput = outDir + "/" + component + ".min.js";
+		if (fs.existsSync(jsInput)) {
+			const js = fs.readFileSync(jsInput, "utf8");
+			fs.writeFileSync(jsOutput, uglify.minify(js).code);
 		}
 
 	})

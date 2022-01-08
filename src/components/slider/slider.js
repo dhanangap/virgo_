@@ -150,7 +150,7 @@ export class Slider {
 		this.isFlexible			= element.classList.contains("flexible") ? true : false;
 
 		element.dataset["active"] = this.activeSlideIndex;
-		
+
 		this.slidesElement		= this.element.querySelector(".slides");
 
 		this.slides 			= this.slidesElement.querySelectorAll(".slide");
@@ -325,7 +325,7 @@ export class Slider {
 			let targetSlide = this.slides[index];
 			let transitionDirection = direction ? direction : ((index - this.activeSlideIndex) / Math.abs(index - this.activeSlideIndex));
 			if (!targetSlide) return;
-			
+
 			this.activeSlideIndex = index;
 
 			// - Update
@@ -561,3 +561,6 @@ export class Slider {
 	}
 
 }
+
+// Make this class globally available
+if (window) window["Slider"] = Slider;

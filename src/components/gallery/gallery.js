@@ -59,6 +59,7 @@ export class Gallery {
 		this.externalNavigations = {};
 		// Initialize the instances of this class
 		let galleryElements = document.querySelectorAll(this.selector);
+		console.log(galleryElements.length);
 		if (galleryElements.length > 0) {
 			for (let index = 0; index < galleryElements.length; index++) {
 				const galleryElement = galleryElements[index];
@@ -578,3 +579,6 @@ export class Gallery {
 	}
 
 }
+
+// Make this class globally available
+if (window) window["Gallery"] = Gallery;

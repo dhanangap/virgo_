@@ -67,14 +67,14 @@ export class Tagger {
 	constructor(index, element) {
 		// Element reference
 		this.element = element;
-		
+
 		// Instance identifier
 		this.id 			= this.element.id ? this.element.id : `tagger-${index}`;
 		this.element.id 	= this.id;
-		
+
 		// Target image
 		this.targetImage 	= this.element.querySelector(".image > img");
-		
+
 		// Initialize tag points
 		this.initTagPoints();
 
@@ -130,7 +130,7 @@ export class Tagger {
 }
 
 export class TagPoint {
-	
+
 	// [ Object properties ] ======================================================================
 	tagger;						// Tagger id
 	element;					// Tag point element
@@ -170,3 +170,6 @@ export class TagPoint {
 	}
 
 }
+
+// Make this class globally available
+if (window) window["Tagger"] = Tagger;

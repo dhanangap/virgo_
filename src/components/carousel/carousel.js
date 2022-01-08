@@ -561,5 +561,7 @@ export class Carousel {
 			}, 50);
 		}
 	}
-
 }
+
+// Make this class globally available
+if (window) window["Carousel"] = Carousel;

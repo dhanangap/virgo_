@@ -2,7 +2,7 @@
 // - Virgo
 // - Preloader
 // =============================================================================================================================
-class Preloader {
+export default class Preloader {
 
 	static element;
 	static background;
@@ -58,8 +58,6 @@ class Preloader {
 			this.cycleCount++;
 		}, 1200);
 
-		window.Preloader = this;
-
 	}
 
 	static finish () {
@@ -96,4 +94,8 @@ class Preloader {
 	}
 
 }
+
+// Make this class globally available
+if (window) window["Preloader"] = Preloader;
+
 Preloader.init();

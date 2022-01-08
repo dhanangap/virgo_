@@ -1,135 +1,153 @@
+// =============================================================================================================================
+// - Virgo Component
+// - Tab
+// =============================================================================================================================
+/** Class representating a Tab Component */
 export class Tab {
 
-    static transitionDuration = 0.3;
-    static transitionEasing = "ease-out";
+	// =========================================================================================================================
+	// - Static Properties
+	// =========================================================================================================================
 
-    static init() {
+	static isInitialized		= false;
+	static defaultSelector 		= ``;
+	static defaults				= {};
+	static registry				= [];
 
-        let tabs = document.querySelectorAll(".tab");
-        if (tabs.length > 0) {
+	// Static computed properties ----------------------------------------------------------------------------------------------
 
-            // ===== Initialize elements
-            for (let index = 0; index < tabs.length; index++) {
-                
-                let tab = tabs[index];
-                let id = tab.id ? tab.id : `tab-${index}`;
-                tab.id = id;
+	static get totalInstances () {
+		return this.registry.length;
+	}
 
-                // ----- Tab Identifier
-                let activeTabIndex = tab.dataset["active"] ? parseInt(tab.dataset["active"]) : 0;
-                tab.dataset["active"] = activeTabIndex;
-;
+	// =========================================================================================================================
+	// - Object Properties
+	// =========================================================================================================================
 
-                // ----- Tab Pages
-                let tabPages = tab.querySelectorAll(".tab-pages > .tab-page");
-                if (!tabPages) return;
-                
-                for (let i = 0; i < tabPages.length; i++) {
-                    let tabPage = tabPages[i];
-                    tabPage.classList.remove("active");
-                    if (i === activeTabIndex) tabPage.classList.add("active");
-                }
+	id;
+	activeIndex;
 
-                // Fix height issue for tabs with transition property
-                let pagesContainer = tab.querySelector(".tab-pages");
-                let activePage = pagesContainer.querySelector(".tab-pages > .tab-page.active");
-                pagesContainer.style.height = activePage.getBoundingClientRect().height + "px";
+	transition;
+	duration;
+	easing;
 
-                // ----- Navigation
-                // - Internal
-                let tabNavigation = tab.querySelector(".navigation");
-                if (tabNavigation) {
-                    let tabNavButtons = tabNavigation.querySelectorAll("button");
-                    if (tabNavButtons) {
-                        // Add data-tab attribute and active status
-                        for (let i = 0; i < tabNavButtons.length; i++) {
-                            // Active status
-                            let button = tabNavButtons[i];
-                            button.classList.remove("active");
-                            // Data attributes
-                            button.classList.add("tab-nav-button");
-                            button.dataset["tab"] = id;
-                            button.dataset["target"] = i;
-                        }
-                    }
-                }
-            }
+	pages;
 
-            // ===== Add event listener to tab nav buttons
-            for (const button of document.querySelectorAll(".tab-nav-button")) {
-                const tabId = button.dataset["tab"];
-                const index = button.dataset["target"];
-                
-                if (tabId && index) {
-                    const tab = document.querySelector(`#${tabId}`);
-                    if (tab) {
-                        button.classList.remove("active")
-                        if (parseInt(tab.dataset["active"]) === parseInt(index)) {
-                            button.classList.add("active")
-                        }
-                        button.addEventListener("click", tabNavListener);
-                    }
-                }
-            }
-            
-        }
+	element;
+	#navElement;
+	#pagesElement;
 
-    }
+	// Object computed properties ----------------------------------------------------------------------------------------------
 
-    // ===== Activate tab page
-    static activate(tabId, index) {
-        let tab = document.querySelector(`#${tabId}`);
-        if (!tab) return;
-        
-        let pagesContainer = tab.querySelector(".tab-pages");
-        if (!pagesContainer) return;
+	/**
+	 * Set instance active page index
+	 */
+	set activeIndex (index) {
+		this.element.dataset["active"] = index;
+	}
 
-        let pages = pagesContainer.querySelectorAll(".tab-page");
-        if (pages.length === 0) return;
-        
-        let currentPage = pages[parseInt( tab.dataset["active"] )];
-        let targetPage = pages[index];
+	/**
+	 * Get instance active page index
+	 */
+	get activeIndex () {
+		return parseInt(this.element.dataset["active"]);
+	}
 
-        if (!currentPage || !targetPage) return;        
+	// =========================================================================================================================
+	// - Static Methods
+	// =========================================================================================================================
 
-        // ------ Start tab page activation
-        const transition = tab.dataset["transition"];
-        tab.dataset["active"] = index;
-        
-        // - No transition effect
-        if (!transition) {
-            currentPage.classList.remove("active");
-            targetPage.classList.add("active");
-        }
-        
-        // - Transition: Fade
-        else if (transition === "fade") {
-            currentPage.dataset["state"] = "transition-out";
-            targetPage.dataset["state"] = "transition-in";
-            pagesContainer.style.height = targetPage.getBoundingClientRect().height + "px";
-            setTimeout(() => {
-                currentPage.classList.remove("active");
-            }, this.transitionDuration * 1000);
-            setTimeout(() => {
-                targetPage.classList.add("active");
-            }, this.transitionDuration * 1000);
-        }
-        
-        // ----- Tab navigation
-        let buttons = document.querySelectorAll(`.tab-nav-button[data-tab=${tabId}]`);
-        for (const button of buttons) {
-            button.classList.remove("active");
-            if (parseInt(button.dataset["target"]) === index) button.classList.add("active");
-        }
+	static init (selector = null, config = null) {
+		// Initialize default value of class properties
+		this.initDefaults();
+		// Create class instance from matched elements in the document
+		for (let element of document.querySelectorAll(selector ? selector : this.defaultSelector)) {
+			this.register(new this(this.totalInstances, element, config));
+		}
+		// Mark this class as initialized
+		this.isInitialized = true;
+	}
 
-    }
+	static initDefaults () {
+		this.defaultSelector 		= `[data-component="stack"]`;
+		this.defaults.id			= `stack-`;
+		this.defaults.transition	= `fade`;
+		this.defaults.duration		= 300;
+		this.defaults.easing		= `ease-out`;
+		this.defaults.activeIndex	= 0;
+	}
 
-}
+	static register (instance) {
+		this.registry.push(instance);
+	}
 
-function tabNavListener (event) {
-    const id = event.currentTarget.dataset["tab"];
-    const index = event.currentTarget.dataset["target"];
-    if (!id || !index) return;
+	// =========================================================================================================================
+	// - Object Methods
+	// =========================================================================================================================
 
-    Tab.activate(id, parseInt(index));
-}
+	/**
+	 * Create a Tab
+	 * @param {number} index - Index of instance
+	 * @param {HTMLElement} element - Instance DOM Element
+	 * @param {object} objectConfig - Instance configuration object
+	 */
+	constructor (index, element, objectConfig = null) {
+
+
+		const proto 		= this.constructor;
+		const config 		= objectConfig 			? objectConfig 					: element.dataset;
+
+		this.element		= element;
+		this.id 			= element.id 			? element.id 					: proto.defaults.id + proto.totalInstances;
+		this.transition		= config["transition"] 	? config["transition"]			: proto.defaults.transition;
+		this.duration		= config["duration"] 	? config["duration"]			: proto.defaults.duration;
+		this.easing			= config["easing"] 		? config["easing"]				: proto.defaults.easing;
+		this.activeIndex	= config["active"] 		? config["active"]				: proto.defaults.activeIndex;
+
+		this.element.id		= this.id;
+
+		this.configure();
+
+	} // end of constructor method
+
+	/**
+	 * Configure pages, navigation, and external navigation
+	 */
+	configure () {
+		this.initPages();
+		this.initNav();
+		this.initExternalNav();
+	}
+
+	/**
+	 * Initialize pages
+	 */
+	initPages () {}
+
+	/**
+	 * Initialize navigation
+	 */
+	initNav () {}
+
+	/**
+	 * Initialize external navigation
+	 */
+	initExternalNav () {}
+
+	/**
+	 * Navigate to specific page
+	 */
+	goToPage (targetIndex, direction = 1) {}
+
+} // end of Tab class
+
+// Make Tab class globally available
+if (window) window["Tab"] = Tab;
+
+// =============================================================================================================================
+/** Class representating a Tab Page */
+export class TabPage {}
+
+// =============================================================================================================================
+/** Class representating a Tab Navigation Button */
+export class TabNav {}
