@@ -8,7 +8,7 @@
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build-sass": "sass ./src/scss/bundle.scss ./dist/virgo.bundle.css"
+        "build": "node build.js"
     },
     "repository": {
         "type": "git",

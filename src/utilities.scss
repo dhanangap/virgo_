@@ -1,0 +1,34 @@
+@import "defaults.scss";
+
+@import "utilities/position/absolute.scss";
+@import "utilities/position/relative.scss";
+@import "utilities/position/positioning.scss";
+
+@import "utilities/display/block.scss";
+@import "utilities/display/flex.scss";
+@import "utilities/display/none.scss";
+@import "utilities/display/overflow.scss";
+
+@import "utilities/dimension/width-min.scss";
+@import "utilities/dimension/width-max.scss";
+@import "utilities/dimension/width.scss";
+
+@import "utilities/dimension/height-min.scss";
+@import "utilities/dimension/height-max.scss";
+@import "utilities/dimension/height.scss";
+
+@import "utilities/whitespace/margin.scss";
+@import "utilities/whitespace/padding.scss";
+
+@import "utilities/text/size.scss";
+@import "utilities/text/weight.scss";
+@import "utilities/text/line.scss";
+@import "utilities/text/align.scss";
+@import "utilities/text/color.scss";
+@import "utilities/text/transform.scss";
+@import "utilities/text/decoration.scss";
+
+@import "utilities/background/color.scss";
+@import "utilities/background/backdrop.scss";
+
+@import "utilities/clip/path.scss";
