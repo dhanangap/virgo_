@@ -103,3 +103,6 @@ export default class Rating {
 	}
 
 } // end of class
+
+// Make this class globally available
+if (window) window["Rating"] = Rating;

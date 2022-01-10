@@ -27,6 +27,7 @@ const config = {
 		"nav",
 		"navbar",
 		"preloader",
+		"rating",
 		"slider",
 		"stack",
 		"tagger",
