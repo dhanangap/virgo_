@@ -1,0 +1,50 @@
+---
+layout: docs.njk
+title: Getting Started
+slug: getting-started
+---
+
+<section>
+	<h1 class="mb-2">Getting Started</h1>
+	<p class="lead">
+		<strong>Virgo</strong> is a modern style library to help you build websites and web applications faster, works accross multiple devices, and easier to work with teams.
+	</p>
+	<p>
+		Getting started with Virgo is fairly straighforward.
+		We only need to include bundled CSS and JavaScript files in our page.
+		In our HTML file, inside head tag, put this line to include the stylesheet:
+	</p>
+	<pre><code class="language-html">
+{{ '<link rel="stylesheet" href="/path/to/bundle.min.css">' }}
+	</code></pre>
+	<p>
+		Then just before closing body tag, put this line to include the script file:
+	</p>
+	<pre><code class="language-html">
+{{ '<script type="module" href="/path/to/bundle.min.js"></script>' }}
+	</code></pre>
+	<p>
+		That's it, and you are good to go.
+	</p>
+	<p>
+		<a href="./layouting/overview" class="button outline primary">Next: &nbsp; <strong>Layouting</strong> <i class="icon right">arrow_forward</i></a>
+	</p>
+</section>
+
+<section class="mt-4">
+	<h4 class="mb-2">Reducing File Size</h4>
+	<p>
+		You will notice that the bundled CSS file size is large. It is because the vast amount of utility classes available.
+		While it doesn't really matter in development, it matters a lot in production environment as it will make the page loading time longer.
+		To reduce the file size after development, please read <a href="#">Reducing File Size</a> page.
+		Typical sites built with Virgo have under 50 kilobytes CSS file size.
+	</p>
+</section>
+
+<section class="mt-4">
+	<h4 class="mb-2">Working with ReactJS, Angular, and Vue</h4>
+	<p>
+		To build modern web applications, you may use frontend web application frameworks or libraries such as ReactJS, Angular, or Vue.
+		Currently, modules for those frameworks are under development. In the meantime, you can use the style library just fine, but not with the components that require JavaScript to work.
+	</p>
+</section>

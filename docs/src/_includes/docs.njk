@@ -1,0 +1,33 @@
+---
+layout: default.njk
+title: Docs
+slug: docs
+---
+
+<div class="row has-navbar-fixed-top h-screen-full">
+
+	<!-- Docs Navigation -->
+	<div class="col-3 px-2 py-4 h-full overflow-y-auto">
+		<ul class="nav-list">
+			<li class="{{ 'active' if slug === 'getting-started' }}"><a href="./getting-started">Getting Started</a></li>
+			<li class="divider"></li>
+			<li class="{{ 'active' if slug === 'layouting' }}">
+				<a href="./layouting">Layouting</a>
+				<ul class="sub">
+					<li class="{{ 'active' if slug === 'layouting/overview' }}"><a href="./layouting/overview">Overview</a></li>
+					<li class="{{ 'active' if slug === 'layouting/grid-system' }}"><a href="./layouting/grid-system">Grid System</a></li>
+					<li class="{{ 'active' if slug === 'layouting/responsive-grid' }}"><a href="./layouting/responsive-grid">Responsive Grid</a></li>
+				</ul>
+			</li>
+			<li class="{{ 'active' if slug === 'base' }}"><a href="./base">Base</a></li>
+			<li class="{{ 'active' if slug === 'utilities' }}"><a href="./utilities">Utilities</a></li>
+			<li class="{{ 'active' if slug === 'components' }}"><a href="./components">Components</a></li>
+		</ul>
+	</div>
+
+	<!-- Docs Content -->
+	<div class="col-9 py-4 px-6 h-full overflow-y-auto">
+		{{ content | safe }}
+	</div>
+
+</div>

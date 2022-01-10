@@ -1,0 +1,73 @@
+// =============================================================================================================================
+// - Virgo Component Class
+// - Navigation
+// =============================================================================================================================
+
+// =============================================================================================================================
+// - Navigation List Style
+// =============================================================================================================================
+
+ul.nav-list {
+	display			: flex;
+	flex-direction	: column;
+	margin			: 0;
+	padding 		: 0;
+	list-style		: none;
+
+	> li {
+		> a {
+			display			: block;
+			margin-bottom	: 0.4rem;
+			padding 		: 1.4rem 2rem;
+			border-radius	: var(--roundness);
+			text-decoration	: none;
+			color 			: var(--color-primary);
+			cursor 			: pointer;
+
+			&:hover {
+				background-color	: var(--color-shade);
+			}
+
+			&:active {
+				filter 	: brightness(95%);
+			}
+		} // > a
+	}
+
+	// Active
+	> li.active > a {
+		color 				: var(--color-text);
+		font-weight			: 500;
+		background-color	: var(--color-shade);
+	}
+
+	// Sub Navigation
+	ul.sub {
+		margin 	: 0;
+		padding : 0 0 0 4rem;
+		display : flex;
+
+		list-style		: none;
+		flex-direction	: column;
+
+		li {
+			margin-bottom: 1rem;
+		}
+
+		li > a {
+			display			: block;
+			color 			: var(--color-primary);
+			text-decoration	: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		li.active > a {
+			font-weight	: 500;
+			color 		: var(--color-text);
+		}
+	}
+
+} // .nav-list

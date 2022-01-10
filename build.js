@@ -24,6 +24,7 @@ const config = {
 		"carousel",
 		"gallery",
 		"modal",
+		"nav",
 		"navbar",
 		"preloader",
 		"slider",

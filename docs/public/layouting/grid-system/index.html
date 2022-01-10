@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Grid System | Virgo Style Library Docs</title>
+		<base href="http://localhost/virgo/docs/public/">
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css">
+		<link rel="stylesheet" href="static/virgo/bundle.min.css">
+		<link rel="stylesheet" href="static/style.css">
+	</head>
+	<body>
+
+		<!-- Navigation Bar -->
+		<div class="navbar fixed-top">
+			<div class="brand">
+				<a href="#">
+					<img src="./static/img/logo.svg">
+				</a>
+			</div>
+			<div class="menu center">
+				<a href="./" class="">Hello</a>
+				<a href="./getting-started" class="">Getting Started</a>
+				<div class="has-dropdown">
+					<a href="#">Documentation</a>
+					<div class="dropdown">
+						<a href="#">Overview</a>
+						<div class="divider"></div>
+						<div class="has-dropdown">
+							<a href="#">Base</a>
+							<div class="dropdown">
+								<a href="#">Overview</a>
+								<div class="divider"></div>
+								<a href="#">Buttons</a>
+								<a href="#">Forms</a>
+								<a href="#">Icons</a>
+								<a href="#">Typography</a>
+							</div>
+						</div>
+						<div class="has-dropdown">
+							<a href="#">Layouting</a>
+							<div class="dropdown">
+								<a href="#">Overview</a>
+								<div class="divider"></div>
+								<a href="#">Grid System</a>
+								<a href="#">Responsive Grid</a>
+							</div>
+						</div>
+						<div class="has-dropdown">
+							<a href="#">Components</a>
+							<div class="dropdown">
+								<a href="#">Overview</a>
+								<div class="divider"></div>
+								<a href="#">Carousel</a>
+								<a href="#">Gallery</a>
+								<a href="#">Modal</a>
+								<a href="#">Slider</a>
+								<a href="#">Tagger</a>
+								<div class="divider"></div>
+								<a href="#">Onboarding</a>
+								<a href="#">Preloader</a>
+							</div>
+						</div>
+						<div class="has-dropdown">
+							<a href="#">Utilities</a>
+							<div class="dropdown">
+								<a href="#">Overview</a>
+								<div class="divider"></div>
+								<a href="#">Background</a>
+								<a href="#">Dimension</a>
+								<a href="#">Display</a>
+								<a href="#">Positioning</a>
+								<a href="#">Text</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<a href="#">Data Visualization</a>
+				<a href="#">Styling</a>
+			</div>
+			<div class="actions">
+				<button class="button primary">Explore</button>
+			</div>
+		</div>
+
+		
+<div class="row has-navbar-fixed-top h-screen-full">
+
+	<!-- Docs Navigation -->
+	<div class="col-3 px-2 py-4 h-full overflow-y-auto">
+		<ul class="nav-list">
+			<li class=""><a href="./getting-started">Getting Started</a></li>
+			<li class="divider"></li>
+			<li class="">
+				<a href="./layouting">Layouting</a>
+				<ul class="sub">
+					<li class=""><a href="./layouting/overview">Overview</a></li>
+					<li class="active"><a href="./layouting/grid-system">Grid System</a></li>
+					<li class=""><a href="./layouting/responsive-grid">Responsive Grid</a></li>
+				</ul>
+			</li>
+			<li class=""><a href="./base">Base</a></li>
+			<li class=""><a href="./utilities">Utilities</a></li>
+			<li class=""><a href="./components">Components</a></li>
+		</ul>
+	</div>
+
+	<!-- Docs Content -->
+	<div class="col-9 py-4 px-6 h-full overflow-y-auto">
+		
+<section>
+	<h1 class="mb-2">Grid System</h1>
+	<p>
+		With Virgo, we have options to use fixed-width columns or flexible columns.
+		The 12-column grid is suitable to build consistent layout accross devices,
+		while with flexible-width columns is more suitable for design that's required to adjust to its content size.
+		We can even combine both fixed and flexible columns to achieve more advanced layout.
+	</p>
+</section>
+
+<section class="mt-4">
+	<h4 class="mb-2">Rows &amp; Columns</h4>
+	<p>
+		It is important to understand the role of rows and columns in this grid system.
+		Rows and columns are the basic building blocks of layout, with columns are placed inside a row.
+	</p>
+	<p>
+		A <strong>row</strong> can contain 12 fixed-width columns and (theoretically) unlimited number of flexible columns.
+		Row is defined by using <code>row</code> class on an HTML element, preferably <code>div</code> element.
+	</p>
+	<pre><code class="language-html">
+&lt;div class=&quot;row&quot;&gt;
+  ...we will put columns here...
+&lt;/div&gt;
+	</code></pre>
+	<p>
+		By default a row fills its container width, unless specified otherwise using <a href="#">width utility classes.</a>
+	</p>
+</section>
+
+
+<div class="flex justify-between mt-4">
+	<a href="./layouting/overview" class="button outline primary"><i class="icon">arrow_back</i> Layouting Overview</a>
+	<a href="./layouting/responsive-grid" class="button outline primary">Next: &nbsp; <strong>Responsive Grid</strong> <i class="icon right">arrow_forward</i></a>
+</div>
+
+	</div>
+
+</div>
+
+
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+		<script>hljs.highlightAll();</script>
+	</body>
+</html>

@@ -1,0 +1,10 @@
+pre {
+	margin: 0 0 1em;
+
+	code, code.hljs {
+		margin: 0;
+		padding: 1rem;
+		border-radius: var(--roundness, 0);
+		background-color: var(--color-shade, #f8f8f8);
+	}
+}
