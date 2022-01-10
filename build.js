@@ -23,6 +23,8 @@ const config = {
 		"accordion",
 		"carousel",
 		"gallery",
+		"modal",
+		"navbar",
 		"preloader",
 		"slider",
 		"stack",

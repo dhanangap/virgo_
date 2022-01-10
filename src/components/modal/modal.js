@@ -3,7 +3,7 @@
 // - Modal
 // ==========================================================================================================
 export class Modal {
-	
+
 	// [ Class static properties ] ==========================================================================
 	static index;						// Stores all class instances on the page
 	static containerElement;			// DOM element of modal container
@@ -17,9 +17,9 @@ export class Modal {
 	transition;							// Open and close transition effect
 	// ["fade", "slideLeft", "slideRight", "none"]
 	duration;							// Transition duration in miliseconds
-	
+
 	toggleElements;						// List of modal toggle DOM elements
-	
+
 	// [ Object computed properties ] =======================================================================
 	// State of modal instance["closed", "open"]
 	get state () 						{ return this.element.dataset["state"]; }
@@ -164,7 +164,7 @@ export class Modal {
 	// ------------------------------------------------------------------------------------------------------
 	constructor (index, element) {
 		this.element = element;
-		
+
 		// Set identifier
 		this.id = this.element.id ? this.element.id : `modal-${index}`;
 		this.element.id = this.id;
@@ -244,6 +244,7 @@ export class Modal {
 		else							{ this.close(); }
 	}
 
-
-	
 }
+
+// Make this class globally available
+if (window) window["Modal"] = Modal;

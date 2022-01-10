@@ -23,6 +23,7 @@
 @mixin flex-align ($value)			{ align-items: $value; }
 @mixin flex-grow ($value)			{ flex-grow: $value }
 @mixin flex-shrink ($value)			{ flex-shrink: $value }
+@mixin flex-wrap ($value)			{ flex-wrap: $value }
 @mixin overflow($x: auto, $y: auto)	{ overflow-x: $x !important; overflow-y: $y !important; }
 @mixin overflow-x($x: auto)			{ overflow-x: $x !important; }
 @mixin overflow-y($y: auto)			{ overflow-y: $y !important; }

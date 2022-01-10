@@ -3,6 +3,8 @@
 // - Navigation Bar
 // ====================================================================
 
+@import "../../defaults.scss";
+
 .navbar {
 
 	display		: flex;
@@ -37,7 +39,7 @@
 				height			: calc(var(--navbar-height) - 4rem);
 				margin-right	: 2rem;
 			}
-		
+
 		} // End of brand link
 	} // End of navbar brand style
 
@@ -54,7 +56,7 @@
         padding			: 0;
 
 		// Direct child link ------------------------------------------
-		> a, > .has-dropdown > a {
+		> a, > .has-dropdown > a, > .has-content > a {
 
 			text-decoration	: none;
 			white-space		: nowrap;
@@ -156,11 +158,11 @@
 
 				// Dropdown inside dropdown ---------------------------
 				.has-dropdown {
-				
+
 					position: relative;
 
 					> a {
-						
+
 						position: relative;
 
 						&::after {
@@ -182,7 +184,7 @@
 					.dropdown {
 						top		: -1rem;
 						left	: calc(100% + 0.4rem);
-						
+
 						// Invisible hoverable area
 						&::before {
 							content 			: "";
@@ -219,6 +221,17 @@
 			}
 
 		} // End of .has-dropdown
+
+		// Direct link with content
+		> .has-content {
+
+			.content {
+				position: absolute;
+				top: 0;
+				left: 0;
+			} // end of .content
+
+		} // End of .has-content
 
 		// Center menu positioning ------------------------------------
 		&.center {
@@ -262,3 +275,116 @@
 .has-navbar-fixed-top {
 	padding-top: var(--navbar-height);
 }
+
+// =============================================================================================================================
+// • Mobile Navigation View
+// =============================================================================================================================
+@media screen and (max-width: $media-sm) {
+.navbar {
+	padding : 0;
+
+	> .menu {
+		position	: absolute;
+		top			: var(--navbar-height);
+		left		: 0;
+		width 		: 100vw;
+		height 		: calc(100vh - var(--navbar-height));
+
+		flex-direction	: column;
+		justify-content	: flex-start !important;
+
+		background-color	: var(--color-shade);
+		transition			: all 0.5s ease-out;
+		transform 			: translate3d(0, 0, 0);
+
+		> a, > .has-content, > .has-dropdown {
+			display		: block;
+			width 		: 100%;
+			height 		: auto;
+		}
+
+		> a, > .has-content > a, > .has-dropdown > a {
+			display		: block;
+			width 		: 100%;
+			height 		: auto;
+			padding		: 2rem;
+			text-align	: center;
+
+			&:not(.button):hover {
+				background-color	: var(--navbar-select-bg);
+			}
+			&:active {
+				filter	: brightness(95%);
+			}
+		}
+
+		// ---------------------------------------------------------------------------------------------------------------------
+		// • Closed State
+		// ---------------------------------------------------------------------------------------------------------------------
+		&:not(.open) {
+			transform	: translate3d(100vw, 0, 0);
+		}
+
+		// ---------------------------------------------------------------------------------------------------------------------
+		// • Dropdown
+		// ---------------------------------------------------------------------------------------------------------------------
+		> .has-dropdown {
+			> a {
+				&::after {
+					position 	: absolute;
+					height		: 100%;
+					right		: 2rem;
+					font-family	: var(--font-icon);
+					font-size 	: 1.5em;
+					font-weight	: 300;
+					display		: flex;
+					align-items	: center;
+					content		: "chevron_right";
+				}
+			}
+
+			> .dropdown {
+				position			: relative;
+				top 				: 0;
+				left 				: 0;
+				padding 			: 0;
+				background-color	: #00000033;
+			}
+
+			&:not(.open) > .dropdown {
+				// display: none;
+			}
+		}
+
+		// ---------------------------------------------------------------------------------------------------------------------
+		// • Content
+		// ---------------------------------------------------------------------------------------------------------------------
+		// - Default State
+		// ---------------------------------------------------------------------------------------------------------------------
+		> .has-content {
+			> a {
+				&::after {
+					position 	: absolute;
+					height		: 100%;
+					right		: 2rem;
+					font-family	: var(--font-icon);
+					font-size 	: 1.5em;
+					font-weight	: 300;
+					display		: flex;
+					align-items	: center;
+					content		: "chevron_right";
+				}
+			}
+			> .content {
+				display: none;
+			}
+		} // end of .has-content style
+
+	} // end of .menu style
+
+	> .actions {
+		min-width	: auto;
+		flex-grow 	: 1;
+	}
+
+}} // end of .navbar mobile style

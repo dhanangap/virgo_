@@ -29,6 +29,9 @@
 &.align-baseline				{ @include flex-align(baseline); }
 &.align-stretch					{ @include flex-align(stretch); }
 
+&.flex-wrap						{ @include flex-wrap(wrap); }
+
+
 }
 
 @for $i from 0 through 12 		{
@@ -63,6 +66,8 @@
 &.sm\:align-end					{ @include flex-align(flex-end); }
 &.sm\:align-baseline			{ @include flex-align(baseline); }
 &.sm\:align-stretch				{ @include flex-align(stretch); }
+
+&.sm\:flex-wrap					{ @include flex-wrap(wrap); }
 
 }
 
@@ -100,6 +105,8 @@
 &.md\:align-baseline			{ @include flex-align(baseline); }
 &.md\:align-stretch				{ @include flex-align(stretch); }
 
+&.md\:flex-wrap					{ @include flex-wrap(wrap); }
+
 }
 
 @for $i from 0 through 12 		{
@@ -136,6 +143,8 @@
 &.lg\:align-baseline			{ @include flex-align(baseline); }
 &.lg\:align-stretch				{ @include flex-align(stretch); }
 
+&.lg\:flex-wrap					{ @include flex-wrap(wrap); }
+
 }
 
 @for $i from 0 through 12 		{
@@ -170,6 +179,8 @@
 &.xl\:align-end					{ @include flex-align(flex-end); }
 &.xl\:align-baseline			{ @include flex-align(baseline); }
 &.xl\:align-stretch				{ @include flex-align(stretch); }
+
+&.xl\:flex-wrap					{ @include flex-wrap(wrap); }
 
 }
 
@@ -206,6 +217,8 @@
 &.xxl\:align-end				{ @include flex-align(flex-end); }
 &.xxl\:align-baseline			{ @include flex-align(baseline); }
 &.xxl\:align-stretch			{ @include flex-align(stretch); }
+
+&.xxl\:flex-wrap				{ @include flex-wrap(wrap); }
 
 }
 
