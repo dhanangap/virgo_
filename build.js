@@ -30,6 +30,7 @@ const config = {
 		"rating",
 		"slider",
 		"stack",
+		"tab",
 		"tagger",
 	],
 
