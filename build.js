@@ -23,6 +23,7 @@ const config = {
 		"accordion",
 		"carousel",
 		"gallery",
+		"map",
 		"modal",
 		"nav",
 		"navbar",

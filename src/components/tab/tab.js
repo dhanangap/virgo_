@@ -175,7 +175,17 @@ export class Tab {
 	/**
 	 * Initialize external navigation
 	 */
-	initExternalNav () {}
+	initExternalNav () {
+		let externalNavs = document.querySelectorAll(`[data-tab-nav="${ this.id }"]`);
+		for (var externalNav of externalNavs) {
+			// Iterate through nav buttons
+			let buttons = externalNav.querySelectorAll("button");
+			for (let i = 0; i < buttons.length; i++) {
+				let button = new TabNav(this.id, i, buttons[i]);
+				this.#navButtons.push(button);
+			}
+		}
+	}
 
 	/**
 	 * Navigate to specific page
