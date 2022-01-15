@@ -4,6 +4,8 @@
 // - SASS Mixins
 // =============================================================================================================================
 
+@use "sass:math";
+
 // - Background
 @mixin backdrop($value)				{ background-color: transparentize($value, 0.6) !important; }
 @mixin background-none				{ background: transparent none !important; }
@@ -62,6 +64,9 @@
 @mixin padding-right($value)    	{ padding-right: $value * 1rem !important; }
 @mixin padding-bottom($value)   	{ padding-bottom: $value * 1rem !important; }
 @mixin padding-left($value)     	{ padding-left: $value * 1rem !important; }
+
+// - Opacity
+@mixin opacity($value)				{ @if ($value == 0) { opacity: 0; } @else { opacity: math.div($value, 100); }; }
 
 // - Position
 @mixin absolute						{ position: absolute; }
