@@ -139,6 +139,20 @@ z-index: 8020;
 	}
 }
 
+// Hide navigation
+&[data-navigation="false"] {
+	> .control > .navigation {
+		display: none;
+	}
+}
+
+// Hide indicator
+&[data-indicator="false"] {
+	> .control > .indicator {
+		display: none;
+	}
+}
+
 // [ Flexible Dimension ] =========================================================================
 &.flexible {
 	height: auto;
