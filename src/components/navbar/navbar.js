@@ -52,6 +52,15 @@ export class Navbar {
             this.resize();
         });
 
+		// Add event listener to dropdown menu toggle
+		const dropdowns = this.element.querySelectorAll(".has-dropdown > a");
+		for (const dropdown of dropdowns) {
+			dropdown.addEventListener("click", (event) => {
+				event.preventDefault();
+				this.toggleDropdown(dropdown.parentElement);
+			});
+		}
+
 	}
 
     // --------------------------------------------------------------------------------------------
@@ -81,6 +90,18 @@ export class Navbar {
 
 		} else {
 
+		}
+	}
+
+	// --------------------------------------------------------------------------------------------
+	// • Toggle Dropdown Menu
+	// --------------------------------------------------------------------------------------------
+	toggleDropdown (parentElement) {
+		const dropdownElement = parentElement.querySelector(".dropdown");
+		if (parentElement.classList.contains("open")) {
+			parentElement.classList.remove("open");
+		} else {
+			parentElement.classList.add("open");
 		}
 	}
 
