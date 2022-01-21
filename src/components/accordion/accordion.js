@@ -182,6 +182,3 @@ export default class Accordion {
 	}
 
 }
-
-// Make this class globally available
-if (window) window["Accordion"] = Accordion;

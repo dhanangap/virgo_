@@ -2,7 +2,7 @@
 // - Virgo Component
 // - Carousel
 // ================================================================================================
-export class Carousel {
+export default class Carousel {
 
 	// [ Class static properties ] ================================================================
 	// Stores all galleries on the page.

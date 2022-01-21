@@ -2,7 +2,7 @@
 // - Virgo Component
 // - Navbar
 // ================================================================================================
-export class Navbar {
+export default class Navbar {
 
 	// [ Object properties ] ======================================================================
 	element;					// The carousel DOM element

@@ -2,13 +2,12 @@
     "name": "virgo",
     "version": "0.0.1",
     "description": "Virgo style library",
-    "main": "./src/js/bundle.js",
     "directories": {
         "doc": "docs"
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "node build.js"
+        "build": "webpack"
     },
     "repository": {
         "type": "git",
@@ -26,6 +25,8 @@
         "cssnano": "^5.0.14",
         "postcss": "^8.4.5",
         "sass": "^1.45.2",
-        "uglify-js": "^3.14.5"
+        "uglify-js": "^3.14.5",
+        "webpack": "^5.66.0",
+        "webpack-cli": "^4.9.1"
     }
 }

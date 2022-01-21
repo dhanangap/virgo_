@@ -2,7 +2,7 @@
 // - Virgo Component
 // - Gallery
 // ================================================================================================
-export class Gallery {
+export default class Gallery {
 
 	// [ Class static properties ] ================================================================
 	// Stores all galleries on the page.

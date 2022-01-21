@@ -2,7 +2,7 @@
 // - Virgo Component
 // - Tagger
 // ================================================================================================
-export class Tagger {
+export default class Tagger {
 
 	// [ Class static properties ] ================================================================
 	static index;					// Stores all instances on the page

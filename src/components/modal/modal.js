@@ -2,7 +2,7 @@
 // - Virgo Component
 // - Modal
 // ==========================================================================================================
-export class Modal {
+export default class Modal {
 
 	// [ Class static properties ] ==========================================================================
 	static index;						// Stores all class instances on the page

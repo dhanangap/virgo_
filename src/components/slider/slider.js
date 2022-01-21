@@ -2,7 +2,7 @@
 // - Virgo Component
 // - Slider
 // ================================================================================================
-export class Slider {
+export default class Slider {
 
 	// [ Class static properties ] ================================================================
 	static index;					// Stores all instances on the page
