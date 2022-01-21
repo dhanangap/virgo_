@@ -96,6 +96,7 @@ export default class Preloader {
 }
 
 // Make this class globally available
-if (window) window["Preloader"] = Preloader;
-
-Preloader.init();
+if (window) {
+	window["Preloader"] = Preloader;
+	Preloader.init();
+}
