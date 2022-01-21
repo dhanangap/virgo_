@@ -1,3 +1,5 @@
+import { AccordionConfig } 	from "./AccordionConfig";
+import { getContentHeight } from "../../Helpers/Dimension";
 // =============================================================================================================================
 // - Virgo Component
 // - Accordion
@@ -9,14 +11,14 @@ export default class Accordion {
 	// - Static Properties
 	// =========================================================================================================================
 
-	static isInitialized		= false;
-	static defaultSelector 		= ``;
-	static defaults				= {};
-	static registry				= [];
+	static isInitialized: boolean		= false;
+	static defaultSelector: string		= "";
+	static defaults: AccordionConfig	= {};
+	static registry: Array<Accordion>	= [];
 
 	// Static computed properties ----------------------------------------------------------------------------------------------
 
-	static get totalInstances () {
+	static get totalInstances () : number {
 		return this.registry.length;
 	}
 
@@ -24,31 +26,31 @@ export default class Accordion {
 	// - Object Properties
 	// =========================================================================================================================
 
-	id;
+	id: string;
 
-	transition;
-	duration;
-	easing;
+	transition: string;
+	duration: number;
+	easing: string;
 
-	element;
-	#toggleElement;
-	#contentElement;
+	element: HTMLElement;
+	#toggleElement: HTMLElement;
+	#contentElement: HTMLElement;
 
-	#contentHeight;
-	#contentPadding;
-	#contentDisplay;
+	#contentHeight: number;
+	#contentPadding: string;
+	#contentDisplay: string;
 
 	/**
 	 * Set instance state
 	 */
-	set state (state) {
+	set state (state: string) {
 		this.element.dataset["state"] = state;
 	}
 
 	/**
 	 * Get instance state
 	 */
-	get state () {
+	get state () : string {
 		return this.element.dataset["state"];
 	}
 
@@ -56,12 +58,12 @@ export default class Accordion {
 	// - Static Methods
 	// =========================================================================================================================
 
-	static init (selector = null, config = null) {
+	static init (selector: string = null, config: AccordionConfig = null) {
 		// Initialize default value of class properties
 		this.initDefaults();
 		// Create class instance from matched elements in the document
 		for (let element of document.querySelectorAll(selector ? selector : this.defaultSelector)) {
-			this.register(new this(this.totalInstances, element, config));
+			this.register(new this(element as HTMLElement, config));
 		}
 		// Mark this class as initialized
 		this.isInitialized = true;
@@ -70,15 +72,18 @@ export default class Accordion {
 	static initDefaults () {
 		this.defaultSelector 		= `[data-component="accordion"]`;
 		this.defaults.id			= `accordion-`;
-		this.defaults.layout		= `list`;
 		this.defaults.transition	= `slide`;
 		this.defaults.duration		= 300;
 		this.defaults.easing		= `ease-out`;
 		this.defaults.state			= `collapsed`;
 	}
 
-	static register (instance) {
+	static register (instance: Accordion) {
 		this.registry.push(instance);
+	}
+
+	static getById (id: string) : Accordion {
+		return this.registry.find(item => item.id === id);
 	}
 
 	// =========================================================================================================================
@@ -91,10 +96,10 @@ export default class Accordion {
 	 * @param {HTMLElement} element - Instance DOM Element
 	 * @param {object} objectConfig - Instance configuration object
 	 */
-	constructor (index, element, objectConfig = null) {
+	constructor (element: HTMLElement, objectConfig: any = null) {
 
 
-		const proto 		= this.constructor;
+		const proto 		= Accordion;
 		const config 		= objectConfig 			? objectConfig 					: element.dataset;
 
 		this.element		= element;
@@ -109,11 +114,11 @@ export default class Accordion {
 		this.#toggleElement		= element.querySelector(".toggle");
 		this.#contentElement	= element.querySelector(".content");
 
-		this.#contentHeight 	= this.#contentElement.getBoundingClientRect().height;
-		this.#contentPadding	= this.#contentElement.style.padding;
-		this.#contentDisplay	= this.#contentElement.style.display;
+		this.#contentHeight 	= getContentHeight(this.#contentElement);
+		this.#contentPadding	= (this.#contentElement.style.padding === "") ? "0px" : this.#contentElement.style.padding;
 
-		this.collapse();
+		this.setDefaultStyle();
+		this.hide();
 
 		this.#toggleElement.addEventListener("click", () => {
 			this.toggle();
@@ -121,29 +126,37 @@ export default class Accordion {
 
 	} // end of constructor method
 
-	collapse () {
+	setDefaultStyle () : void {
+		this.#contentElement.style.overflow = "hidden";
+	}
+
+	hide () : void {
+		this.state = `collapsed`;
+		this.#contentElement.style.height = "0px";
+		this.#contentElement.style.padding = "0px";
+	}
+
+	collapse () : void {
 		this.state = `collapsed`;
 
 		// Slide transition
 		if (this.transition === `slide`) {
 			this.#contentElement.animate([
 				{ height: this.#contentHeight + "px", padding: this.#contentPadding },
-				{ height: 0, padding: 0 },
+				{ height: "0px", padding: "0px" },
 			], {
 				duration: this.duration,
 				easing	: this.easing
 			});
 			setTimeout(() => {
-				this.#contentElement.style.height = 0;
-				this.#contentElement.style.padding = 0;
-				this.#contentElement.style.display = `none`;
+				this.#contentElement.style.height = "0px";
+				this.#contentElement.style.padding = "0px";
 			}, this.duration);
 		}
 		// No transition
 		else {
-			this.#contentElement.style.height = 0;
-			this.#contentElement.style.padding = 0;
-			this.#contentElement.style.display = `none`;
+			this.#contentElement.style.height = "0px";
+			this.#contentElement.style.padding = "0px";
 		}
 	}
 
@@ -152,9 +165,8 @@ export default class Accordion {
 
 		// Slide transition
 		if (this.transition === `slide`) {
-			this.#contentElement.style.display = this.#contentDisplay;
 			this.#contentElement.animate([
-				{ height: 0, padding: 0 },
+				{ height: "0px", padding: "0px" },
 				{ height: this.#contentHeight + "px", padding: this.#contentPadding },
 			], {
 				duration: this.duration,
@@ -169,11 +181,10 @@ export default class Accordion {
 		else {
 			this.#contentElement.style.height = this.#contentHeight + "px";
 			this.#contentElement.style.padding = this.#contentPadding;
-			this.#contentElement.style.display = this.#contentDisplay;
 		}
 	}
 
-	toggle () {
+	toggle () : void {
 		if (this.state === `collapsed`) {
 			this.open();
 		} else {
