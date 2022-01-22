@@ -72,7 +72,7 @@ export default class Accordion {
 	}
 
 	static initDefaults () {
-		this.defaultSelector 		= `[data-component="accordion"]`;
+		this.defaultSelector 		= `.accordion`;
 		this.defaults.id			= `accordion-`;
 		this.defaults.transition	= `slide`;
 		this.defaults.duration		= 300;
