@@ -1,5 +1,7 @@
-import { AccordionConfig } 	from "./AccordionConfig";
-import { getContentHeight } from "../../Helpers/Dimension";
+import { AccordionConfig } 		from "./AccordionConfig";
+import { getContentHeight } 	from "../../helpers/dimension";
+import { hide }					from "../../animation/show";
+import { slideDown, slideUp }	from "../../animation/slide";
 // =============================================================================================================================
 // - Virgo Component
 // - Accordion
@@ -114,11 +116,16 @@ export default class Accordion {
 		this.#toggleElement		= element.querySelector(".toggle");
 		this.#contentElement	= element.querySelector(".content");
 
-		this.#contentHeight 	= getContentHeight(this.#contentElement);
-		this.#contentPadding	= (this.#contentElement.style.padding === "") ? "0px" : this.#contentElement.style.padding;
+		const contentStyles 	= window.getComputedStyle(this.#contentElement);
 
-		this.setDefaultStyle();
-		this.hide();
+		this.#contentHeight 	= getContentHeight(this.#contentElement);
+		this.#contentPadding	= contentStyles.getPropertyValue("padding");
+
+		if (this.state !== "open") {
+			hide(this.#contentElement, () => {
+				this.state = `collapsed`;
+			});
+		}
 
 		this.#toggleElement.addEventListener("click", () => {
 			this.toggle();
@@ -126,32 +133,12 @@ export default class Accordion {
 
 	} // end of constructor method
 
-	setDefaultStyle () : void {
-		this.#contentElement.style.overflow = "hidden";
-	}
-
-	hide () : void {
-		this.state = `collapsed`;
-		this.#contentElement.style.height = "0px";
-		this.#contentElement.style.padding = "0px";
-	}
-
 	collapse () : void {
 		this.state = `collapsed`;
 
 		// Slide transition
 		if (this.transition === `slide`) {
-			this.#contentElement.animate([
-				{ height: this.#contentHeight + "px", padding: this.#contentPadding },
-				{ height: "0px", padding: "0px" },
-			], {
-				duration: this.duration,
-				easing	: this.easing
-			});
-			setTimeout(() => {
-				this.#contentElement.style.height = "0px";
-				this.#contentElement.style.padding = "0px";
-			}, this.duration);
+			slideUp(this.#contentElement);
 		}
 		// No transition
 		else {
@@ -165,17 +152,7 @@ export default class Accordion {
 
 		// Slide transition
 		if (this.transition === `slide`) {
-			this.#contentElement.animate([
-				{ height: "0px", padding: "0px" },
-				{ height: this.#contentHeight + "px", padding: this.#contentPadding },
-			], {
-				duration: this.duration,
-				easing	: this.easing
-			});
-			setTimeout(() => {
-				this.#contentElement.style.height = this.#contentHeight + "px";
-				this.#contentElement.style.padding = this.#contentPadding;
-			}, this.duration);
+			slideDown(this.#contentElement);
 		}
 		// No transition
 		else {
