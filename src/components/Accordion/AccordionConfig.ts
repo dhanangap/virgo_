@@ -1,4 +1,4 @@
-export interface AccordionConfig {
+export default interface AccordionConfig {
 	id?			: string;
 	transition?	: string;
 	duration?	: number;

@@ -1,4 +1,4 @@
-import { AccordionConfig } 		from "./AccordionConfig";
+import AccordionConfig	 		from "./AccordionConfig";
 import { getContentHeight } 	from "../../helpers/dimension";
 import { hide }					from "../../animation/show";
 import { slideDown, slideUp }	from "../../animation/slide";
