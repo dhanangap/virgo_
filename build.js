@@ -23,7 +23,7 @@ const config = {
 		"base",
 		"layout",
 		"components",
-		// "utilities",
+		"utilities",
 		"bundle",
 	],
 
