@@ -38,11 +38,16 @@ $media-xxl	: 1536px;
 	--color-secondary	: #fbc02d;
 	--color-border		: #bbbbbb;
 	--color-shade		: #f6f6f6;
-	--color-background	: #ffffff;
-	--color-text		: #2e2e2f;
+	--color-background	: #fefefc;
+	--color-text		: #313133;
 
 	--color-primary-text 	: #ffffff;
 	--color-secondary-text 	: #ffffff;
+
+	// ----------------------------------------------------------------
+	// Animation
+	// ----------------------------------------------------------------
+	--transition 		: all 0.3s ease-out;
 
 	// ----------------------------------------------------------------
 	// Components

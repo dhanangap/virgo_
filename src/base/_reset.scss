@@ -41,6 +41,7 @@ body {
 	min-height		: 100vh;
 	text-rendering	: geometricPrecision;
 	line-height		: 1;
+	background-color: var(--color-background, #fff);
 }
 
 // A elements that don't have a class get default styles --------------

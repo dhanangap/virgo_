@@ -3,5 +3,16 @@
 // - Anchor <a>
 // ====================================================================
 a:not([class]) {
-	color: var(--color-primary);
+	color 			: var(--color-primary);
+	transition 		: var(--transition);
+	text-decoration	: none;
+
+	&:hover {
+		text-decoration	: underline;
+	}
+
+	&:active {
+		transition-duration	: 0s;
+		opacity 			: 0.6;
+	}
 }
