@@ -50,9 +50,10 @@ button, a.button {
 
 	// Pressed state -----------------------------------------------------------
 	&:active {
-		filter: brightness(90%);
-		transition-duration: 0s;
-		opacity: 0.75;
+		filter				: brightness(90%);
+		transition-duration	: 0s;
+		opacity				: 0.75;
+		box-shadow 			: none;
 	}
 
 	// -------------------------------------------------------------------------
@@ -176,20 +177,20 @@ button, a.button {
 	// - Icon inside button
 	// -------------------------------------------------------------------------
 	// Icon in left-hand side before the text
-	> i.icon {
+	i.icon {
 		margin-right: 1rem;
 		margin-left: -1rem;
 		font-size: 2rem;
 	}
 
 	// Icon in right-hand side after the text
-	> i.icon:last-child {
+	i.icon:last-child {
 		margin-left: 1rem;
 		margin-right: -1rem;
 	}
 
 	// Single icon
-	> i.icon:only-child {
+	i.icon:only-child {
 		margin-left: -1rem;
 		margin-right: -1rem;
 	}
@@ -234,4 +235,26 @@ button, a.button {
 		justify-content	: center;
 	}
 
+	// Touch Device
+	@media (hover: none) and (pointer: coarse) {
+		& {
+			height: 5rem;
+			padding: 1rem 2.5rem;
+
+			&:active {
+				opacity: 0.5;
+			}
+		}
+
+		&.circle {
+			width: 5rem;
+			height: 5rem;
+		}
+
+		i.icon {
+			font-size: 2.5rem;
+		}
+	}
+
 } // End of button style
+
