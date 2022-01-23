@@ -14,12 +14,12 @@ $media-xxl	: 1536px;
 	// ----------------------------------------------------------------
 	// Typefaces
 	// ----------------------------------------------------------------
-	--font-sans			: "Helvetica Neue", "Arial", sans-serif;
+	--font-sans			: "SF Pro", "Helvetica Neue", "Arial", sans-serif;
 	--font-serif		: "New York", "Georgia", serif;
 	--font-mono			: "SF Mono", "Consolas", monospace;
 	--font-icon			: "Material Icons";
 	// ----------------------------------------------------------------
-	--font-heading		: var(--font-sans);
+	--font-heading		: "SF Pro Display", var(--font-sans);
 	--font-body			: var(--font-sans);
 	--font-element		: var(--font-sans);
 
@@ -27,7 +27,7 @@ $media-xxl	: 1536px;
 	// Dimension
 	// ----------------------------------------------------------------
 	--base-size			: 10px;
-	--font-size			: 1.6rem;
+	--font-size			: 1.8rem;
 	--roundness			: 0.25em;
 
 	// ----------------------------------------------------------------
