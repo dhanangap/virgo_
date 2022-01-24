@@ -1,9 +1,4 @@
 // • Normal Spacing
-// - Desktop
-body {
-	--space 		: var(--space, 1rem);
-	--button-height : var(--button-height, 4rem);
-};
 // - Mobile & Tablets
 @media screen and (hover: none) and (pointer: coarse) {
 	body {

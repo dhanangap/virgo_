@@ -9,10 +9,9 @@
 	// - Toggle
 	.toggle {
 		position 		: relative;
-		padding-top 	: 1rem;
-		padding-bottom 	: 1rem;
 		display 		: flex;
 		justify-content : space-between;
+		line-height 	: var(--button-height);
 		align-items 	: center;
 		user-select 	: none;
 		overflow 		: hidden;
@@ -30,6 +29,7 @@
 			font-size 		: 1.2em;
 			transition 		: transform 0.3s ease-out;
 			border-radius 	: 50%;
+			line-height 	: 1;
 		}
 
 		// - Hover
@@ -82,20 +82,13 @@
 // - Mobile
 // =============================================================================================================================
 
-@media screen and (max-width: calc($media-md - 1px)){
+@media screen and (hover: none) and (pointer: coarse) {
 	.accordion {
 		.toggle {
-			padding-top 	: 2rem;
-			padding-bottom 	: 2rem;
 
 			&:hover::after, &:active::after {
 				background-color: transparent;
 			}
-		}
-
-		.content {
-			padding-top 	: 2rem;
-			padding-bottom 	: 2rem;
 		}
 	}
 }
