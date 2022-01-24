@@ -5,11 +5,11 @@
 
 .tab {
 
-	.tab-nav {}
+	.nav {}
 
-	.tab-pages {}
+	.pages {}
 
-	.tab-pages .tab-page:not(.active) {
+	.pages .page:not(.active) {
 		display: none;
 	}
 }

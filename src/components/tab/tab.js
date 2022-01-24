@@ -77,7 +77,7 @@ export default class Tab {
 	}
 
 	static initDefaults () {
-		this.defaultSelector 		= `[data-component="tab"]`;
+		this.defaultSelector 		= `.tab`;
 		this.defaults.id			= `tab-`;
 		this.defaults.transition	= `fade`;
 		this.defaults.duration		= 300;
@@ -141,12 +141,12 @@ export default class Tab {
 	initPages () {
 		// Get pages container
 		if (!this.#pagesElement) {
-			this.#pagesElement = this.element.querySelector(".tab-pages");
+			this.#pagesElement = this.element.querySelector(".pages");
 		}
 		if (!this.#pagesElement) return;
 
 		// Iterate through pages
-		let pages = this.#pagesElement.querySelectorAll(".tab-page");
+		let pages = this.#pagesElement.querySelectorAll(".page");
 		for (let i = 0; i < pages.length; i++) {
 			let page = new TabPage(this.id, i, pages[i]);
 			this.pages.push(page);
@@ -159,10 +159,9 @@ export default class Tab {
 	initNav () {
 		// Get nav container
 		if (!this.#navElement) {
-			this.#navElement = this.element.querySelector(".tab-nav");
+			this.#navElement = this.element.querySelector(".nav");
 		}
 		if (!this.#navElement) return;
-
 
 		// Iterate through nav buttons
 		let buttons = this.#navElement.querySelectorAll("button");
