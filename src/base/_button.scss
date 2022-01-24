@@ -49,6 +49,7 @@ button, a.button {
 	&:hover {
 		box-shadow 		: none;
 		background-color: var(--hover-bg);
+		text-decoration : none;
 	}
 
 	// Pressed state -----------------------------------------------------------
