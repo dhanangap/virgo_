@@ -1,4 +1,7 @@
-.tab .nav button, .tab .nav a, tab-button {
+.tab .nav button,
+.tab .nav a,
+.tab .tab-nav-overflow button,
+tab-button {
 	border-radius: 0;
 	border-bottom: 1px solid var(--color-border);
 	flex-shrink: 0;
