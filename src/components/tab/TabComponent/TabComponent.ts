@@ -1,6 +1,7 @@
-import Component 	from "../../Base/Component";
-import TabNav 		from "../TabNav/TabNav";
-import TabPage 		from "../TabPage/TabPage";
+import Component from "../../Base/Component";
+import TabNav from "../TabNav/TabNav";
+import TabPage from "../TabPage/TabPage";
+import { getContentHeight } from "../../../helper/Dimension";
 
 export default class TabComponent extends Component {
 
@@ -66,20 +67,10 @@ export default class TabComponent extends Component {
 	}
 
 	updateHeight () : void {
+		let pageContainer = this.element.querySelector(".pages") as HTMLElement;
 		let page = this.pages.find(page => page.active);
-		if (page) {
-			let height = 0;
-
-			const navStyle = window.getComputedStyle(this.nav.element);
-			const pageStyle = window.getComputedStyle(page.element);
-			height = height + parseFloat(navStyle.getPropertyValue("margin-top"));
-			height = height + parseFloat(navStyle.getPropertyValue("margin-bottom"));
-			height = height + this.nav.element.offsetHeight + 1;
-			height = height + parseFloat(pageStyle.getPropertyValue("margin-top"));
-			height = height + parseFloat(pageStyle.getPropertyValue("margin-bottom"));
-			height = height + page.element.offsetHeight;
-
-			this.element.style.height = height + "px";
+		if (pageContainer && page) {
+			pageContainer.style.height = page.element.offsetHeight + "px";
 		}
 	}
 

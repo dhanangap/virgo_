@@ -1,5 +1,6 @@
 .tab .pages, tab-pages {
 	position: relative;
+	transition: var(--transition);
 }
 
 .tab .pages .page, tab-page {
