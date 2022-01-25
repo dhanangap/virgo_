@@ -1,5 +1,5 @@
-import Component 			from "../../base/Component"
-import ComponentInterface 	from "../../base/ComponentInterface";
+import Component 			from "../../Base/Component"
+import ComponentInterface 	from "../../Base/ComponentInterface";
 import TabComponent 		from "../TabComponent/TabComponent";
 
 export default class TabPage extends Component {

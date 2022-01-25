@@ -1,4 +1,4 @@
-import TabComponent from "./components/tab/TabComponent/TabComponent";
+import TabComponent from "./components/Tab/TabComponent/TabComponent";
 if (window) {
 
 	// Initialize components

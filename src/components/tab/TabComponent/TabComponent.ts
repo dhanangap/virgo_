@@ -1,4 +1,4 @@
-import Component 	from "../../base/Component";
+import Component 	from "../../Base/Component";
 import TabNav 		from "../TabNav/TabNav";
 import TabPage 		from "../TabPage/TabPage";
 
