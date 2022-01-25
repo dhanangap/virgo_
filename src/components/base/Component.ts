@@ -33,8 +33,7 @@ export default class Component implements ComponentInterface {
 	data		: ComponentData;
 	config?		: ComponentInterface;
 
-	constructor (element: HTMLElement | Element, config?: ComponentInterface) {
-
+	constructor (element: HTMLElement | Element, config: ComponentInterface = {}) {
 		const defaultId = config.id ? config.id : undefined;
 		
 		this.element 	= element as HTMLElement;

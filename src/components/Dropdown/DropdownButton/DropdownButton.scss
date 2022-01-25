@@ -1,0 +1,8 @@
+.dropdown > button {
+	position: relative;
+	i.icon-dropdown {
+		position: absolute;
+		right: var(--space);
+		margin: 0;
+	}
+}

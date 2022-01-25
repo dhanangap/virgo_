@@ -1,6 +1,10 @@
 @import "mixins.scss";
 
-@import "./components/tab/TabComponent/TabComponent.scss";
-@import "./components/tab/TabNav/TabNav.scss";
-@import "./components/tab/TabButton/TabButton.scss";
-@import "./components/tab/TabPage/TabPage.scss";
+@import "./components/Tab/TabComponent/TabComponent.scss";
+@import "./components/Tab/TabNav/TabNav.scss";
+@import "./components/Tab/TabButton/TabButton.scss";
+@import "./components/Tab/TabPage/TabPage.scss";
+
+@import "./components/Dropdown/DropdownComponent/DropdownComponent.scss";
+@import "./components/Dropdown/DropdownButton/DropdownButton.scss";
+@import "./components/Dropdown/DropdownMenu/DropdownMenu.scss";
