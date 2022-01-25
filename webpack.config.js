@@ -5,7 +5,7 @@ module.exports 	= {
 	mode	 	: "production",
 	entry		: {
 		bundle		: "./src/bundle.ts",
-		preloader 	: "./src/components/preloader/preloader.js"
+		// preloader 	: "./src/components/preloader/preloader.js"
 	},
 	module		: {
 		rules 	: [
@@ -26,7 +26,7 @@ module.exports 	= {
 	output		: {
 		filename	: "virgo.[name].min.js",
 		path		: path.resolve(__dirname, "dist"),
-		clean 		: true,
+		// clean 		: true,
 		library		: {
 			name 	: "Virgo",
 			type 	: "umd"

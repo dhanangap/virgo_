@@ -5,27 +5,28 @@
 		<title></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="./dist/bundle.min.css">
+		<link rel="stylesheet" href="./dist/utilities.min.css">
 	</head>
-	<body>
+	<body class="pa-10">
 
-		<div class="pa-4 sm:pt-8 sm:px-0">
-			<div class="tab">
-				<div class="nav tabs">
-					<button>Home</button>
-					<button>About</button>
-					<button>Contact</button>
-					<button>Another Page</button>
-					<a href="#">Another Page</a>
-				</div>
-				<div class="pages pt-4">
-					<div class="page">
-						<a href="#" class="button">ghj</a>
-					</div>
-					<div class="page">About page</div>
-					<div class="page">Contact page</div>
-					<div class="page">Another page</div>
-				</div>
+		<div class="tab" data-active="0" data-transition="slide">
+			<div class="nav">
+				<button>1</button>
+				<button>2</button>
+				<button>3</button>
 			</div>
+			<div class="pages">
+				<div class="page">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum sequi impedit neque sunt voluptates sint officiis eaque, voluptate quaerat reiciendis eius, tempore nesciunt explicabo minus vero eveniet velit! Sapiente, recusandae.</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam atque dolorem laudantium, nam voluptate corrupti distinctio sapiente ipsum necessitatibus commodi dignissimos. Explicabo voluptate, cupiditate assumenda suscipit ea cumque molestias accusantium.</p>
+				</div>
+				<div class="page">Two</div>
+				<div class="page">Three</div>
+			</div>
+		</div>
+
+		<div class="py-4">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque veritatis placeat nam mollitia, odit consequatur at provident, ad eum dolorem asperiores ipsa numquam sit vel error facere totam non consequuntur.</p>
 		</div>
 
 		<script src="./dist/virgo.bundle.min.js"></script>

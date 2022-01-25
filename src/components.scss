@@ -1,16 +1,6 @@
-@import "defaults.scss";
+@import "mixins.scss";
 
-@import "components/Accordion/Accordion.scss";
-@import "components/Modal/Modal.scss";
-@import "components/Nav/Nav.scss";
-@import "components/Tab/Tab.scss";
-
-@import "components/carousel/carousel.scss";
-@import "components/gallery/gallery.scss";
-@import "components/map/map.scss";
-@import "components/navbar/navbar.scss";
-@import "components/preloader/preloader.scss";
-@import "components/rating/rating.scss";
-@import "components/slider/slider.scss";
-@import "components/stack/stack.scss";
-@import "components/tagger/tagger.scss";
+@import "./components/tab/TabComponent.scss";
+@import "./components/tab/TabNav.scss";
+@import "./components/tab/TabButton.scss";
+@import "./components/tab/TabPage.scss";

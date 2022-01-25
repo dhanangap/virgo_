@@ -20,10 +20,7 @@ const config = {
 	outputDir: "./dist",
 
 	styles: [
-		"base",
-		"layout",
-		"components",
-		"utilities",
+		// "utilities",
 		"bundle",
 	],
 
@@ -37,7 +34,7 @@ try {
 		console.log(`Compiling: ${styleInput}`);
 		if (fs.existsSync(styleInput)) {
 			const css = sass.renderSync({ file: styleInput });
-			postcss([cssnano, autoprefixer]).process(css.css.toString()).then(result => {
+			postcss([cssnano, autoprefixer]).process(css.css.toString(), { from: undefined }).then(result => {
 				fs.writeFileSync(styleOutput, result.css);
 			})
 		}

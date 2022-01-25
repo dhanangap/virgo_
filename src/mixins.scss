@@ -84,6 +84,17 @@
 @mixin bottom-percent ($value: 0)	{ bottom: ($value * 1%) !important; }
 @mixin left-percent ($value: 0)		{ left: ($value * 1%) !important; }
 
+// - Scrollbar
+@mixin hide-scrollbar {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	overflow-y: scroll; 
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
 // - Text
 @mixin text-align($value)				{ text-align: $value !important; }
 @mixin text-nowrap						{ white-space: nowrap; }
