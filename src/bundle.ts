@@ -1,6 +1,7 @@
-import TabComponent from "./components/tab/TabComponent";
-
+import TabComponent from "./components/tab/TabComponent/TabComponent";
 if (window) {
+
+	// Initialize components
 	window.addEventListener('DOMContentLoaded', (event) => {
 		TabComponent.init();
 	});

@@ -1,9 +1,8 @@
-import Component 	from "../base/Component";
-import TabInterface from "./TabInterface";
-import TabNav 		from "./TabNav";
-import TabPage 		from "./TabPage";
+import Component 	from "../../base/Component";
+import TabNav 		from "../TabNav/TabNav";
+import TabPage 		from "../TabPage/TabPage";
 
-export default class TabComponent extends Component implements TabInterface {
+export default class TabComponent extends Component {
 
 	// * Static Properties and Methods
 
@@ -19,14 +18,21 @@ export default class TabComponent extends Component implements TabInterface {
 	constructor (element: HTMLElement | Element, config?: any) {
 		super(element, config);
 
+		let navSelector = ".nav";
+		let pageSelector = ".pages .page";
+
 		if (config) {
 			this.active = isNaN(parseInt(config.active)) ? config.active : parseInt(config.active);
 			this.transition = config.transition ? config.transition : "none";
+			if (config.navSelector) navSelector = config.navSelector;
+			if (config.pageSelector) pageSelector = config.pageSelector;
 		}
-		this.initNav(".nav");
-		this.initPages(".pages .page");
+
+		this.initNav(navSelector);
+		this.initPages(pageSelector);
 		this.initEvents();
 		this.updateHeight();
+
 	}
 
 	initNav (selector: string) : void {
@@ -60,18 +66,21 @@ export default class TabComponent extends Component implements TabInterface {
 	}
 
 	updateHeight () : void {
-		let height = 0;
 		let page = this.pages.find(page => page.active);
-		const navStyle = window.getComputedStyle(this.nav.element);
-		const pageStyle = window.getComputedStyle(page.element);
-		height = height + parseFloat(navStyle.getPropertyValue("margin-top"));
-		height = height + parseFloat(navStyle.getPropertyValue("margin-bottom"));
-		height = height + this.nav.element.offsetHeight + 1;
-		height = height + parseFloat(pageStyle.getPropertyValue("margin-top"));
-		height = height + parseFloat(pageStyle.getPropertyValue("margin-bottom"));
-		height = height + page.element.offsetHeight;
+		if (page) {
+			let height = 0;
 
-		this.element.style.height = height + "px";
+			const navStyle = window.getComputedStyle(this.nav.element);
+			const pageStyle = window.getComputedStyle(page.element);
+			height = height + parseFloat(navStyle.getPropertyValue("margin-top"));
+			height = height + parseFloat(navStyle.getPropertyValue("margin-bottom"));
+			height = height + this.nav.element.offsetHeight + 1;
+			height = height + parseFloat(pageStyle.getPropertyValue("margin-top"));
+			height = height + parseFloat(pageStyle.getPropertyValue("margin-bottom"));
+			height = height + page.element.offsetHeight;
+
+			this.element.style.height = height + "px";
+		}
 	}
 
 	goTo (index: number | string) : void {

@@ -1,7 +1,7 @@
-import Component from "../base/Component"
-import ComponentInterface from "../base/ComponentInterface";
-import TabButton from "./TabButton";
-import TabComponent from "./TabComponent";
+import Component 			from "../../base/Component"
+import ComponentInterface 	from "../../base/ComponentInterface";
+import TabButton 			from "./../TabButton/TabButton";
+import TabComponent 		from "../TabComponent/TabComponent";
 
 export default class TabNav extends Component {
 
