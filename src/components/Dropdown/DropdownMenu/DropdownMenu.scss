@@ -1,19 +1,23 @@
-.dropdown .menu {
+@mixin menuStyle () {
+	position: fixed;
 
-	position: absolute;
-	top: calc(100% + (var(--space) * 0.5));
-	
-	width: 100%;
-	padding-top: var(--space);
-	padding-bottom: var(--space);
 	border-radius: var(--roundness);
-
 	background-color: #ffffffcc;
 	backdrop-filter: blur(50px);
 	box-shadow: 0 2px 3px #00000010, 0 0 60px #00000010;
 
+	z-index: 9000;
+}
+
+.dropdown-menu {
+	
+	padding-top: var(--space);
+	padding-bottom: var(--space);
+
 	display: flex;
 	flex-direction: column;
+
+	@include menuStyle();
 	
 	button, a {
 		width: 100%;
@@ -50,6 +54,12 @@
 
 }
 
-.dropdown:not([data-state="open"]) .menu {
-	display: none;
+.dropdown:not([data-state="open"]) {
+	.dropdown-menu, .dropdown-content {
+		display: none;
+	}
+}
+
+.dropdown-content {
+	@include menuStyle();
 }

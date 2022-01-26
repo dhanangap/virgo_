@@ -8,6 +8,7 @@ export default class DropdownComponent extends Component {
 	// * Static Properties and Methods
 
 	static className: string = "dropdown";
+	static dropdownContainer: HTMLElement;
 
 	static init(selector?: string, config?: ComponentInterface): void {
 		super.init(selector, config);
@@ -17,9 +18,16 @@ export default class DropdownComponent extends Component {
 			}
 		});
 		document.addEventListener("click", (event) => {
-			if (!this.isInsideDropdown(event.target)) {
+			if (!this.isInsideDropdown(event.x, event.y)) {
 				this.closeAll();
 			}
+		});
+		document.addEventListener("scroll", (event) => {
+			const dropdowns = this.instances.filter(dropdown => dropdown.isOpen);
+			dropdowns.forEach(dropdown => {
+				(dropdown as DropdownComponent).menu.updatePosition();
+			});
+
 		});
 	}
 
@@ -29,13 +37,25 @@ export default class DropdownComponent extends Component {
 		}
 	}
 
-	static isInsideDropdown (clickedElement: EventTarget) : boolean {
+	static isInsideDropdown (x: number, y: number) : boolean {
 		let value = false;
 		let i = 0;
 		
 		while (value === false && i < this.instances.length) {
 			const dropdown = this.instances[i] as DropdownComponent;
-			value = dropdown.element.contains(clickedElement as Node);
+			const dropdownRect = dropdown.element.getBoundingClientRect();
+			const menuRect = dropdown.menu.element.getBoundingClientRect();
+
+			const left		= (menuRect.left === 0) ? dropdownRect.left : Math.min(menuRect.left, dropdownRect.left);
+			const right		= (menuRect.right === 0) ? dropdownRect.right : Math.max(menuRect.right, dropdownRect.right);
+			const top		= (menuRect.top === 0) ? dropdownRect.top : Math.min(menuRect.top, dropdownRect.top);
+			const bottom	= (menuRect.bottom === 0) ? dropdownRect.bottom : Math.max(menuRect.bottom, dropdownRect.bottom);
+
+			value = (x >= left) &&
+					(x <= right) &&
+					(y >= top) &&
+					(y <= bottom);
+
 			i++;
 		}
 
@@ -55,7 +75,10 @@ export default class DropdownComponent extends Component {
 	set isOpen (value: boolean) {
 		if (value) {
 			this.element.dataset["state"] = "open";
+			document.body.appendChild(this.menu.element);
+			this.menu.updatePosition();
 		} else {
+			this.element.appendChild(this.menu.element);
 			this.element.removeAttribute("data-state");
 		}
 	}
@@ -64,8 +87,14 @@ export default class DropdownComponent extends Component {
 		super(element, config);
 		if (config) this.transition = config.transition ? config.transition : "none";
 
+		let menuElement = this.element.querySelector(".dropdown-menu");
+		if (!menuElement) {
+			menuElement = this.element.querySelector(".dropdown-content")
+		}
+
 		this.button = new DropdownButton(this.element.querySelector("button"), { parent: this });
-		this.menu = new DropdownMenu(this.element.querySelector(".menu"), { parent: this });
+		this.menu = new DropdownMenu(menuElement, { parent: this });
+
 	}
 
 	toggleOpen () : void {
