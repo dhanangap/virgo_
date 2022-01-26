@@ -9,6 +9,10 @@ a:not([class]) {
 
 	&:hover {
 		text-decoration	: underline;
+
+		i.icon {
+			text-decoration: none;
+		}
 	}
 
 	&:active {

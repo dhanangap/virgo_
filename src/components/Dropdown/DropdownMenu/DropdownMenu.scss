@@ -31,11 +31,16 @@
 		&:last-child {
 			border-bottom: none;
 		}
+		
+		&:focus {
+			box-shadow: none;
+		}
 	}
 
 	button:hover {
 		background-color: var(--color-shade);
 	}
+
 
 	.divider {
 		height: 1px;
@@ -43,4 +48,8 @@
 		background-color: var(--color-shade);
 	}
 
+}
+
+.dropdown:not([data-state="open"]) .menu {
+	display: none;
 }
