@@ -2,11 +2,10 @@ import ComponentData from "./ComponentData";
 import ComponentInterface from "./ComponentInterface";
 
 export default class Component implements ComponentInterface {
-
 	// * Static Properties and Methods
 
-	static className		: string 			= "component";
-	static registry			: Array<Component>	= [];
+	static className		: string 	= "component";
+	static registry			: any 		= {};
 
 	static generateId () : string {
 		return this.className + "-" + this.registry.length;
@@ -15,14 +14,23 @@ export default class Component implements ComponentInterface {
 	static init (selector?: string, config?: ComponentInterface) : void {
 		const query 	= selector ? selector : `.${this.className}`;
 		const elements 	= document.querySelectorAll(query);
+		if (!this.registry[this.className]) {
+			this.registry[this.className] = [];
+		}
+		const instanceList = this.registry[this.className];
+		
 		for (const element of elements) {
-			this.registry.push(new this(element as HTMLElement, {
+			instanceList.push(new this(element as HTMLElement, {
 				...(element as HTMLElement).dataset,
 				...config,
 				selector: query,
 				id: this.generateId()
 			}));
 		}
+	}
+
+	static get instances () : Array<any> {
+		return this.registry[this.className];
 	}
 
 	// * Object Properties and Methods
