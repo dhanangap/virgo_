@@ -70,7 +70,7 @@ export default class TabComponent extends Component {
 		let pageContainer = this.element.querySelector(".pages") as HTMLElement;
 		let page = this.pages.find(page => page.active);
 		if (pageContainer && page) {
-			pageContainer.style.height = page.element.offsetHeight + "px";
+			pageContainer.style.height = page.element.scrollHeight + "px";
 		}
 	}
 

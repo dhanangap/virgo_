@@ -32,6 +32,7 @@
 		.pages .page {
 			transition: var(--transition);
 			transform: translate3d(0, 0, 0);
+			// transition-timing-function: cubic-bezier(0, 0, 0.07, 0.93);
 
 			&.before {
 				transform: translate3d(-100%, 0, 0);
