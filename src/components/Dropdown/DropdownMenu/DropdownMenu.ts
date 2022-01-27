@@ -12,7 +12,8 @@ export default class DropdownMenu extends Component {
 
 	updatePosition () {
 		const parentBounds 			= this.parent.element.getBoundingClientRect();
-		this.element.style.top		= (parentBounds.top + parentBounds.height + 5) + "px";
+		const bodyBounds 			= document.body.getBoundingClientRect();
+		this.element.style.top 		= (parentBounds.top + parentBounds.height - bodyBounds.top + 5) + "px";
 		this.element.style.left		= parentBounds.left + "px";
 		this.element.style.width	= parentBounds.width + "px";
 	}

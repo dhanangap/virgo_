@@ -1,5 +1,5 @@
 @mixin menuStyle () {
-	position: fixed;
+	position: absolute;
 
 	border-radius: var(--roundness);
 	background-color: #ffffffcc;
@@ -21,7 +21,7 @@
 	
 	button, a {
 		width: 100%;
-		padding: var(--space) calc(var(--space) * 2);
+		padding: var(--space, 1rem) calc(var(--space, 1rem) * 2);
 		padding-bottom: 1rem;
 		font-weight: 400;
 		font-size: 0.88em;
@@ -39,17 +39,20 @@
 		&:focus {
 			box-shadow: none;
 		}
-	}
 
-	button:hover {
-		background-color: var(--color-shade);
+		&:hover {
+			background-color: #00000010;
+			transition-duration: 0s;
+			text-decoration: none;
+		}
 	}
 
 
 	.divider {
-		height: 1px;
+		height: 2px;
 		margin: var(--space) 0;
-		background-color: var(--color-shade);
+		border-top: 1px solid #00000010;
+		border-bottom: 1px solid #ffffff30;
 	}
 
 }

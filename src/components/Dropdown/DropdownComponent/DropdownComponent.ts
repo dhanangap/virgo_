@@ -22,7 +22,7 @@ export default class DropdownComponent extends Component {
 				this.closeAll();
 			}
 		});
-		document.addEventListener("scroll", (event) => {
+		window.addEventListener("resize", (event) => {
 			const dropdowns = this.instances.filter(dropdown => dropdown.isOpen);
 			dropdowns.forEach(dropdown => {
 				(dropdown as DropdownComponent).menu.updatePosition();

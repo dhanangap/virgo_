@@ -2,13 +2,12 @@
 // - Mobile & Tablets
 @media screen and (hover: none) and (pointer: coarse) {
 	body {
-		--space : calc(var(--space) * 2);
 		--button-height : 5rem;
 	}
 }
 
 // • Compact Spacing
 body.spacing-compact {
-	--space 		: calc(var(--space) * 0.5);
+	--space 		: 0.5rem;
 	--button-height : calc(var(--button-height) * 0.75);
 };
