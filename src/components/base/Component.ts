@@ -8,7 +8,7 @@ export default class Component implements ComponentInterface {
 	static registry			: any 		= {};
 
 	static generateId () : string {
-		return this.className + "-" + this.registry.length;
+		return this.className + "-" + this.instances.length;
 	}
 
 	static init (selector?: string, config?: ComponentInterface) : void {
